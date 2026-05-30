@@ -7,6 +7,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Leaf, ShieldAlert, Sparkles, CheckCircle, Flame } from "lucide-react";
 import { IMAGES } from "../data";
+import produklosgo from "../assets/produklosgo.png";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -145,10 +146,9 @@ export default function Hero() {
             {/* Custom generated Premium Culinary Dish Image Container */}
             <div className="w-[88%] h-[88%] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-light relative group bg-brand-light">
               <img
-                src={IMAGES.heroDish}
-                alt="LOSGo gourmet fish nuggets"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                src={produklosgo}
+                alt="Produk LOSGo"
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
               />
               {/* Overlay shading gradient */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/40 to-transparent h-1/3" />
