@@ -148,7 +148,7 @@ export default function Hero() {
               <img
                 src={produklosgo}
                 alt="Produk LOSGo"
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Overlay shading gradient */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-dark/40 to-transparent h-1/3" />
