@@ -115,13 +115,13 @@ export default function Hero() {
               </span>
             </div>
             <div className="flex flex-col gap-1 border-x border-brand-soft/60 px-4">
-              <span className="font-display font-bold text-xl text-brand-primary">Healthy</span>
+              <span className="font-display font-bold text-xl text-brand-primary">SEHAT</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
-                Tinggi Protein
+                Protein Alami
               </span>
             </div>
             <div className="flex flex-col gap-1 pl-2">
-              <span className="font-display font-bold text-xl text-brand-primary">Lokal</span>
+              <span className="font-display font-bold text-xl text-brand-primary">LOKAL</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
                 UMKM Banyumas
               </span>
@@ -164,8 +164,8 @@ export default function Hero() {
                 <Flame className="w-4 h-4 fill-brand-accent text-brand-accent" />
               </div>
               <div>
-                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">PREMIUM</div>
-                <div className="text-xs font-extrabold text-brand-primary">Bukan Lele Biasa</div>
+                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">FAVORIT</div>
+                <div className="text-xs font-extrabold text-brand-primary">Bikin Ketagihan</div>
               </div>
             </motion.div>
 
@@ -179,8 +179,8 @@ export default function Hero() {
                 <CheckCircle className="w-4 h-4 text-brand-primary" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">HIGIENIS</div>
-                <div className="text-xs font-bold text-brand-dark">Lele Organik Siap Goreng</div>
+                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">FRESH</div>
+                <div className="text-xs font-bold text-brand-dark">Kualitas Terjaga</div>
               </div>
             </motion.div>
           </motion.div>
