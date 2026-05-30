@@ -1,0 +1,193 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import { Leaf, Check, X, ShieldCheck, Sparkles, Smile, Trophy, Award, BrainCircuit, Heart, Droplets } from "lucide-react";
+import { WHY_PROBIOTIC_CATFISH } from "../data";
+
+export default function WhyProbiotic() {
+  const [activeCard, setActiveCard] = useState<number>(0);
+
+  // Quick comparison data to build high educational trust
+  const comparisonData = [
+    {
+      metric: "Aroma & Rasa",
+      traditional: "Sering tercium aroma tanah/lumpur yang pekat.",
+      probiotic: "Rasa gurih alami murni, bersih bebas bau tanah.",
+      badge: "Indrawi"
+    },
+    {
+      metric: "Metode Budidaya",
+      traditional: "Kolam tanah terbuka, rentan genangan air tercemar.",
+      probiotic: "Kolam bio-fleksibel steril dengan filter probiotik harian.",
+      badge: "Sistem"
+    },
+    {
+      metric: "Kepadatan Protein",
+      traditional: "Serat daging lebih lunak / berlemak jenuh tinggi.",
+      probiotic: "Serat padat kokoh, tinggi asam amino esensial.",
+      badge: "Gizi"
+    },
+    {
+      metric: "Keamanan Kimia",
+      traditional: "Rentan kontaminasi antibiotik buatan luar & timbal.",
+      probiotic: "Bebas merkuri, tanpa antibiotik sintetik berbahaya.",
+      badge: "Keamanan"
+    },
+    {
+      metric: "Kemudahan Saji",
+      traditional: "Harus dibersihkan & dibumbui manual (memakan waktu).",
+      probiotic: "Siap beku tinggal goreng atau kukus dalam 10 menit.",
+      badge: "Praktis"
+    }
+  ];
+
+  // Specific icons for the 4 feature cards
+  const featureIcons = [Trophy, BrainCircuit, Droplets, Heart];
+
+  return (
+    <section id="keunggulan" className="py-24 bg-brand-bg relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-1/2 left-0 w-80 h-80 bg-brand-soft/20 rounded-full blur-3xl -z-10" />
+
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        
+        {/* Section Header */}
+        <div id="keunggulan-header" className="text-center max-w-3xl mx-auto mb-16">
+          <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-primary mb-3 inline-flex items-center gap-1.5 p-1 px-3 bg-brand-soft rounded-full">
+            <Sparkles className="w-3 h-3 text-brand-accent animate-pulse" />
+            Nutrisi Cerdas Generasi Baru
+          </span>
+          <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
+            Mengapa Lele Probiotik Adalah <span className="text-brand-primary">Nutrisi Terbaik?</span>
+          </h2>
+          <p className="text-base text-brand-dark/70">
+            Kami mengintegrasikan bioteknologi biosekuriti pangan untuk membesarkan ikan lele yang kaya nutrisi mikro esensial untuk mendorong kesehatan aktif Anda.
+          </p>
+        </div>
+
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+          
+          {/* Left: 4 Feature Cards (Interactive) */}
+          <div id="why-cards-group" className="lg:col-span-6 flex flex-col gap-4 justify-between">
+            {WHY_PROBIOTIC_CATFISH.map((feature, idx) => {
+              const IconComponent = featureIcons[idx];
+              const isActive = activeCard === idx;
+              return (
+                <motion.div
+                  key={feature.id}
+                  onClick={() => setActiveCard(idx)}
+                  className={`p-6 rounded-2xl border transition-all duration-300 text-left cursor-pointer flex gap-5 items-start ${
+                    isActive
+                      ? "bg-brand-primary border-brand-primary shadow-lg text-brand-light transform scale-102"
+                      : "bg-white border-brand-soft/60 hover:border-brand-primary/20 text-brand-dark"
+                  }`}
+                  whileHover={{ scale: isActive ? 1.02 : 1.01 }}
+                  id={`feature-card-${feature.id}`}
+                >
+                  <div className={`p-3 rounded-xl shrink-0 shadow-sm ${
+                    isActive ? "bg-brand-accent text-brand-dark" : "bg-brand-soft/30 text-brand-primary"
+                  }`}>
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className={`font-display font-extrabold text-base sm:text-lg mb-1 ${
+                      isActive ? "text-brand-accent" : "text-brand-primary"
+                    }`}>
+                      {feature.title}
+                    </h3>
+                    <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${
+                      isActive ? "text-white/80" : "text-brand-dark/40"
+                    }`}>
+                      {feature.boldText}
+                    </p>
+                    <p className={`text-xs sm:text-sm leading-relaxed ${
+                      isActive ? "text-white/90" : "text-brand-dark/60"
+                    }`}>
+                      {feature.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Right: Infographic Comparison Visual Board */}
+          <div id="why-infographic" className="lg:col-span-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-soft shadow-xl h-full flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex justify-between items-center border-b border-brand-soft/60 pb-4 mb-6">
+                  <div>
+                    <h4 className="font-display font-black text-lg text-brand-dark">
+                      Tabel Perbandingan Mutu
+                    </h4>
+                    <p className="text-xs text-brand-dark/50">Bukti keunggulan nyata teknologi bahan pangan LOSGo</p>
+                  </div>
+                  <div className="bg-brand-accent/20 text-brand-primary font-bold text-[10px] uppercase py-1 px-2.5 rounded-full">
+                    Kualitas Teruji
+                  </div>
+                </div>
+
+                {/* Grid Comparison Rows */}
+                <div className="space-y-4">
+                  {comparisonData.map((row) => (
+                    <div
+                      key={row.metric}
+                      className="grid grid-cols-1 sm:grid-cols-12 gap-2 border-b border-brand-soft/30 pb-3 last:border-0"
+                    >
+                      {/* Metric Category Label */}
+                      <div className="sm:col-span-3 flex sm:flex-col items-start gap-1 justify-center">
+                        <span className="font-display font-black text-xs text-brand-dark max-w-[100px] leading-tight">
+                          {row.metric}
+                        </span>
+                        <span className="text-[9px] uppercase tracking-wider font-extrabold text-brand-secondary">
+                          {row.badge}
+                        </span>
+                      </div>
+
+                      {/* Traditional */}
+                      <div className="sm:col-span-4 bg-rose-50/50 p-2 sm:p-2.5 rounded-xl border border-rose-100 flex gap-2 items-start text-left">
+                        <X className="w-3.5 h-3.5 text-rose-500 shrink-0 mt-0.5" />
+                        <span className="text-[11px] text-rose-900/80 leading-relaxed font-medium">
+                          {row.traditional}
+                        </span>
+                      </div>
+
+                      {/* Probiotic LOSGo */}
+                      <div className="sm:col-span-5 bg-brand-soft/20 p-2 sm:p-2.5 rounded-xl border border-brand-soft flex gap-2 items-start text-left">
+                        <Check className="w-3.5 h-3.5 text-brand-primary shrink-0 mt-0.5" />
+                        <span className="text-[11px] text-brand-primary leading-relaxed font-bold">
+                          {row.probiotic}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Verified Badge Bottom Footer */}
+              <div className="mt-8 flex gap-3 items-center bg-brand-soft/20 border border-brand-soft/40 p-4 rounded-xl">
+                <ShieldCheck className="w-8 h-8 text-brand-primary shrink-0" />
+                <p className="text-[11px] text-brand-dark/70 text-left leading-relaxed">
+                  Semua benih lele kami dikarantina ketat dan dibudidayakan bermitra dengan pakar perikanan setempat di daerah Klaten utara untuk menghasilkan standarisasi bersih yang berkelanjutan.
+                </p>
+              </div>
+
+            </motion.div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

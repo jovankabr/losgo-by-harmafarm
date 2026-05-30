@@ -1,0 +1,6 @@
+{
+  "name": "LOSGo Healthy Food",
+  "description": "Modern healthy frozen food berbasis lele probiotik berkualitas tinggi untuk keluarga Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
