@@ -93,20 +93,13 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
           id="navbar-logo-link"
           href="#home"
           onClick={(e) => handleLinkClick(e, "#home")}
-          className="flex items-center gap-2 group cursor-pointer"
+          className="flex items-center group cursor-pointer"
         >
-          <div className="relative w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-brand-light shadow-md shadow-brand-primary/20 group-hover:scale-105 transition-transform duration-300">
-            <Fish className="w-5 h-5 absolute" />
-            <Leaf className="w-4 h-4 text-brand-accent absolute -top-1 -right-1 rotate-12 drop-shadow-sm" />
-          </div>
-          <div>
-            <span className="font-display font-bold text-2xl tracking-tight text-brand-primary">
-              LOS<span className="text-brand-accent">Go</span>
-            </span>
-            <div className="text-[10px] uppercase tracking-widest font-bold text-brand-secondary leading-none -mt-1">
-              HEALTHY FOOD
-            </div>
-          </div>
+          <img
+            src={logoo}
+            alt="LOSGo Logo"
+            className="h-14 w-auto object-contain"
+        />
         </a>
 
         {/* Desktop Navigation Link Menu */}
