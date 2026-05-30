@@ -73,7 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="text-base sm:text-lg md:text-xl text-brand-dark/70 leading-relaxed max-w-2xl mb-8"
           >
-            Diolah dari lele bio-probiotik berkualitas, tinggi protein, higienis, praktis disajikan, dan cocok untuk keluarga modern yang mengutamakan cita rasa serta kesehatan.
+            Diolah dari lele probiotik berkualitas, tinggi protein, higienis, praktis disajikan, dan cocok untuk keluarga modern yang mengutamakan cita rasa serta kesehatan.
           </motion.p>
 
           {/* CTA Group Buttons */}
@@ -88,7 +88,7 @@ export default function Hero() {
               onClick={() => scrollToSection("produk")}
               className="btn-primary w-full sm:w-auto text-base group cursor-pointer"
             >
-              Lihat Produk Pilihan
+              Katalog Produk
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
             </button>
             <button
@@ -96,7 +96,7 @@ export default function Hero() {
               onClick={() => scrollToSection("kontak")}
               className="btn-secondary w-full sm:w-auto text-base cursor-pointer"
             >
-              Hubungi Kami
+              Pesan Sekarang
             </button>
           </motion.div>
 
@@ -110,19 +110,19 @@ export default function Hero() {
             <div className="flex flex-col gap-1">
               <span className="font-display font-bold text-xl text-brand-primary">100%</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
-                Bebas Bau Lumpur
+                Lele Probiotik
               </span>
             </div>
             <div className="flex flex-col gap-1 border-x border-brand-soft/60 px-4">
-              <span className="font-display font-bold text-xl text-brand-primary">Premium</span>
+              <span className="font-display font-bold text-xl text-brand-primary">Healthy</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
-                Nutrisi Terjamin
+                Tinggi Protein
               </span>
             </div>
             <div className="flex flex-col gap-1 pl-2">
               <span className="font-display font-bold text-xl text-brand-primary">Lokal</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
-                Mitra UMKM Klaten
+                UMKM Banyumas
               </span>
             </div>
           </motion.div>
@@ -164,8 +164,8 @@ export default function Hero() {
                 <Flame className="w-4 h-4 fill-brand-accent text-brand-accent" />
               </div>
               <div>
-                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">PROTEIN</div>
-                <div className="text-xs font-extrabold text-brand-primary">+35% Lebih Padat</div>
+                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">PREMIUM</div>
+                <div className="text-xs font-extrabold text-brand-primary">Bukan Lele Biasa</div>
               </div>
             </motion.div>
 
@@ -179,8 +179,8 @@ export default function Hero() {
                 <CheckCircle className="w-4 h-4 text-brand-primary" />
               </div>
               <div className="text-left">
-                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">TEKNOLOGI</div>
-                <div className="text-xs font-bold text-brand-dark">Lele Bio-Probiotik</div>
+                <div className="text-[10px] uppercase font-bold text-brand-dark/50 leading-none">HIGIENIS</div>
+                <div className="text-xs font-bold text-brand-dark">Lele Organik Siap Goreng</div>
               </div>
             </motion.div>
           </motion.div>
