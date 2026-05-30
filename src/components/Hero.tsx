@@ -53,9 +53,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-display font-black text-4xl sm:text-5xl md:text-[56px] tracking-tight leading-[1.1] text-[#315B35] mb-6"
           >
-            Frozen Food Sehat <br/>
+            Frozen Food Lele Probiotik <br/>
             <span className="text-[#A4C639] relative inline-block">
-              Lele Probiotik
+              Tanpa Bau Lumpur
               <svg
                 className="absolute left-0 bottom-[-8px] w-full h-[12px] text-[#A4C639]/30 -z-10"
                 viewBox="0 0 100 10"
@@ -73,7 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="text-base sm:text-lg md:text-xl text-brand-dark/70 leading-relaxed max-w-2xl mb-8"
           >
-            Makanan praktis, bergizi bebas bau lumpur, dan berkualitas tinggi untuk mendukung gaya hidup sehat keluarga Indonesia murni 100% dibudidaya secara modern.
+            Diolah dari lele bio-probiotik berkualitas, tinggi protein, higienis, praktis disajikan, dan cocok untuk keluarga modern yang mengutamakan cita rasa serta kesehatan.
           </motion.p>
 
           {/* CTA Group Buttons */}
