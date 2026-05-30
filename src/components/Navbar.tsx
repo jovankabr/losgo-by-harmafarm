@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Phone, Fish, Leaf, Sparkles } from "lucide-react";
 import { CONTACT_INFO } from "../data";
+import logoo from "../assets/images/logoo.png";
 
 interface NavbarProps {
   scrollProgress: number;
