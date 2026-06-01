@@ -92,10 +92,10 @@ export default function App() {
               </div>
 
               <div className="text-center">
-                <span className="font-display font-black text-2xl tracking-wide text-white block">
+                <span className="font-display font-black text-3xl tracking-tight text-brand-primary block">
                   Healthy Fish Frozen Food
                 </span>
-                <span className="text-sm tracking-wider text-brand-accent block mt-2">
+                <span className="text-sm tracking-wider text-brand-secondary block mt-2">
                   by HarmaFarm
                 </span>
               </div>
