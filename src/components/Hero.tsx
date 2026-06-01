@@ -44,7 +44,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A4C639] opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#A4C639]" />
             </span>
-            <span>Produk Olahan Lele Probiotik Berkualitas</span>
+            <span>Pasti Bersih, Pasti Enak!</span>
           </motion.div>
 
           {/* Master Headline */}
@@ -54,9 +54,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-display font-black text-4xl sm:text-5xl md:text-[56px] tracking-tight leading-[1.1] text-[#315B35] mb-6"
           >
-            Frozen Food Lele Probiotik <br/>
+            Frozen Food Ikan Marinasi <br/>
             <span className="text-[#A4C639] relative inline-block">
-              Tanpa Bau Lumpur
+              Siap Goreng, Siap Santap!
               <svg
                 className="absolute left-0 bottom-[-8px] w-full h-[12px] text-[#A4C639]/30 -z-10"
                 viewBox="0 0 100 10"
