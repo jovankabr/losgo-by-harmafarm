@@ -21,6 +21,8 @@ import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { CONTACT_INFO } from "./data";
+import logoo from "./assets/logoo.png";
+import harmafarm from "./assets/harmafarm.png";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -81,9 +83,18 @@ export default function App() {
               className="flex flex-col items-center gap-6"
             >
               {/* Spinning Fish Logo frame */}
-              <div className="relative w-16 h-16 bg-brand-primary rounded-2xl flex items-center justify-center text-brand-light shadow-xl shadow-brand-primary/20">
-                <Fish className="w-8 h-8 animate-pulse" />
-                <Leaf className="w-5 h-5 text-brand-accent absolute -top-1 -right-1 rotate-12 drop-shadow-sm animate-bounce" />
+              <div className="flex items-center gap-4">
+                <img
+                  src={logoo}
+                  alt="LOSGo"
+                  className="w-20 h-20 object-contain"
+                />
+
+                <img
+                  src={harmafarm}
+                  alt="HarmaFarm"
+                  className="w-16 h-16 object-contain opacity-90"
+                />
               </div>
 
               <div>
@@ -91,7 +102,7 @@ export default function App() {
                   LOS<span className="text-brand-accent">Go</span>
                 </span>
                 <span className="text-xs uppercase tracking-widest font-black text-brand-accent leading-none block mt-1">
-                  HEALTHY FOOD SOLUTIONS
+                  PRODUCED BY HARMAFARM
                 </span>
               </div>
 
