@@ -90,7 +90,7 @@ export default function About() {
                 <strong>HarmaFarm</strong> hadir sebagai UMKM inovatif asal Cilongok, Banyumas yang mengembangkan berbagai olahan makanan beku (frozen food) siap saji berbasis <strong>probiotik berkualitas tinggi</strong>.
               </p>
               <p className="text-sm sm:text-base">
-                Kami berdedikasi mematahkan stigma bahwa lele adalah komoditas kolam tanah kotor. Melalui kolam berbioteknologi bio-probiotik modern, kami menghasilkan bahan makanan berkepadatan gizi murni yang bersih, renyah, gurih, dan bebas dari bau lumpur khas lele tradisional.
+                Kami berkomitmen menghadirkan produk ikan dan frozen food berkualitas tinggi yang sehat, praktis, dan aman dikonsumsi. Dengan bahan baku pilihan serta proses pengolahan yang higienis, setiap produk HarmaFarm dihasilkan untuk memberikan cita rasa terbaik, kandungan gizi optimal, dan pengalaman konsumsi yang lebih baik bagi keluarga Indonesia.
               </p>
             </div>
 
