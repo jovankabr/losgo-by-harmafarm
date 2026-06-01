@@ -59,13 +59,13 @@ export default function WhyProbiotic() {
         <div id="keunggulan-header" className="text-center max-w-3xl mx-auto mb-16">
           <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-primary mb-3 inline-flex items-center gap-1.5 p-1 px-3 bg-brand-soft rounded-full">
             <Sparkles className="w-3 h-3 text-brand-accent animate-pulse" />
-            Nutrisi Cerdas Generasi Baru
+            KEUNGGULAN HARMAFARM
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
-            Mengapa Lele Probiotik Adalah <span className="text-brand-primary">Nutrisi Terbaik?</span>
+            Mengapa HarmaFarm Menjadi Pilihan <span className="text-brand-primary">Banyak Orang?</span>
           </h2>
           <p className="text-base text-brand-dark/70">
-            Kami mengintegrasikan bioteknologi biosekuriti pangan untuk membesarkan ikan lele yang kaya nutrisi mikro esensial untuk mendorong kesehatan aktif Anda.
+            Produk HarmaFarm diolah dari ikan pilihan, dimarinasi dengan bumbu berkualitas, dan diproses secara higienis untuk menghadirkan cita rasa terbaik bagi Orang Indonesia.
           </p>
         </div>
 
