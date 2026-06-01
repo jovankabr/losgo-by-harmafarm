@@ -82,12 +82,12 @@ export default function About() {
               Tentang Kami
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight text-brand-dark mb-6">
-              Merevolusi Cara Menikmati{" "}
-              <span className="text-brand-primary">Nutrisi Ikan Lokal</span>
+              Mengolah Ikan Lokal Menjadi{" "}
+              <span className="text-brand-primary">Hidangan Praktis dan Bernutrisi</span>
             </h2>
             <div className="space-y-4 text-brand-dark/70 text-base md:text-lg mb-10 text-left">
               <p>
-                <strong>LOSGo</strong> hadir sebagai UMKM inovatif asal Klaten yang mengembangkan berbagai olahan makanan beku (frozen food) siap saji berbasis <strong>lele probiotik berkualitas tinggi</strong>.
+                <strong>HarmaFarm</strong> hadir sebagai UMKM inovatif asal Cilongok, Banyumas yang mengembangkan berbagai olahan makanan beku (frozen food) siap saji berbasis <strong>probiotik berkualitas tinggi</strong>.
               </p>
               <p className="text-sm sm:text-base">
                 Kami berdedikasi mematahkan stigma bahwa lele adalah komoditas kolam tanah kotor. Melalui kolam berbioteknologi bio-probiotik modern, kami menghasilkan bahan makanan berkepadatan gizi murni yang bersih, renyah, gurih, dan bebas dari bau lumpur khas lele tradisional.
