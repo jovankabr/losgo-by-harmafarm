@@ -73,7 +73,7 @@ export default function App() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 bg-brand-dark z-[100] flex flex-col items-center justify-center text-white"
+            className="fixed inset-0 bg-gradient-to-br from-white via-green-50 to-white z-[100] flex flex-col items-center justify-center text-brand-primary"
           >
             {/* Spinning Brand Loading Node */}
             <motion.div
