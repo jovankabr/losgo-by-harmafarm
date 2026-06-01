@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Phone, Fish, Leaf, Sparkles } from "lucide-react";
 import { CONTACT_INFO } from "../data";
-import logoo from "../assets/logoo.png";
+import harmafarm from "../assets/harmafarm.png";
 
 interface NavbarProps {
   scrollProgress: number;
@@ -96,8 +96,8 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
           className="flex items-center group cursor-pointer"
         >
           <img
-            src={logoo}
-            alt="LOSGo Logo"
+            src={harmafarm}
+            alt="HarmaFarm Logo"
             className="h-14 w-auto object-contain"
         />
         </a>
