@@ -98,7 +98,7 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
           <img
             src={harmafarm}
             alt="HarmaFarm Logo"
-            className="h-14 w-auto object-contain"
+            className="h-17 w-auto object-contain"
         />
         </a>
 
