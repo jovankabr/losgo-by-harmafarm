@@ -85,24 +85,18 @@ export default function App() {
               {/* Spinning Fish Logo frame */}
               <div className="flex items-center gap-4">
                 <img
-                  src={logoo}
-                  alt="LOSGo"
-                  className="w-20 h-20 object-contain"
-                />
-
-                <img
                   src={harmafarm}
                   alt="HarmaFarm"
-                  className="w-16 h-16 object-contain opacity-90"
+                  className="w-28 h-28 object-contain"
                 />
               </div>
 
-              <div>
-                <span className="font-display font-black text-3xl tracking-tight text-white block">
-                  LOS<span className="text-brand-accent">Go</span>
+              <div className="text-center">
+                <span className="font-display font-black text-2xl tracking-wide text-white block">
+                  Healthy Fish Frozen Food
                 </span>
-                <span className="text-xs uppercase tracking-widest font-black text-brand-accent leading-none block mt-1">
-                  PRODUCED BY HARMAFARM
+                <span className="text-sm tracking-wider text-brand-accent block mt-2">
+                  by HarmaFarm
                 </span>
               </div>
 
