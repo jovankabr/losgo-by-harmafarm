@@ -111,7 +111,7 @@ export default function Hero() {
             <div className="flex flex-col gap-1">
               <span className="font-display font-bold text-xl text-brand-primary">100%</span>
               <span className="text-[11px] uppercase tracking-wider text-brand-dark/50 font-semibold">
-                Lele Probiotik
+                Ikan Probiotik
               </span>
             </div>
             <div className="flex flex-col gap-1 border-x border-brand-soft/60 px-4">
