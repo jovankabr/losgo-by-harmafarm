@@ -74,7 +74,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="text-base sm:text-lg md:text-xl text-brand-dark/70 leading-relaxed max-w-2xl mb-8"
           >
-            Diolah dari lele probiotik berkualitas, tinggi protein, higienis, praktis disajikan, dan cocok untuk keluarga modern yang mengutamakan cita rasa serta kesehatan.
+            Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga.
           </motion.p>
 
           {/* CTA Group Buttons */}
