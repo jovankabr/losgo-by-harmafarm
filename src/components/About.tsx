@@ -7,6 +7,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Sparkles, Check, Gem, ShieldCheck, HeartPulse, Recycle } from "lucide-react";
 import { IMAGES } from "../data";
+import ownerlosgo from "../assets/ownerlosgo.jpeg";
 
 export default function About() {
   const highlights = [
@@ -59,8 +60,8 @@ export default function About() {
             {/* Main Picture */}
             <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-brand-light relative z-10 bg-brand-bg select-none">
               <img
-                src={IMAGES.aboutFamily}
-                alt="Modern Indonesian Family Dining"
+                src={ownerlosgo}
+                alt="Owner HarmaFarm"
                 className="w-full object-cover aspect-[4/3] hover:scale-103 transition-transform duration-500"
                 referrerPolicy="no-referrer"
               />
@@ -69,9 +70,9 @@ export default function About() {
 
             {/* Experience or Focus Badge */}
             <div className="absolute -bottom-6 -right-6 lg:right-4 z-20 bg-brand-primary text-white py-4 px-5 rounded-2xl shadow-lg border border-brand-secondary">
-              <div className="font-display font-black text-2xl text-brand-accent leading-none">LOSGo</div>
+              <div className="font-display font-black text-xl text-brand-accent leading-none">HarmaFarm</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-white/80 mt-1 leading-tight">
-                UMKM Pelopor<br />Sehat Klaten
+                Pasti Bersih!<br />Pasti Enak!
               </div>
             </div>
           </motion.div>
