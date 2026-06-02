@@ -13,25 +13,25 @@ export default function About() {
   const highlights = [
     {
       title: "Kualitas Premium",
-      desc: "Menjamin bahan baku lele probiotik Grade A yang diproses higienis sempurna tanpa limbah.",
+      desc: "Ikan probiotik pilihan dari budidaya mandiri yang terjamin kesegaran, kualitas, dan keamanannya.",
       icon: Gem,
       color: "bg-emerald-500/10 text-emerald-600",
     },
     {
       title: "Inovasi Modern",
-      desc: "Mengubah komoditas tradisional menjadi sajian frozen food yang berkelas internasional.",
+      desc: "Produk siap goreng dengan bumbu marinasi khas yang praktis tanpa mengurangi cita rasa alami ikan.",
       icon: Sparkles,
       color: "bg-amber-500/10 text-amber-600",
     },
     {
       title: "Kesehatan Unggul",
-      desc: "Alternatif makanan kaya Omega-3 murni yang aman dikonsumsi harian bebas merkuri.",
+      desc: "Sumber protein berkualitas yang diolah secara higienis tanpa bahan pengawet berbahaya untuk mendukung gaya hidup sehat.",
       icon: HeartPulse,
       color: "bg-rose-500/10 text-rose-600",
     },
     {
       title: "Keberlanjutan Lingkungan",
-      desc: "Budidaya sistem bio-filtrasi hemat air yang ramah ekosistem dan mendukung keberlanjutan lokal.",
+      desc: "Budidaya berbasis bahan probiotik yang mendukung produksi pangan sehat sekaligus menjaga keseimbangan lingkungan.",
       icon: Recycle,
       color: "bg-blue-500/10 text-blue-600",
     },
