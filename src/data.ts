@@ -322,23 +322,23 @@ export interface FaqItem {
 export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    question: "Apa perbedaan mendasar lele probiotik dengan lele biasa?",
-    answer: "Lele probiotik LOSGo dibesarkan dalam sistem kolam bio-filtrasi modern yang secara rutin ditambahkan mikroba bermanfaat (probiotik). Probiotik ini memakan sisa pakan dan kotoran lele, menjaga kebersihan air sepanjang siklus hidup. Hasilnya adalah daging lele yang bersih bebas dari herbisida, bebas dari bau lumpur tanah, bertekstur kencang kenyal, dan kaya akan protein alami."
+    question: "Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?",
+    answer: "LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah. Dengan kondisi yang lebih bersih, minim bau amis, dan siap masak, LOSGo memberikan kemudahan bagi konsumen tanpa mengurangi kualitas maupun cita rasa ikan lele."
   },
   {
     id: "faq-2",
-    question: "Bagaimana cara tepat menyimpan produk frozen food LOSGo agar tahan lama?",
-    answer: "Karena kami memprioritaskan makanan sehat alami tanpa pengawet sintetik, Anda wajib menyimpannya di dalam freezer dengan suhu stabil -18°C atau lebih rendah. Dalam kondisi beku rapat seperti ini, produk dapat bertahan segar hingga 6 bulan. Jika sudah dikeluarkan ke pendingin biasa (chiller), sebaiknya dikonsumsi dalam 3 hari."
+    question: "Bagaimana Cara yang Tepat Menyimpan Produk Harma Farm Agar Tahan Lama?",
+    answer: "Karena Harma Farm mengutamakan produk yang sehat dan alami tanpa penggunaan pengawet sintetis, penyimpanan yang tepat sangat penting untuk menjaga kualitas, kesegaran, dan cita rasa produk. Simpan produk dalam kondisi beku di dalam freezer dengan suhu stabil -18°C atau lebih rendah. Dengan kemasan yang tetap tertutup rapat dan penyimpanan yang sesuai, produk dapat bertahan hingga 6 bulan tanpa mengurangi kualitasnya. Apabila produk sudah dipindahkan dari freezer ke chiller atau lemari pendingin biasa, sebaiknya segera dikonsumsi dan tidak disimpan lebih dari 3 hari. Hindari membekukan kembali produk yang sudah dicairkan untuk menjaga keamanan pangan dan kualitas produk tetap optimal."
   },
   {
     id: "faq-3",
-    question: "Apakah produk frozen food LOSGo ini aman dikonsumsi oleh ibu hamil dan anak-anak?",
-    answer: "Sangat aman dan bahkan sangat dianjurkan! Lele probiotik disuplai gizi pakan terpilih bebas logam berat, menjadikannya sumber protein hewani yang bersih dari merkuri (tidak seperti beberapa predator laut). Kandungan asam lemak esensial Omega-3 serta vitamin B12 di dalamnya sangat krusial untuk kecerdasan otak janin dan balita."
+    question: "Apakah Produk Harma Farm Cocok Dikonsumsi oleh Ibu Hamil dan Anak-Anak?",
+    answer: "Produk Harma Farm dibuat dari bahan baku pilihan yang diproses secara higienis dan dapat menjadi bagian dari pola makan bergizi seimbang bagi keluarga. Ikan merupakan sumber protein hewani yang mengandung berbagai nutrisi penting seperti protein, vitamin B12, dan asam lemak esensial. Untuk ibu hamil, ibu menyusui, anak-anak, maupun individu dengan kebutuhan gizi tertentu, disarankan tetap menyesuaikan konsumsi dengan kondisi masing-masing dan berkonsultasi dengan tenaga kesehatan apabila diperlukan."
   },
   {
     id: "faq-4",
-    question: "Bagaimana cara melakukan pemesanan produk? Apakah ada titik offline?",
-    answer: "Sangat mudah! Anda cukup klik tombol 'Pesan via WhatsApp' yang tersebar di halaman ini untuk terhubung langsung dengan Customer Support kami. Kami melayani pengantaran cepat wilayah Yogyakarta, Klaten, Solo, dan sekitarnya menggunakan kurir berpendingin. Kami juga sedang memperluas kemitraan agen reseller di berbagai kota agar semakin dekat dengan Anda."
+    question: "Bagaimana Cara Melakukan Pemesanan Produk Harma Farm? Apakah Tersedia Titik Penjualan Offline?",
+    answer: "Melakukan pemesanan produk Harma Farm sangat mudah. Anda cukup mengklik tombol "Pesan via WhatsApp" yang tersedia di website untuk terhubung langsung dengan tim kami. Tim Harma Farm akan membantu proses pemesanan, konfirmasi produk, hingga pengaturan pengiriman sesuai kebutuhan Anda. Saat ini Harma Farm melayani pengiriman ke wilayah Kabupaten Banyumas dan sekitarnya menggunakan layanan pengiriman yang menjaga kualitas produk selama perjalanan. Selain penjualan online, Harma Farm juga terus memperluas jaringan kemitraan melalui program agen dan reseller di berbagai daerah. Untuk informasi kerja sama maupun ketersediaan produk di wilayah Anda, silakan hubungi tim Harma Farm secara langsung."
   }
 ];
 
@@ -354,31 +354,31 @@ export interface SocialMediaStat {
 export const DIGITAL_PRESENCE: SocialMediaStat[] = [
   {
     platform: "Instagram",
-    handle: "@losgo.healthyfood",
-    metric: "4.8K+ Followers",
-    change: "+24% Growth MoM",
-    actionText: "Lihat Ressep & Tips Sehat",
-    url: "https://instagram.com"
+    handle: "@harmafarm.losgo",
+    metric: "300+ Followers",
+    change: "+1.691% Accounts Reached",
+    actionText: "Lihat Resep & Tips Sehat",
+    url: "https://www.instagram.com/harmafarm.losgo?igsh=MWx0bG02Z3VjOWNvZw=="
   },
   {
     platform: "TikTok",
-    handle: "@losgo.healthy",
-    metric: "12.5K+ Likes",
+    handle: "@harmafarm.losgo",
+    metric: "1.3K+ Likes",
     change: "Viral Video Resep Praktis",
     actionText: "Tonton Ide Penyajian",
-    url: "https://tiktok.com"
+    url: "https://www.tiktok.com/@harmafarm.losgo?_r=1&_t=ZS-96s87slWO38"
   },
   {
     platform: "Google Maps",
-    handle: "Dapur Produksi LOSGo Klaten",
-    metric: "4.9/5 Rating (120+ Ulasan)",
-    change: "100% Wilayah Delivery Aman",
+    handle: "LOSGO LELE ORGANIK HARMAFARM",
+    metric: "4.6/5 Rating (30+ Ulasan)",
+    change: "Pengiriman Cepat & Terjaga",
     actionText: "Rute Petunjuk Produksi",
-    url: "https://maps.google.com"
+    url: "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6?g_st=ic"
   },
   {
     platform: "Website",
-    handle: "losgo.id (Local Store)",
+    handle: "losgo-by-harmafarm",
     metric: "98% Kepuasan Pelanggan",
     change: "Sistem Order 24/7 Terbuka",
     actionText: "Hubungi Admin WhatsApp",
