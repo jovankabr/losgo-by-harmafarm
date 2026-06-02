@@ -5,7 +5,7 @@
 
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { ShoppingCart, Heart, Activity, Check, ShieldCheck, Flame, Scale, Sparkles } from "lucide-react";
+import { ShoppingCart, Heart, Activity, Check, ShieldCheck, Flame, Scale, Sparkles, Handshake } from "lucide-react";
 import { FEATURED_PRODUCTS, CONTACT_INFO, Product } from "../data";
 
 export default function FeaturedProducts() {
@@ -20,7 +20,7 @@ export default function FeaturedProducts() {
     );
   };
 
-  const allTags = ["All", "Lele, "Nila", "Bandeng", "Gurameh", "Rolade"];
+  const allTags = ["Semua", "Lele", "Nila", "Bandeng", "Gurameh", "Rolade"];
 
   const filteredProducts = selectedTag === "Semua" 
     ? FEATURED_PRODUCTS 
