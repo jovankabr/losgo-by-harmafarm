@@ -5,8 +5,10 @@ export default function App() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
         height: "100vh",
         fontSize: "24px",
+        textAlign: "center",
       }}
     >
       404
