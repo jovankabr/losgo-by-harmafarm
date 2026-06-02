@@ -9,11 +9,11 @@ import { Fish, Filter, Soup, Snowflake, Truck, Heart, ArrowDown, ChevronRight, A
 import { PRODUCTION_PROCESS, ProcessStep } from "../data";
 
 const ProcessIcons = [
-  Filter,      // Budidaya Terukur
-  Fish,        // Seleksi Mutu (Lele Probiotik)
-  Soup,        // Produksi Higienis
-  Snowflake,   // Pembekuan Cepat (IQF)
-  Truck,       // Distribusi Terjaga
+  Filter,      // Seleksi Bahan Baku
+  Fish,        // Pembersihan Higienis
+  Soup,        // Marinasi Bumbu Pilihan
+  Snowflake,   // Pengemasan & Pembekuan
+  Truck,       // Siap Dinikmati
   Heart,       // Konsumen Bahagia
 ];
 
@@ -31,10 +31,10 @@ export default function ProductionProcess() {
             Standardisasi Cold Chain Utama
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
-            Proses Produksi Higienis Berstandar <span className="text-brand-primary">Tinggi</span>
+            Proses Produksi <span className="text-brand-primary">HarmaFarm</span>
           </h2>
           <p className="text-sm sm:text-base text-brand-dark/60">
-            Dari pembesaran ramah alam hingga hidangan hangat di meja Anda, kami mengontrol secara presisi setiap tahap keamanan pangan demi menjaga kesempurnaan gizi.
+            Setiap produk HarmaFarm melalui proses seleksi, pembersihan, marinasi, dan pengemasan yang terjaga untuk menghasilkan produk yang praktis dan berkualitas.
           </p>
         </div>
 
