@@ -9,7 +9,7 @@ export default function App() {
         fontSize: "24px",
       }}
     >
-      Website sedang dalam pengembangan
+      Website ini sudah dihapus
     </div>
   );
 }
