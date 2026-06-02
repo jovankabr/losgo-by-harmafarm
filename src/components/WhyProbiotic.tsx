@@ -14,34 +14,34 @@ export default function WhyProbiotic() {
   // Quick comparison data to build high educational trust
   const comparisonData = [
     {
-      metric: "Aroma & Rasa",
-      traditional: "Sering tercium aroma tanah/lumpur yang pekat.",
-      probiotic: "Rasa gurih alami murni, bersih bebas bau tanah.",
-      badge: "Indrawi"
+      metric: "Persiapan Memasak",
+      traditional: "Harus membersihkan, memotong, dan meracik bumbu dari awal.",
+      probiotic: "Sudah dibersihkan dan dimarinasi, siap diolah.",
+      badge: "PROSES"
     },
     {
-      metric: "Metode Budidaya",
-      traditional: "Kolam tanah terbuka, rentan genangan air tercemar.",
-      probiotic: "Kolam bio-fleksibel steril dengan filter probiotik harian.",
-      badge: "Sistem"
+      metric: "Kepraktisan",
+      traditional: "Membutuhkan waktu persiapan lebih lama.",
+      probiotic: "Cukup goreng, kukus, atau panaskan dalam hitungan menit.",
+      badge: "PRAKTIS"
     },
     {
-      metric: "Kepadatan Protein",
-      traditional: "Serat daging lebih lunak / berlemak jenuh tinggi.",
-      probiotic: "Serat padat kokoh, tinggi asam amino esensial.",
-      badge: "Gizi"
+      metric: "Konsistensi Rasa",
+      traditional: "Rasa bergantung pada racikan bumbu masing-masing.",
+      probiotic: "Menggunakan bumbu pilihan dengan cita rasa yang konsisten.",
+      badge: "RASA"
     },
     {
-      metric: "Keamanan Kimia",
-      traditional: "Rentan kontaminasi antibiotik buatan luar & timbal.",
-      probiotic: "Bebas merkuri, tanpa antibiotik sintetik berbahaya.",
-      badge: "Keamanan"
+      metric: "Kebersihan",
+      traditional: "Perlu proses pembersihan tambahan sebelum diolah.",
+      probiotic: "Diproses higienis dan siap dimasak.",
+      badge: "HIGIENIS"
     },
     {
-      metric: "Kemudahan Saji",
-      traditional: "Harus dibersihkan & dibumbui manual (memakan waktu).",
-      probiotic: "Siap beku tinggal goreng atau kukus dalam 10 menit.",
-      badge: "Praktis"
+      metric: "Pilihan Produk",
+      traditional: "Pilihan menu terbatas pada bahan mentah.",
+      probiotic: "Tersedia LOSGo, NilaSigo, Bandeng, Gurame, Rolade, dan Fillet.",
+      badge: "VARIAN"
     }
   ];
 
@@ -129,12 +129,12 @@ export default function WhyProbiotic() {
                 <div className="flex justify-between items-center border-b border-brand-soft/60 pb-4 mb-6">
                   <div>
                     <h4 className="font-display font-black text-lg text-brand-dark">
-                      Tabel Perbandingan Mutu
+                      Keunggulan Produk HarmaFarm
                     </h4>
-                    <p className="text-xs text-brand-dark/50">Bukti keunggulan nyata teknologi bahan pangan LOSGo</p>
+                    <p className="text-xs text-brand-dark/50">Mengapa produk HarmaFarm menjadi pilihan praktis untuk kebutuhan sehari-hari.</p>
                   </div>
                   <div className="bg-brand-accent/20 text-brand-primary font-bold text-[10px] uppercase py-1 px-2.5 rounded-full">
-                    Kualitas Teruji
+                    Pasti Bersih, Pasti Enak!
                   </div>
                 </div>
 
