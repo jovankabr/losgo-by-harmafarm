@@ -10,8 +10,8 @@ import { FEATURED_PRODUCTS, CONTACT_INFO, Product } from "../data";
 
 export default function FeaturedProducts() {
   const [favorites, setFavorites] = useState<string[]>([]);
-  const [selectedTag, setSelectedTag] = useState<string>("All");
-
+  const [selectedTag, setSelectedTag] = useState<string>("Semua");
+  
   const toggleFavorite = (productId: string) => {
     setFavorites(prev => 
       prev.includes(productId) 
@@ -22,12 +22,12 @@ export default function FeaturedProducts() {
 
   const allTags = ["All", "Lele, "Nila", "Bandeng", "Gurameh", "Rolade"];
 
-  const filteredProducts = selectedTag === "All" 
+  const filteredProducts = selectedTag === "Semua" 
     ? FEATURED_PRODUCTS 
     : FEATURED_PRODUCTS.filter(p => p.tags.includes(selectedTag));
 
   const getWaLinkWithProduct = (productName: string) => {
-    const text = encodeURIComponent(`Halo LOSGo! Saya tertarik membeli produk "${productName}" sehat berbasis lele probiotik yang praktis ini. Bagaimana cara pemesanan dan pengirimannya?`);
+    const text = encodeURIComponent(`Halo HarmaFarm! Saya tertarik membeli produk "${productName}" produk frozen food ikan marinasi yang praktis ini. Bagaimana cara pemesanan dan pengirimannya?`);
     return `https://wa.me/6281234567890?text=${text}`;
   };
 
@@ -183,14 +183,14 @@ export default function FeaturedProducts() {
         >
           <div className="flex gap-4 items-center">
             <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-brand-accent shrink-0 border border-white/10 shadow-inner">
-              <ShoppingCart className="w-6 h-6" />
+              <Handshake className="w-6 h-6" />
             </div>
             <div>
               <h4 className="font-display font-black text-base sm:text-lg mb-1">
-                Akan Tersedia Layanan Checkout E-commerce!
+                Ingin Menjadi Reseller HarmaFarm?
               </h4>
               <p className="text-xs text-white/80 max-w-xl">
-                Kami sedang menyiapkan sistem e-commerce checkout otomatis dan integrasi gateway pembayaran untuk pengiriman frozen food nasional yang terjamin aman terlindungi.
+                Bergabung sebagai mitra reseller dan dapatkan akses produk frozen food ikan berkualitas dengan harga khusus serta dukungan promosi dari HarmaFarm.
               </p>
             </div>
           </div>
