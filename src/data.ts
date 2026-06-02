@@ -273,27 +273,43 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "testi-1",
-    name: "Andini Larasati",
-    role: "Ibu Rumah Tangga (3 Anak) - Sleman",
+    name: "Rina",
+    role: "Ibu Rumah Tangga - Purwokerto",
     rating: 5,
-    text: "Anak-anak saya awalnya susah sekali makan ikan lele karena mengeluh bau lumpur. Tapi waktu coba Nugget Lele LOSGo, mereka langsung lahap habis! Teksturnya garing di luar, lembut di dalam, dan tidak amis sama sekali. Benar-benar penyelamat gizi keluarga praktis!",
-    avatarSeed: "Andini"
+    text: "Awalnya ragu coba produk HarmaFarm ini apalagi LOSGo nya, tapi setelah dimasak ternyata rasanya lebih gurih dan tidak ada bau lumpur. Anak-anak juga lebih suka dibanding lele yang biasa saya beli.",
+    avatarSeed: "Rina"
   },
   {
     id: "testi-2",
-    name: "dr. Hendra Wijaya",
-    role: "Pekerja Medis & Fitness Enthusiast - Klaten",
+    name: "Dwi",
+    role: "Ibu Rumah Tangga - Salatiga",
     rating: 5,
-    text: "Sebagai seseorang yang peduli pada kandungan nutrisi, saya sangat merekomendasikan LOSGo. Lele probiotik terbukti memiliki asam lemak jenuh yang lebih rendah dan kebersihan yang jauh mengungguli lele kolam tanah biasa. Baksonya kenyal alami tanpa campuran zat sintetis berbahaya.",
-    avatarSeed: "Hendra"
+    text: "Produk filletnya sangat membantu kluntuk MPASI anak saya. Cocok buat saya yang memiliki anak balita.",
+    avatarSeed: "Dwi"
   },
   {
     id: "testi-3",
-    name: "Rizky Ramadhan",
-    role: "Mahasiswa Senior UGM - Yogyakarta",
+    name: "Arif",
+    role: "Dosen Universitas Jendral Soedirman - Purwokerto",
     rating: 5,
-    text: "Sebagai anak kos yang pengen hidup sehat tapi mageran, siomay lele LOSGo ini beneran jadi andalan. Tinggal kukus sebentar sambil ngerjain tugas, udah dapet camilan protein tinggi yang mengenyangkan. Saus kacangnya juga mantap gurih!",
-    avatarSeed: "Rizky"
+    text: "Tekstur dagingnya padat dan tidak mudah hancur saat dimasak. Sudah beberapa kali pesan dan kualitasnya selalu konsisten.",
+    avatarSeed: "Arif"
+  },
+  {
+    id: "testi-4",
+    name: "Siska",
+    role: "Pekerja Swasta - Bekasi",
+    rating: 5,
+    text: "Saya paling suka karena produknya bersih dan praktis. Tinggal keluarkan dari freezer lalu langsung diolah untuk menu keluarga. Cocok untuk saya yang seorang pekerja.",
+    avatarSeed: "Siska"
+  },
+  {
+    id: "testi-5",
+    name: "Hana",
+    role: "Owner Hana Frozen Food - Purwokerto",
+    rating: 5,
+    text: "Sebagai pelaku usaha kuliner, kualitas bahan baku sangat penting. LOSGo membantu karena ukuran dan kualitas ikannya lebih seragam.",
+    avatarSeed: "Hana"
   }
 ];
 
