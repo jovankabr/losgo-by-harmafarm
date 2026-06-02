@@ -100,45 +100,60 @@ export interface Product {
 
 export const FEATURED_PRODUCTS: Product[] = [
   {
-    id: "nugget",
-    name: "Nugget Lele Probiotik Premium",
-    badge: "Terlaris",
-    image: IMAGES.productNugget,
-    description: "Nugget renyah berlapis tepung panir premium dengan isian daging lele probiotik suwir tebal dan campuran rempah rahasia. Sangat disukai anak-anak.",
-    portion: "Kemasan 250g / isi 12-14 pcs",
-    tags: ["High Protein", "Kid-Friendly"],
-    features: ["Rasa gurih alami", "Tanpa MSG berlebih", "Serat daging premium"]
-  },
-  {
-    id: "bakso",
-    name: "Bakso Lele Probiotik Gurih",
-    badge: "Favorit",
-    image: IMAGES.productBakso,
-    description: "Bakso kenyal lembut bebas boraks yang dibuat dari pasta lele murni berkualitas tinggi. Cocok disajikan bersama kuah hangat maupun digoreng.",
-    portion: "Kemasan 300g / isi 20-22 pcs",
-    tags: ["Gluten-Free Ready", "Praktis"],
-    features: ["Tekstur kenyal alami", "Sudah bersertifikat halalan", "Bebas bau lumpur"]
-  },
-  {
-    id: "siomay",
-    name: "Siomay Lele Probiotik Kukus",
-    badge: "Camilan Sehat",
-    image: IMAGES.productSiomay,
-    description: "Siomay oriental lezat berbalut kulit tipis premium yang diisi adonan lele probiotik cincang lembut dan parutan wortel segar kaya vitamin A.",
-    portion: "Kemasan 200g / isi 10 pcs",
-    tags: ["Serat Tinggi", "Rendah Lemak"],
-    features: ["Kaya serat sayuran", "Saus kacang terpisah", "Rendah kalori jenuh"]
-  },
-  {
-    id: "otak-otak",
-    name: "Otak-Otak Premium Lele Probiotik",
-    badge: "Terbaru",
-    image: IMAGES.productOtakOtak,
-    description: "Otak-otak aromatik panggang bumbu rempah nusantara dengan adonan lele probiotik bertekstur membal kenyal. Nikmat disajikan sebagai teman bersantai.",
-    portion: "Kemasan 250g / isi 12 pcs",
-    tags: ["Herbal Nusantara", "Snack Sehat"],
-    features: ["Daun pisang aromatik", "Kenyal padat bergizi", "Bumbu warisan tradisional"]
+    id: "losgo800",
+    name: "LOSGo 800 gr",
+    badge: "TERLARIS",
+    portion: "800 gr",
+    tags: ["Lele"],
+    description: "Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.",
+    features: ["Siap Goreng", "Bumbu Meresap", "Praktis Disajikan"],
   }
+  {
+    id: "losgo400",
+    name: "LOSGo 400 gr",
+    badge: "FAVORIT",
+    portion: "400 gr",
+    tags: ["Lele"],
+    description: "Pilihan praktis untuk keluarga kecil atau kebutuhan harian.",
+    features: ["Siap Masak", "Ikan Berkualitas", "Pasti Bersih"],
+  },
+  {
+    id: "nilasigo800",
+    name: "NilaSigo 800 gr",
+    badge: "PREMIUM",
+    portion: "800 gr",
+    tags: ["Nila"],
+    description: "Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.",
+    features: ["Bumbu Meresap", "Protein Alami", "Siap Goreng"],
+  },
+  {
+    id: "lekids",
+    name: "Lekids Lele Fillet",
+    badge: "PRAKTIS",
+    portion: "200 gr",
+    tags: ["Fillet"],
+    description: "Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.",
+    features: ["Tanpa Duri", "Mudah Diolah", "Siap Masak"],
+  },
+  {
+    id: "rolade",
+    name: "Rolade Lele",
+    badge: "UNIK",
+    portion: "300 gr",
+    tags: ["Rolade"],
+    description: "Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.",
+    features: ["Olahan Premium", "Praktis", "Cocok Untuk Keluarga"],
+  },
+  {
+    id: "bandeng",
+    name: "Bandeng Presto",
+    badge: "TERBARU",
+    portion: "320 gr",
+    tags: ["Bandeng"],
+    description: "Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.",
+    features: ["Empuk", "Siap Santap", "Praktis"],
+  },
+  {
 ];
 
 export interface ProcessStep {
