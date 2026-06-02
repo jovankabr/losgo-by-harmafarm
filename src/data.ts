@@ -107,7 +107,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "800 gr",
     tags: ["Lele"],
     description: "Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.",
-    features: ["Siap Goreng", "Bumbu Meresap", "Praktis Disajikan"],
+    features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"],
   },
   {
     id: "losgo400",
@@ -117,7 +117,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "400 gr",
     tags: ["Lele"],
     description: "Pilihan praktis untuk keluarga kecil atau kebutuhan harian.",
-    features: ["Siap Masak", "Ikan Berkualitas", "Pasti Bersih"],
+    features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"],
   },
   {
     id: "nilasigo800",
@@ -127,7 +127,17 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "800 gr",
     tags: ["Nila"],
     description: "Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.",
-    features: ["Bumbu Meresap", "Protein Alami", "Siap Goreng"],
+    features: ["Bumbu Meresap", "Alami Tanpa Pengawet", "Proses Higienis"],
+  },
+  {
+    id: "nilasigo400",
+    name: "NilaSigo 400 gr",
+    badge: "POPULER",
+    image: IMAGES.heroDish,
+    portion: "400 gr",
+    tags: ["Nila"],
+    description: "Ukuran praktis untuk sajian keluarga kecil maupun anak kos.",
+    features: ["Bumbu Meresap", "Alami Tanpa Pengawet", "Proses Higienis"]
   },
   {
     id: "leleterbang",
@@ -137,7 +147,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "400 gr",
     tags: ["Lele"],
     description: "Lele utuh siap goreng dengan tekstur renyah dan rasa gurih.",
-    features: ["Siap Goreng", "Renyah", "Favorit Keluarga"]
+    features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"]
   },
   {
     id: "lekids",
@@ -147,7 +157,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "200 gr",
     tags: ["Lele"],
     description: "Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.",
-    features: ["Tanpa Duri", "Mudah Diolah", "Siap Masak"],
+    features: ["Tinggi Protein Omega 3", "Cocok Untuk MPASI", "Tanpa Duri"],
   },
   {
     id: "rolade",
@@ -157,7 +167,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "300 gr",
     tags: ["Rolade"],
     description: "Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.",
-    features: ["Olahan Premium", "Praktis", "Cocok Untuk Keluarga"],
+    features: ["Bergizi", "Favorit Keluarga", "Baik Untuk Otak dan Jantung"],
   },
   {
     id: "bandeng",
@@ -167,7 +177,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "320 gr",
     tags: ["Bandeng"],
     description: "Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.",
-    features: ["Empuk", "Siap Santap", "Praktis"],
+    features: ["Tinggi Kalsium", "Tinggi Protein Omega 3", "Alami Tanpa Pengawet"],
   },
   {
     id: "nilapresto",
@@ -177,7 +187,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "150 gr",
     tags: ["Nila"],
     description: "Nila presto empuk dengan tulang lunak dan rasa gurih alami.",
-    features: ["Presto", "Empuk", "Siap Santap"]
+    features: ["Rendah Lemak", "Tinggi Protein dan Asam Folat", "Proses Higienis"]
   },
   {
     id: "guramebersih",
@@ -187,7 +197,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "Fresh",
     tags: ["Gurame"],
     description: "Gurame segar yang telah dibersihkan dan siap diolah.",
-    features: ["Fresh", "Siap Masak", "Bersih"]
+    features: ["Kaya Kalsium dan Fosfor", "Alami Tanpa Pengawet", "Aman Untuk Ibu Hamil"]
   },
   {
     id: "guramekuning",
@@ -197,7 +207,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "Fresh",
     tags: ["Gurame"],
     description: "Gurame segar dengan marinasi bumbu kuning khas HarmaFarm.",
-    features: ["Bumbu Kuning", "Siap Masak", "Praktis"]
+    features: ["Bebas Amis", "Kaya Antioksidan", "Melancarkan Pencernaan"]
   }
 ];
 
@@ -357,8 +367,8 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
 ];
 
 export const CONTACT_INFO = {
-  phone: "+62 812-3456-7890",
-  whatsappUrl: "https://wa.me/6281234567890?text=Halo%20LOSGo%20saya%20ingin%20memesan%20frozen%20food%20lele%20probiotik%20yang%20enak%20dan%20sehat!",
+  phone: "+62 856-4111-4777",
+  whatsappUrl: "https://wa.me/6285641114777?text=Halo%20HarmaFarm%20saya%20ingin%20memesan%20frozen%20food%20ikan%20probiotik%20yang%20enak%20dan%20sehat!",
   email: "halo@losgo.id",
   address: "Dusun II, Sidowayah, Kec. Polanharjo, Kabupaten Klaten, Jawa Tengah 57474",
   instagram: "https://instagram.com",
