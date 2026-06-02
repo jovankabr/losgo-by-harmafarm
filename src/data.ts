@@ -338,7 +338,7 @@ export const FAQS: FaqItem[] = [
   {
     id: "faq-4",
     question: "Bagaimana Cara Melakukan Pemesanan Produk Harma Farm? Apakah Tersedia Titik Penjualan Offline?",
-    answer: "Melakukan pemesanan produk Harma Farm sangat mudah. Anda cukup mengklik tombol "Pesan via WhatsApp" yang tersedia di website untuk terhubung langsung dengan tim kami. Tim Harma Farm akan membantu proses pemesanan, konfirmasi produk, hingga pengaturan pengiriman sesuai kebutuhan Anda. Saat ini Harma Farm melayani pengiriman ke wilayah Kabupaten Banyumas dan sekitarnya menggunakan layanan pengiriman yang menjaga kualitas produk selama perjalanan. Selain penjualan online, Harma Farm juga terus memperluas jaringan kemitraan melalui program agen dan reseller di berbagai daerah. Untuk informasi kerja sama maupun ketersediaan produk di wilayah Anda, silakan hubungi tim Harma Farm secara langsung."
+    answer: "Melakukan pemesanan produk Harma Farm sangat mudah. Anda cukup mengklik tombol 'Pesan via WhatsApp' yang tersedia di website untuk terhubung langsung dengan tim kami. Tim Harma Farm akan membantu proses pemesanan, konfirmasi produk, hingga pengaturan pengiriman sesuai kebutuhan Anda. Saat ini Harma Farm melayani pengiriman ke wilayah Kabupaten Banyumas dan sekitarnya menggunakan layanan pengiriman yang menjaga kualitas produk selama perjalanan. Selain penjualan online, Harma Farm juga terus memperluas jaringan kemitraan melalui program agen dan reseller di berbagai daerah. Untuk informasi kerja sama maupun ketersediaan produk di wilayah Anda, silakan hubungi tim Harma Farm secara langsung."
   }
 ];
 
