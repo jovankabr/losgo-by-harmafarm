@@ -93,7 +93,7 @@ export default function FAQ() {
             <MessageSquare className="w-10 h-10 text-brand-primary shrink-0" />
             <div>
               <h4 className="font-display font-bold text-xs sm:text-sm text-brand-dark">Ada Pertanyaan Lain?</h4>
-              <p className="text-xs text-brand-dark/50">Konsultan gizi tanggap kami siap melayani chat Anda 24 jam.</p>
+              <p className="text-xs text-brand-dark/50">Hubungi tim HarmaFarm untuk informasi produk, pemesanan, atau pertanyaan lainnya.</p>
             </div>
           </div>
           <a
@@ -102,7 +102,7 @@ export default function FAQ() {
             rel="noopener noreferrer"
             className="btn-primary py-2 px-4 text-xs font-semibold rounded-full shrink-0"
           >
-            Hubungi Customer Care
+            Hubungi HarmaFarm
           </a>
         </div>
 
