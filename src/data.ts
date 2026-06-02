@@ -225,39 +225,39 @@ export interface ProcessStep {
 export const PRODUCTION_PROCESS: ProcessStep[] = [
   {
     id: 1,
-    title: "Budidaya Terukur",
-    description: "Bibit lele unggulan dibesarkan di kolam khusus berteknologi sirkulasi bio-probiotik alami tanpa bahan kimia pencemar.",
-    duration: "Hari ke 1-80"
+    title: "Seleksi Bahan Baku",
+    description: "Ikan pilihan diseleksi berdasarkan kualitas, kesegaran, dan ukuran yang sesuai standar produksi HarmaFarm.",
+    duration: "TAHAP 1"
   },
   {
     id: 2,
-    title: "Seleksi Mutu (Lele Probiotik)",
-    description: "Hanya lele sehat aktif terbaik berukuran ideal yang dipilih untuk menjamin tekstur serat daging optimal berkualitas premium.",
-    duration: "Hari ke 81"
+    title: "Pembersihan Higienis",
+    description: "Bahan baku dibersihkan secara menyeluruh untuk menjaga kualitas dan kenyamanan saat diolah.",
+    duration: "TAHAP 2"
   },
   {
     id: 3,
-    title: "Produksi Higienis",
-    description: "Lele segar dibersihkan secara steril dari kulit, duri, dan lemak berlebih, lalu dicincang halus bersama herba alami nusantara.",
-    duration: "Proses cepat, higienis"
+    title: "Marinasi Bumbu Pilihan",
+    description: "Produk dimarinasi menggunakan bumbu pilihan agar cita rasa lebih meresap dan konsisten.",
+    duration: "TAHAP 3"
   },
   {
     id: 4,
-    title: "Pembekuan Cepat (IQF)",
-    description: "Produk adonan dibentuk, dikemas kedap udara, lalu dibekukan instan suhu ekstrem -18°C untuk mengunci kelembaban dan nutrisi murni.",
-    duration: "Pembekuan < 2 jam"
+    title: "Pengemasan & Pembekuan",
+    description: "Produk dikemas dan disimpan dalam suhu terkontrol untuk menjaga kualitas hingga sampai ke pelanggan.",
+    duration: "TAHAP 4"
   },
   {
     id: 5,
-    title: "Distribusi Terjaga",
-    description: "Dikirim memanfaatkan kotak berpendingin khusus untuk menjaga kualitas rantai dingin (cold chain) tetap stabil hingga titik tujuan.",
-    duration: "Kontrol suhu konstan"
+    title: "Siap Dinikmati",
+    description: "Produk siap goreng, siap masak, dan siap menjadi hidangan favorit keluarga.",
+    duration: "TAHAP 5"
   },
   {
     id: 6,
     title: "Konsumen Bahagia",
     description: "Produk siap saji sehat mendarat di meja makan Anda, menghidangkan kepraktisan bergizi tinggi yang dinikmati seluruh keluarga hangat.",
-    duration: "Siap saji < 10 menit"
+    duration: "TAHAP 6"
   }
 ];
 
