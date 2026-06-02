@@ -23,32 +23,32 @@ export interface TrustIndicator {
 export const TRUST_INDICATORS: TrustIndicator[] = [
   {
     id: "quality",
-    title: "Produk Berkualitas",
-    description: "Diproduksi dengan standar kebersihan tinggi dan kendali mutu yang ketat.",
+    title: "Bahan Baku Berkualitas",
+    description: "Menggunakan ikan pilihan yang diproses dengan standar mutu dan kebersihan yang terjaga.",
     iconName: "Award"
   },
   {
-    id: "probiotic",
-    title: "Lele Probiotik Utama",
-    description: "Budidaya higienis menggunakan sirkulasi probiotik alami, bebas zat kimia berbahaya.",
+    id: "signature",
+    title: "Pasti Bersih, Pasti Enak",
+    description: "Diolah secara higienis dengan bumbu pilihan untuk menghasilkan cita rasa yang konsisten dan lezat.",
     iconName: "Fish"
   },
   {
-    id: "protein",
-    title: "High Protein",
-    description: "Kaya akan protein esensial dan asam amino baik untuk pertumbuhan keluarga.",
+    id: "nutrition",
+    title: "Protein Alami",
+    description: "Sumber protein hewani berkualitas untuk mendukung kebutuhan gizi sehari-hari.",
     iconName: "Activity"
   },
   {
-    id: "hygienic",
-    title: "Higienis & Alami",
-    description: "Proses pembersihan menyeluruh tanpa bau lumpur khas lele tradisional.",
+    id: "practical",
+    title: "Siap Masak & Praktis",
+    description: "Sudah dibersihkan dan dimarinasi sehingga lebih cepat diolah tanpa repot.",
     iconName: "ShieldCheck"
   },
   {
-    id: "practical",
-    title: "Praktis Disajikan",
-    description: "Siap digoreng, dikukus, atau direbus hanya dalam waktu kurang dari 10 menit.",
+    id: "everyone",
+    title: "Cocok Untuk Semua",
+    description: "Pilihan menu praktis untuk keluarga, mahasiswa, pekerja, hingga pelaku usaha kuliner.",
     iconName: "Zap"
   }
 ];
@@ -63,27 +63,31 @@ export interface WhyProbioticItem {
 export const WHY_PROBIOTIC_CATFISH: WhyProbioticItem[] = [
   {
     id: "why-1",
-    title: "Protein Super Tinggi",
-    boldText: "Protein murni di atas rata-rata.",
-    description: "Daging lele probiotik memiliki kepadatan serat protein yang lebih tinggi serta kaya fosfor dan kalsium untuk menutrisi otak anak."
+    title: "Bumbu Meresap Sempurna",
+    boldText: "Siap masak tanpa repot meracik.",
+    description:
+      "Setiap produk dimarinasi dengan bumbu pilihan sehingga menghasilkan cita rasa gurih dan konsisten di setiap sajian."
   },
   {
     id: "why-2",
-    title: "Bebas Bau & Higienis",
-    boldText: "Nol aroma tanah atau lumpur.",
-    description: "Sistem air bioclean terfiltrasi dengan suplemen mikroorganisme baik memastikan rasa daging bersih, gurih alami, dan bertekstur kencang."
+    title: "Pasti Bersih & Higienis",
+    boldText: "Diolah dengan standar kebersihan tinggi.",
+    description:
+      "Ikan dibersihkan secara menyeluruh dan diproses secara higienis untuk menjaga kualitas, rasa, dan keamanan pangan."
   },
   {
     id: "why-3",
-    title: "Budidaya Modern Lestari",
-    boldText: "Eco-friendly & berkelanjutan.",
-    description: "Memanfaatkan bioteknologi probiotik aktif yang mengurai sisa organik, menghemat air, dan menjaga keselarasan lingkungan hayati."
+    title: "Praktis Untuk Aktivitas Padat",
+    boldText: "Siap goreng, siap masak, siap santap.",
+    description:
+      "Cocok untuk keluarga modern, mahasiswa, pekerja, maupun pelaku usaha kuliner yang membutuhkan solusi makanan praktis."
   },
   {
     id: "why-4",
-    title: "Nutrisi Kehamilan & Anak",
-    boldText: "Kaya Omega-3 dan Vitamin B12.",
-    description: "Pilihan aman tanpa merkuri yang sangat direkomendasikan untuk tumbuh kembang prima serta memperkuat fungsi saraf pusat balita."
+    title: "Pilihan Produk Beragam",
+    boldText: "Lele, nila, bandeng, gurame hingga rolade.",
+    description:
+      "HarmaFarm menghadirkan berbagai pilihan olahan ikan berkualitas yang dapat disesuaikan dengan kebutuhan dan selera pelanggan."
   }
 ];
 
