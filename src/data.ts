@@ -130,16 +130,6 @@ export const FEATURED_PRODUCTS: Product[] = [
     features: ["Bumbu Meresap", "Protein Alami", "Siap Goreng"],
   },
   {
-    id: "nilasigo800",
-    name: "NilaSigo 800 gr",
-    badge: "PREMIUM",
-    image: IMAGES.heroDish,
-    portion: "800 gr",
-    tags: ["Nila"],
-    description: "Ukuran praktis untuk sajian keluarga kecil maupun anak kos.",
-    features: ["Praktis", "Siap Masak", "Bumbu Pilihan"]
-  },
-  {
     id: "leleterbang",
     name: "Lele Terbang",
     badge: "UNIK",
@@ -188,16 +178,6 @@ export const FEATURED_PRODUCTS: Product[] = [
     tags: ["Nila"],
     description: "Nila presto empuk dengan tulang lunak dan rasa gurih alami.",
     features: ["Presto", "Empuk", "Siap Santap"]
-  },
-  {
-    id: "bandengpresto",
-    name: "Bandeng Presto",
-    badge: "FAVORIT",
-    image: IMAGES.heroDish,
-    portion: "320 gr",
-    tags: ["Bandeng"],
-    description: "Bandeng presto isi 2 ekor dengan tekstur empuk dan lezat.",
-    features: ["Presto", "Empuk", "Praktis"]
   },
   {
     id: "guramebersih",
