@@ -41,13 +41,13 @@ export default function DigitalPresence() {
         <div id="digital-header" className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
           <div className="lg:col-span-7 text-left">
             <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-secondary mb-3 inline-block">
-              Komunitas Digital Aktif
+              KANAL INFORMASI & PEMESANAN
             </span>
             <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
-              Penyebaran Kampanye Edukasi <span className="text-brand-primary">LOSGo</span> Harian
+              Temukan <span className="text-brand-primary">HarmaFarm</span> di Berbagai Platform
             </h2>
             <p className="text-sm sm:text-base text-brand-dark/60 max-w-xl">
-              Kami aktif mengedukasi jutaan keluarga tentang diet bersih, resep mudah hidangan lele probiotik, dan gaya hidup sehat di seluruh saluran media sosial utama.
+              Ikuti informasi produk terbaru, promo, resep olahan, serta hubungi HarmaFarm melalui berbagai kanal resmi kami.
             </p>
           </div>
 
