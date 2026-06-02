@@ -20,7 +20,7 @@ export default function FeaturedProducts() {
     );
   };
 
-  const allTags = ["All", "High Protein", "Kid-Friendly", "Praktis", "Rendah Lemak", "Snack Sehat"];
+  const allTags = ["All", "Lele, "Nila", "Bandeng", "Gurameh", "Rolade"];
 
   const filteredProducts = selectedTag === "All" 
     ? FEATURED_PRODUCTS 
@@ -46,11 +46,12 @@ export default function FeaturedProducts() {
               Etalase Menu Bergizi
             </span>
             <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-3">
-              Produk Premium <span className="text-brand-primary">Frozen Food LOSGo</span>
+              Katalog Produk <span className="text-brand-primary">Frozen Food HarmaFarm</span>
             </h2>
             <p className="text-sm sm:text-base text-brand-dark/60 max-w-2xl">
-              Dibuat eksklusif dari lele probiotik bergizi dan bumbu rempah pilihan, bebas zat berbahaya, siap masak secepat kilat untuk keluarga tercinta.
+              Berbagai pilihan olahan ikan marinasi dan frozen food berkualitas yang praktis, lezat, dan siap dimasak kapan saja.
             </p>
+            
           </div>
 
           {/* Filter Pill Badges */}
