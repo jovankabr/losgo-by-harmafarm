@@ -28,10 +28,10 @@ export default function FAQ() {
             Tanya Jawab Pintar
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
-            Pertanyaan yang Sering <span className="text-brand-primary">Diajukan</span>
+            Pertanyaan Seputar Produk <span className="text-brand-primary">HarmaFarm</span>
           </h2>
           <p className="text-sm sm:text-base text-brand-dark/60">
-            Temukan jawaban komprehensif seputar budidaya lele probiotik, masa kesegaran, instruksi ramah saji, hingga metode pemesanan produk kami.
+            Temukan informasi seputar produk, penyimpanan, pemesanan, dan cara penyajian produk HarmaFarm.
           </p>
         </div>
 
