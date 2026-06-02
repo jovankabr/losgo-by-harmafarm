@@ -135,6 +135,7 @@ export default function WhyProbiotic() {
                   </div>
                   <div className="bg-brand-accent/20 text-brand-primary font-bold text-[10px] uppercase py-1 px-2.5 rounded-full">
                     Pasti Bersih,
+                    <br />
                     Pasti Enak!
                   </div>
                 </div>
