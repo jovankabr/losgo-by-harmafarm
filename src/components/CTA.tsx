@@ -39,18 +39,20 @@ export default function CTA() {
             {/* Tag block */}
             <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-accent bg-white/10 py-1 px-4 rounded-full mb-6 inline-flex items-center gap-1.5 border border-white/10 backdrop-blur-xs">
               <Sparkles className="w-3.5 h-3.5 fill-brand-accent text-brand-accent animate-pulse" />
-              Nutrisi Praktis, Sehat Tangguh
+              PRODUK HIGIENIS • PRAKTIS • BERKUALITAS
             </span>
 
             {/* Headline */}
             <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight text-white mb-6">
-              Mulai Hidup Lebih Sehat <br className="hidden sm:inline" />
-              Bersama <span className="text-brand-accent">LOSGo Healthy Food</span>
+              Nikmati Produk <span className="text-brand-accent">HarmaFarm</span>
+              <br className="hidden sm:inline" />
+              Yang <span className="text-brand-accent">Praktis</span> dan{" "}
+              <span className="text-brand-accent">Berkualitas</span>
             </h2>
 
             {/* Paragraph copywrite */}
             <p className="text-white/80 text-sm sm:text-base md:text-lg mb-10 max-w-xl leading-relaxed">
-              Bergabunglah bersama ribuan keluarga Indonesia aktif yang telah merasakan kemudahan menyajikan hidangan harian murni kaya protein dan Omega-3 bebas cemas.
+              Hadirkan hidangan berkualitas untuk keluarga dengan produk ikan olahan dan frozen food HarmaFarm yang higienis, praktis, dan siap diolah kapan saja.
             </p>
 
             {/* Action buttons list group */}
@@ -72,7 +74,7 @@ export default function CTA() {
                 }}
                 className="bg-transparent hover:bg-white/10 text-white border-2 border-white/20 font-semibold py-4 px-8 rounded-full sm:text-base transition-all w-full sm:w-auto hover:border-white cursor-pointer"
               >
-                Eksplor Galeri Menu
+                Lihat Katalog Produk
               </button>
             </div>
 
@@ -89,7 +91,7 @@ export default function CTA() {
             {/* Support guarantee subtitle bottom notice */}
             <p className="text-[10px] text-white/50 tracking-wide uppercase mt-8 inline-flex items-center gap-1.5">
               <AlertCircle className="w-3 h-3" />
-              Layanan Pesan Antar Seluruh Yogyakarta, Klaten & Solo Raya Terjamin Fresh
+              Layanan Pesan Antar Banyumas dan Sekitarnya Terjamin Fresh
             </p>
 
           </div>
