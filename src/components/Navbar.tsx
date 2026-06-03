@@ -100,6 +100,10 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
             alt="HarmaFarm Logo"
             className="h-17 w-auto object-contain"
         />
+           <div className="leading-tight">
+            <div className="font-display font-black text-xl text-brand-primary">
+              HarmaFarm
+           </div>
         </a>
 
         {/* Desktop Navigation Link Menu */}
