@@ -6,6 +6,7 @@
 import React from "react";
 import { Fish, Leaf, Sparkles, Mail, Phone, ChevronRight, Heart, ArrowUp } from "lucide-react";
 import { CONTACT_INFO } from "../data";
+import harmafarm from "../assets/harmafarm.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,9 +33,9 @@ export default function Footer() {
     ],
     products: [
       { name: "LOSGo 800 gr", href: "#produk" },
-      { name: "LOSGo 400 gr", href: "#produk" },
       { name: "NilaSigo 800 gr", href: "#produk" },
-      { name: "NilaSigo 400 gr", href: "#produk" },
+      { name: "Lele Fillet (LeKids)", href: "#produk" },
+      { name: "Rolade Lele", href: "#produk" },
     ],
     support: [
       { name: "Hubungi Penjualan", href: "#kontak" },
@@ -62,16 +63,17 @@ export default function Footer() {
               onClick={(e) => handleLinkClick(e, "#home")}
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <div className="relative w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-brand-light shadow-md shadow-brand-primary/20 group-hover:scale-105 transition-transform duration-300">
-                <Fish className="w-5 h-5 absolute" />
-                <Leaf className="w-4 h-4 text-brand-accent absolute -top-1 -right-1 rotate-12 drop-shadow-sm" />
-              </div>
+              <img
+                src={harmafarm}
+                alt="HarmaFarm"
+                className="h-12 w-auto"
+              />
               <div>
                 <span className="font-display font-bold text-2xl tracking-tight text-white">
-                  LOS<span className="text-brand-accent">Go</span>
+                  <span className="text-brand-accent">HarmaFarm</span>
                 </span>
                 <div className="text-[10px] uppercase tracking-widest font-bold text-brand-accent leading-none -mt-1">
-                  HEALTHY FOOD
+                  Pasti Bersih, Pasti Enak!
                 </div>
               </div>
             </a>
