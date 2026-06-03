@@ -10,10 +10,10 @@ import { CONTACT_INFO } from "../data";
 
 export default function CTA() {
   const bulletBenefits = [
-    "Garansi Bebas Bau Lumpur (Amis)",
-    "Pilihan Praktis Siap Sajikan < 10 Menit",
-    "Pengiriman Rantai Dingin (Cold Chain) Aman",
-    "Bebas Zat Kimia / Pengawet Berbahaya",
+    "Produk Higienis dan Berkualitas",
+    "Praktis Disiapkan untuk Keluarga",
+    "Diproses dan Dikemas dengan Baik",
+    "Tersedia Berbagai Pilihan Produk",
   ];
 
   return (
