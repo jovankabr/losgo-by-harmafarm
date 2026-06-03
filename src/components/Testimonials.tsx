@@ -31,13 +31,13 @@ export default function Testimonials() {
         {/* Section Header */}
         <div id="testimonials-header" className="text-center max-w-2xl mx-auto mb-16">
           <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-primary mb-3 inline-block p-1 px-3 bg-brand-soft rounded-full">
-            Suara Pelanggan Setia
+            TESTIMONI PELANGGAN
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
-            Ulasan Kejujuran Komunitas <span className="text-brand-primary">LOSGo</span>
+            Apa Kata Pelanggan <span className="text-brand-primary">HarmaFarm?</span>
           </h2>
           <p className="text-sm sm:text-base text-brand-dark/60">
-            Dengarkan petualangan rasa dan manfaat kebaikan nutrisi lele probiotik secara langsung dari mereka yang telah mengubah menu makannya.
+            Berbagai pengalaman positif dari pelanggan yang telah merasakan kualitas dan kepraktisan produk HarmaFarm.
           </p>
         </div>
 
