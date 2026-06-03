@@ -382,7 +382,7 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
     metric: "98% Kepuasan Pelanggan",
     change: "Sistem Order 24/7 Terbuka",
     actionText: "Hubungi Admin WhatsApp",
-    url: "https://wa.me/6281234567890?text=Halo%20LOSGo%20saya%20tertarik%20dengan%20produk%20frozen%20food%20lele%20probiotik%20sehat!"
+    url: "https://wa.me/6285641114777?text=Halo%20HarmaFarm%20saya%20tertarik%20dengan%20produk%20frozen%20food%ikan%20probiotik%20sehat!"
   }
 ];
 
