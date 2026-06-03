@@ -13,7 +13,7 @@ export default function Contact() {
     {
       title: "WhatsApp Order & Reseller",
       value: CONTACT_INFO.phone,
-      info: "Hubungi untuk order instan Yudhistira Yogyakarta & Jateng",
+      info: "Hubungi kami untuk pemesanan produk, konsultasi, dan informasi resseller.",
       href: CONTACT_INFO.whatsappUrl,
       icon: Phone,
       color: "bg-emerald-50 text-emerald-600 border-emerald-100",
@@ -21,7 +21,7 @@ export default function Contact() {
     {
       title: "E-mail Resmi",
       value: CONTACT_INFO.email,
-      info: "Pertanyaan kerjasama b2b, keagenan, & proposal kemitraan",
+      info: "Terbuka untuk diskusi, kolaborasi bisnis, serta berbagai peluang kerja sama yang saling menguntungkan.",
       href: `mailto:${CONTACT_INFO.email}`,
       icon: Mail,
       color: "bg-blue-50 text-blue-600 border-blue-100",
@@ -35,10 +35,10 @@ export default function Contact() {
       color: "bg-pink-50 text-pink-600 border-pink-100",
     },
     {
-      title: "Dapur Utama & Distribusi",
+      title: "Rumah Produksi dan Penjualan",
       value: CONTACT_INFO.address,
-      info: "Dusun II, Sidowayah, Kec. Polanharjo, Kab. Klaten, Jawa Tengah",
-      href: "https://maps.google.com",
+      info: "Dusun 4 Cirongge, Jl.Siliwangi Jl. Cipendok, Dusun 4 Karangnangka, Depok, Karangtengah, Kec. Cilongok, Kabupaten Banyumas, Jawa Tengah 53162, Indonesia",
+      href: "https://maps.app.goo.gl/asRtC9NfWBkGZdHS7",
       icon: MapPin,
       color: "bg-amber-50 text-amber-600 border-amber-100",
     },
