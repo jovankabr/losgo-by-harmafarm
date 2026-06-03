@@ -28,7 +28,7 @@ export default function ProductionProcess() {
         {/* Section Header */}
         <div id="process-header" className="text-center max-w-3xl mx-auto mb-20">
           <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-primary mb-3 inline-block p-1 px-3 bg-brand-soft rounded-full">
-            Standardisasi Cold Chain Utama
+            PROSES PRODUKSI HIGIENIS
           </span>
           <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
             Proses Produksi <span className="text-brand-primary">HarmaFarm</span>
