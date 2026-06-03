@@ -28,8 +28,8 @@ export default function Contact() {
     },
     {
       title: "Instagram Utama",
-      value: "@losgo.healthyfood",
-      info: "Ikuti video harian seputar menu kreasi lele probiotik sehat",
+      value: "@harmafarm.losgo",
+      info: "Ikuti untuk melihat berbagai promo, kreasi hidangan, resep, dan berbagai hal lainnya.",
       href: CONTACT_INFO.instagram,
       icon: Instagram,
       color: "bg-pink-50 text-pink-600 border-pink-100",
