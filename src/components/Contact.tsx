@@ -37,7 +37,7 @@ export default function Contact() {
     {
       title: "Rumah Produksi dan Penjualan",
       value: CONTACT_INFO.address,
-      info: "Dusun 4 Cirongge, Jl.Siliwangi Jl. Cipendok, Dusun 4 Karangnangka, Depok, Karangtengah, Kec. Cilongok, Kabupaten Banyumas, Jawa Tengah 53162, Indonesia",
+      info: "Pusat produksi dan pengolahan produk HarmaFarm di Kabupaten Banyumas.",
       href: "https://maps.app.goo.gl/asRtC9NfWBkGZdHS7",
       icon: MapPin,
       color: "bg-amber-50 text-amber-600 border-amber-100",
@@ -109,9 +109,9 @@ export default function Contact() {
                 <Clock2 className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-display font-bold text-xs sm:text-sm text-brand-dark leading-none">Jam Operasional CS</h4>
+                <h4 className="font-display font-bold text-xs sm:text-sm text-brand-dark leading-none">Jam Operasional HarmaFarm</h4>
                 <p className="text-xs text-brand-dark/60 mt-1.5 leading-relaxed">
-                  Layanan Chat & Reseller Terbuka Setiap Hari pukul <strong className="font-bold">08:00 - 20:00 WIB</strong>. Pesanan di luar jam kerja diproses segera esok pagi.
+                  Hubungi kami untuk pemesanan produk, informasi reseller, maupun pertanyaan seputar HarmaFarm setiap hari pukul <strong className="font-bold">08:00 - 18:00 WIB.</strong>
                 </p>
               </div>
             </div>
