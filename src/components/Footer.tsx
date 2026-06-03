@@ -26,21 +26,21 @@ export default function Footer() {
   const footerLinks = {
     brand: [
       { name: "Tentang Kami", href: "#tentang-kami" },
-      { name: "Kampanye Sehat", href: "#digital" },
-      { name: "Alur Cold Chain", href: "#proses" },
+      { name: "Keunggulan Produk", href: "#digital" },
+      { name: "Proses Produksi", href: "#proses" },
       { name: "Testimoni Pelanggan", href: "#faq-testimonials-section" },
     ],
     products: [
-      { name: "Nugget Lele Premium", href: "#produk" },
-      { name: "Bakso Lele Gurih", href: "#produk" },
-      { name: "Siomay Lele Kukus", href: "#produk" },
-      { name: "Otak-Otak Tradisional", href: "#produk" },
+      { name: "LOSGo 800 gr", href: "#produk" },
+      { name: "LOSGo 400 gr", href: "#produk" },
+      { name: "NilaSigo 800 gr", href: "#produk" },
+      { name: "NilaSigo 400 gr", href: "#produk" },
     ],
     support: [
       { name: "Hubungi Penjualan", href: "#kontak" },
-      { name: "Saran Gizi & Diet", href: "#faq" },
-      { name: "Daftar Reseller", href: "#produk" },
-      { name: "Petunjuk Peta Dapur", href: "#kontak" },
+      { name: "Program Reseller", href: "#faq" },
+      { name: "Informasi Produk", href: "#produk" },
+      { name: "Lokasi Produksi", href: "#kontak" },
     ],
   };
 
@@ -77,7 +77,7 @@ export default function Footer() {
             </a>
 
             <p className="text-xs sm:text-sm text-white/60 leading-relaxed max-w-sm mt-2">
-              LOSGo didesain sebagai modern healthy food brand asal Klaten yang mendayagunakan lele probiotik suplemen hayati sebagai bahan gizi murni premium berkelanjutan untuk menunjang kebugaran keluarga Indonesia.
+              HarmaFarm menghadirkan berbagai produk olahan ikan dan frozen food berkualitas yang diproses secara higienis, praktis disajikan, dan cocok untuk kebutuhan keluarga sehari-hari.
             </p>
 
             {/* Quick social labels */}
@@ -106,7 +106,7 @@ export default function Footer() {
           {/* Links structure columns (span 2 each) */}
           <div className="lg:col-span-2 flex flex-col items-start gap-4">
             <h4 className="font-display font-black text-xs uppercase tracking-widest text-white leading-none">
-              Jelajahi LOSGo
+              TENTANG HARMAFARM
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               {footerLinks.brand.map((link) => (
@@ -169,12 +169,10 @@ export default function Footer() {
         {/* Lower row: Copyright and credit attribution */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-white/40 text-left" id="footer-bottom-panel">
           <div>
-            &copy; {currentYear} <strong className="font-bold text-white/60">LOSGo Healthy Food</strong>. Hak Cipta Dilindungi Undang-Undang.
+            &copy; {currentYear} <strong className="font-bold text-white/60">Harma Farm</strong>. Hak Cipta Dilindungi Undang-Undang.
           </div>
           <div className="flex items-center gap-1.5 shrink-0 select-none">
-            <span>Dibuat dengan cinta</span>
-            <Heart className="w-3 h-3 text-rose-500 fill-rose-500" />
-            <span>untuk keluarga cerdas & sehat di Indonesia</span>
+            <span>HarmaFarm • Higienis • Praktis • Berkualitas</span>
           </div>
         </div>
 
