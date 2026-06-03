@@ -41,7 +41,7 @@ export default function DigitalPresence() {
         <div id="digital-header" className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
           <div className="lg:col-span-7 text-left">
             <span className="font-display font-extrabold text-xs uppercase tracking-widest text-brand-secondary mb-3 inline-block">
-              KANAL INFORMASI & PEMESANAN
+              INFORMASI & PEMESANAN
             </span>
             <h2 className="font-display font-black text-3xl sm:text-4xl tracking-tight text-brand-dark mb-4">
               Temukan <span className="text-brand-primary">HarmaFarm</span> di Berbagai Platform
@@ -54,9 +54,9 @@ export default function DigitalPresence() {
           {/* Interactive sparkline summary badge */}
           <div className="lg:col-span-5 bg-brand-bg rounded-2xl p-4 border border-brand-soft flex items-center justify-between shadow-sm">
             <div className="text-left">
-              <span className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 leading-none">Interaksi Kolektif</span>
-              <div className="font-display font-bold text-lg text-brand-primary mt-1">+340% MoM</div>
-              <p className="text-[10px] text-brand-dark/50 leading-relaxed font-semibold">Trawling Brand Sehat 2026</p>
+              <span className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 leading-none">PESANAN TERLAYANI</span>
+              <div className="font-display font-bold text-lg text-brand-primary mt-1">1000+ Produk Terjual</div>
+              <p className="text-[10px] text-brand-dark/50 leading-relaxed font-semibold">Melayani Pelanggan Setiap Hari</p>
             </div>
             
             {/* Sparkline Graph */}
