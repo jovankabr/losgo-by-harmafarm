@@ -389,9 +389,9 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
 export const CONTACT_INFO = {
   phone: "+62 856-4111-4777",
   whatsappUrl: "https://wa.me/6285641114777?text=Halo%20HarmaFarm%20saya%20ingin%20memesan%20frozen%20food%20ikan%20probiotik%20yang%20enak%20dan%20sehat!",
-  email: "halo@losgo.id",
-  address: "Dusun II, Sidowayah, Kec. Polanharjo, Kabupaten Klaten, Jawa Tengah 57474",
-  instagram: "https://instagram.com",
-  tiktok: "https://tiktok.com",
-  mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.2185567302485!2d110.61205609999999!3d-7.660167699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a40df6fa0afcb%3A0xe5a363ca97626fc!2sPolanharjo%2C%20Klaten%20Regency%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1717096000000!5m2!1sen!2sid"
+  email: "hartonolosgo@gmail.com",
+  address: "Dusun 4 Cirongge, Jl.Siliwangi Jl. Cipendok, Dusun 4 Karangnangka, Depok, Karangtengah, Kec. Cilongok, Kabupaten Banyumas, Jawa Tengah 53162, Indonesia",
+  instagram: "https://www.instagram.com/harmafarm.losgo?igsh=MWx0bG02Z3VjOWNvZw==",
+  tiktok: "https://www.tiktok.com/@harmafarm.losgo?_r=1&_t=ZS-96s87slWO38",
+  mapsEmbed: "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6?g_st=ic"
 };
