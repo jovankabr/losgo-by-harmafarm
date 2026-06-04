@@ -142,7 +142,7 @@ export default function Contact() {
                   <p className="text-[11px] text-brand-dark/50 mt-0.5">Jawa Tengah</p>
                 </div>
                 <a
-                  href={c?.mapsEmbed || '#'}
+                  href={c?.mapsUrl || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary py-2 px-4 text-xs font-semibold rounded-full flex items-center gap-1 cursor-pointer"
