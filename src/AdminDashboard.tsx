@@ -62,16 +62,12 @@ const DEFAULT: SiteData = {
     logoUrl: '',
     aboutImages: [],
   },
-
   gallery: [],
-
   certifications: [],
-
   youtube: {
     channelName: '',
     url: ''
   },
-
   feedComposition: {
     image: '',
     title: '',
@@ -112,28 +108,17 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 async function uploadToCloudinary(file: File): Promise<string> {
   const formData = new FormData()
-
   formData.append("file", file)
   formData.append("upload_preset", "losgo-upload")
-
   const res = await fetch(
     "https://api.cloudinary.com/v1_1/dtpj53z21/image/upload",
-    {
-      method: "POST",
-      body: formData
-    }
+    { method: "POST", body: formData }
   )
-
-  if (!res.ok) {
-    throw new Error("Upload gagal")
-  }
-
+  if (!res.ok) throw new Error("Upload gagal")
   const data = await res.json()
-
   return data.secure_url
 }
 
-// Komponen upload gambar — gambar disimpan sebagai base64 di JSONBin
 function ImageUploader({ value, onChange }: { value: string; onChange: (base64: string) => void }) {
   const fileRef = useRef<HTMLInputElement>(null)
   const [uploading, setUploading] = useState(false)
@@ -147,14 +132,8 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (base64: 
     }
     setUploading(true)
     uploadToCloudinary(file)
-  .then((url) => {
-    onChange(url)
-    setUploading(false)
-  })
-  .catch(() => {
-    alert("Upload ke Cloudinary gagal")
-    setUploading(false)
-  })
+      .then((url) => { onChange(url); setUploading(false) })
+      .catch(() => { alert("Upload ke Cloudinary gagal"); setUploading(false) })
   }
 
   return (
@@ -179,7 +158,7 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (base64: 
             style={{ width: 90, height: 90, border: '2px dashed #c5d9b3', borderRadius: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', background: '#f9fdf9', gap: 4 }}
           >
             <span style={{ fontSize: 24 }}>📷</span>
-            <span style={{ fontSize: 10, color: '#888', textAlign: 'center', lineHeight: 1.3 }}>Klik pilih<br/>gambar</span>
+            <span style={{ fontSize: 10, color: '#888', textAlign: 'center', lineHeight: 1.3 }}>Klik pilih<br />gambar</span>
           </div>
         )}
         <div style={{ flex: 1 }}>
@@ -191,8 +170,8 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (base64: 
             {uploading ? '⏳ Memproses...' : value ? '🔄 Ganti Gambar' : '📁 Pilih Gambar'}
           </button>
           <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>
-            Format: JPG/PNG/WEBP<br/>
-            Maks: 500KB<br/>
+            Format: JPG/PNG/WEBP<br />
+            Maks: 500KB<br />
             <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>Kompres di squoosh.app</a>
           </div>
         </div>
@@ -331,6 +310,7 @@ export default function AdminDashboard() {
 
         <div style={s.main}>
 
+          {/* ===== TAB: HERO ===== */}
           {tab === 'hero' && (
             <div>
               <div style={s.h2}>🏠 Hero Section</div>
@@ -370,6 +350,7 @@ export default function AdminDashboard() {
             </div>
           )}
 
+          {/* ===== TAB: PRODUK ===== */}
           {tab === 'produk' && (
             <div>
               <div style={s.h2}>🐟 Daftar Produk</div>
@@ -382,15 +363,12 @@ export default function AdminDashboard() {
                     <strong style={{ fontSize: 14 }}>{p.name || `Produk ${i + 1}`}</strong>
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, products: d.products.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
-
-                  {/* Foto Produk */}
                   <Field label="Foto Produk">
                     <ImageUploader
                       value={p.image || ''}
                       onChange={base64 => updateProduct(i, { image: base64 })}
                     />
                   </Field>
-
                   <div style={s.grid2}>
                     <Field label="Nama Produk">
                       <input style={s.input} value={p.name} onChange={e => updateProduct(i, { name: e.target.value })} />
@@ -422,6 +400,7 @@ export default function AdminDashboard() {
             </div>
           )}
 
+          {/* ===== TAB: KONTAK ===== */}
           {tab === 'kontak' && (
             <div>
               <div style={s.h2}>📞 Kontak HarmaFarm</div>
@@ -446,42 +425,26 @@ export default function AdminDashboard() {
                 <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} />
               </Field>
               <Field label="Nama Channel Youtube">
-  <input
-    style={s.input}
-    value={data.youtube?.channelName || ''}
-    onChange={e =>
-      setData(d => ({
-        ...d,
-        youtube: {
-          ...d.youtube,
-          channelName: e.target.value
-        }
-      }))
-    }
-  />
-</Field>
-
-<Field label="Link Channel Youtube">
-  <input
-    style={s.input}
-    value={data.youtube?.url || ''}
-    onChange={e =>
-      setData(d => ({
-        ...d,
-        youtube: {
-          ...d.youtube,
-          url: e.target.value
-        }
-      }))
-    }
-  />
-</Field>
+                <input
+                  style={s.input}
+                  value={data.youtube?.channelName || ''}
+                  onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))}
+                />
+              </Field>
+              <Field label="Link Channel Youtube">
+                <input
+                  style={s.input}
+                  value={data.youtube?.url || ''}
+                  onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))}
+                />
+              </Field>
               <Field label="Link Embed Google Maps">
                 <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} />
               </Field>
             </div>
           )}
 
+          {/* ===== TAB: DIGITAL ===== */}
           {tab === 'digital' && (
             <div>
               <div style={s.h2}>📱 Sosmed & Digital Presence</div>
@@ -521,6 +484,7 @@ export default function AdminDashboard() {
             </div>
           )}
 
+          {/* ===== TAB: FAQ ===== */}
           {tab === 'faq' && (
             <div>
               <div style={s.h2}>❓ FAQ (Pertanyaan Umum)</div>
@@ -544,6 +508,7 @@ export default function AdminDashboard() {
             </div>
           )}
 
+          {/* ===== TAB: TESTIMONI ===== */}
           {tab === 'testimoni' && (
             <div>
               <div style={s.h2}>⭐ Testimoni Pelanggan</div>
@@ -563,7 +528,7 @@ export default function AdminDashboard() {
                   </div>
                   <Field label="Rating (1-5)">
                     <select style={s.input} value={t.rating} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, rating: Number(e.target.value) } : x) }))}>
-                      {[1,2,3,4,5].map(n => <option key={n} value={n}>{n} bintang</option>)}
+                      {[1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n} bintang</option>)}
                     </select>
                   </Field>
                   <Field label="Isi Testimoni">
@@ -577,11 +542,12 @@ export default function AdminDashboard() {
             </div>
           )}
 
+          {/* ===== TAB: BRANDING ===== */}
           {tab === 'branding' && (
             <div>
               <div style={s.h2}>🖼️ Gambar & Branding</div>
 
-              {/* --- LOGO --- */}
+              {/* Logo */}
               <div style={s.card}>
                 <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>🏷️ Logo (Navbar & Footer)</div>
                 <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
@@ -592,201 +558,12 @@ export default function AdminDashboard() {
                 <Field label="Upload Logo">
                   <ImageUploader
                     value={data.branding?.logoUrl || ''}
-                    onChange={base64 => setData(d => ({
-                      ...d,
-                      branding: { ...d.branding, logoUrl: base64 }
-                    }))}
+                    onChange={base64 => setData(d => ({ ...d, branding: { ...d.branding, logoUrl: base64 } }))}
                   />
                 </Field>
               </div>
 
-              {/* ================= GALERI ================= */}
-
-{tab === 'gallery' && (
-  <div>
-    <h2 style={s.h2}>🖼️ Galeri Website</h2>
-
-    {(data.gallery || []).map((item, i) => (
-      <div key={i} style={s.card}>
-        <Field label={`Foto ${i + 1}`}>
-          <ImageUploader
-            value={item.image}
-            onChange={(url) =>
-              setData(d => ({
-                ...d,
-                gallery: d.gallery.map((g, idx) =>
-                  idx === i ? { ...g, image: url } : g
-                )
-              }))
-            }
-          />
-        </Field>
-
-        <Field label="Judul">
-          <input
-            style={s.input}
-            value={item.title}
-            onChange={e =>
-              setData(d => ({
-                ...d,
-                gallery: d.gallery.map((g, idx) =>
-                  idx === i ? { ...g, title: e.target.value } : g
-                )
-              }))
-            }
-          />
-        </Field>
-
-        <Field label="Sub Judul">
-          <input
-            style={s.input}
-            value={item.subtitle}
-            onChange={e =>
-              setData(d => ({
-                ...d,
-                gallery: d.gallery.map((g, idx) =>
-                  idx === i ? { ...g, subtitle: e.target.value } : g
-                )
-              }))
-            }
-          />
-        </Field>
-      </div>
-    ))}
-
-    <button
-      style={s.addBtn}
-      onClick={() =>
-        setData(d => ({
-          ...d,
-          gallery: [
-            ...(d.gallery || []),
-            {
-              image: '',
-              title: '',
-              subtitle: ''
-            }
-          ]
-        }))
-      }
-    >
-      + Tambah Foto Galeri
-    </button>
-  </div>
-
-              {/* ================= SERTIFIKASI ================= */}
-
-{tab === 'sertifikasi' && (
-  <div>
-    <h2 style={s.h2}>🏆 Sertifikasi</h2>
-
-    {(data.certifications || []).map((item, i) => (
-      <div key={i} style={s.card}>
-        <Field label="Nama Sertifikasi">
-          <input
-            style={s.input}
-            value={item.name}
-            onChange={e =>
-              setData(d => ({
-                ...d,
-                certifications: d.certifications.map((c, idx) =>
-                  idx === i ? { ...c, name: e.target.value } : c
-                )
-              }))
-            }
-          />
-        </Field>
-
-        <Field label="Logo Sertifikasi">
-          <ImageUploader
-            value={item.image}
-            onChange={(url) =>
-              setData(d => ({
-                ...d,
-                certifications: d.certifications.map((c, idx) =>
-                  idx === i ? { ...c, image: url } : c
-                )
-              }))
-            }
-          />
-        </Field>
-      </div>
-    ))}
-
-    <button
-      style={s.addBtn}
-      onClick={() =>
-        setData(d => ({
-          ...d,
-          certifications: [
-            ...(d.certifications || []),
-            {
-              name: '',
-              image: ''
-            }
-          ]
-        }))
-      }
-    >
-      + Tambah Sertifikasi
-    </button>
-  </div>
-
-              {/* ================= KOMPOSISI PAKAN ================= */}
-
-{tab === 'pakan' && (
-  <div>
-    <h2 style={s.h2}>🌾 Komposisi Pakan</h2>
-
-    <Field label="Judul">
-      <input
-        style={s.input}
-        value={data.feedComposition?.title || ''}
-        onChange={e =>
-          setData(d => ({
-            ...d,
-            feedComposition: {
-              ...d.feedComposition,
-              title: e.target.value
-            }
-          }))
-        }
-      />
-    </Field>
-
-    <Field label="Deskripsi">
-      <textarea
-        style={s.textarea}
-        value={data.feedComposition?.description || ''}
-        onChange={e =>
-          setData(d => ({
-            ...d,
-            feedComposition: {
-              ...d.feedComposition,
-              description: e.target.value
-            }
-          }))
-        }
-      />
-    </Field>
-
-    <Field label="Gambar">
-      <ImageUploader
-        value={data.feedComposition?.image || ''}
-        onChange={(url) =>
-          setData(d => ({
-            ...d,
-            feedComposition: {
-              ...d.feedComposition,
-              image: url
-            }
-          }))
-        }
-      />
-    </Field>
-  </div>
-
-              {/* --- SLIDESHOW TENTANG KAMI --- */}
+              {/* Slideshow Tentang Kami */}
               <div style={s.card}>
                 <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>📸 Gambar "Tentang Kami" (Slideshow)</div>
                 <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
@@ -795,7 +572,6 @@ export default function AdminDashboard() {
                   <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a>{' '}
                   jika perlu.
                 </p>
-
                 {(data.branding?.aboutImages || []).map((img, i) => (
                   <div key={i} style={{ ...s.card, marginBottom: 10 }}>
                     <div style={s.cardHeader}>
@@ -825,7 +601,6 @@ export default function AdminDashboard() {
                     />
                   </div>
                 ))}
-
                 <button
                   style={s.addBtn}
                   onClick={() => setData(d => ({
@@ -839,6 +614,148 @@ export default function AdminDashboard() {
                   + Tambah Gambar Slideshow
                 </button>
               </div>
+            </div>
+          )}
+
+          {/* ===== TAB: GALLERY ===== */}
+          {tab === 'gallery' && (
+            <div>
+              <div style={s.h2}>🖼️ Galeri Website</div>
+              {(data.gallery || []).map((item, i) => (
+                <div key={i} style={s.card}>
+                  <div style={s.cardHeader}>
+                    <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
+                    <button
+                      style={s.delBtn}
+                      onClick={() => setData(d => ({ ...d, gallery: d.gallery.filter((_, idx) => idx !== i) }))}
+                    >
+                      🗑 Hapus
+                    </button>
+                  </div>
+                  <Field label={`Foto ${i + 1}`}>
+                    <ImageUploader
+                      value={item.image}
+                      onChange={(url) => setData(d => ({
+                        ...d,
+                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g)
+                      }))}
+                    />
+                  </Field>
+                  <Field label="Judul">
+                    <input
+                      style={s.input}
+                      value={item.title}
+                      onChange={e => setData(d => ({
+                        ...d,
+                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, title: e.target.value } : g)
+                      }))}
+                    />
+                  </Field>
+                  <Field label="Sub Judul">
+                    <input
+                      style={s.input}
+                      value={item.subtitle}
+                      onChange={e => setData(d => ({
+                        ...d,
+                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, subtitle: e.target.value } : g)
+                      }))}
+                    />
+                  </Field>
+                </div>
+              ))}
+              <button
+                style={s.addBtn}
+                onClick={() => setData(d => ({
+                  ...d,
+                  gallery: [...(d.gallery || []), { image: '', title: '', subtitle: '' }]
+                }))}
+              >
+                + Tambah Foto Galeri
+              </button>
+            </div>
+          )}
+
+          {/* ===== TAB: SERTIFIKASI ===== */}
+          {tab === 'sertifikasi' && (
+            <div>
+              <div style={s.h2}>🏆 Sertifikasi</div>
+              {(data.certifications || []).map((item, i) => (
+                <div key={i} style={s.card}>
+                  <div style={s.cardHeader}>
+                    <strong style={{ fontSize: 13 }}>Sertifikasi {i + 1}</strong>
+                    <button
+                      style={s.delBtn}
+                      onClick={() => setData(d => ({ ...d, certifications: d.certifications.filter((_, idx) => idx !== i) }))}
+                    >
+                      🗑 Hapus
+                    </button>
+                  </div>
+                  <Field label="Nama Sertifikasi">
+                    <input
+                      style={s.input}
+                      value={item.name}
+                      onChange={e => setData(d => ({
+                        ...d,
+                        certifications: d.certifications.map((c, idx) => idx === i ? { ...c, name: e.target.value } : c)
+                      }))}
+                    />
+                  </Field>
+                  <Field label="Logo Sertifikasi">
+                    <ImageUploader
+                      value={item.image}
+                      onChange={(url) => setData(d => ({
+                        ...d,
+                        certifications: d.certifications.map((c, idx) => idx === i ? { ...c, image: url } : c)
+                      }))}
+                    />
+                  </Field>
+                </div>
+              ))}
+              <button
+                style={s.addBtn}
+                onClick={() => setData(d => ({
+                  ...d,
+                  certifications: [...(d.certifications || []), { name: '', image: '' }]
+                }))}
+              >
+                + Tambah Sertifikasi
+              </button>
+            </div>
+          )}
+
+          {/* ===== TAB: PAKAN ===== */}
+          {tab === 'pakan' && (
+            <div>
+              <div style={s.h2}>🌾 Komposisi Pakan</div>
+              <Field label="Judul">
+                <input
+                  style={s.input}
+                  value={data.feedComposition?.title || ''}
+                  onChange={e => setData(d => ({
+                    ...d,
+                    feedComposition: { ...d.feedComposition, title: e.target.value }
+                  }))}
+                />
+              </Field>
+              <Field label="Deskripsi">
+                <textarea
+                  style={s.textarea}
+                  value={data.feedComposition?.description || ''}
+                  onChange={e => setData(d => ({
+                    ...d,
+                    feedComposition: { ...d.feedComposition, description: e.target.value }
+                  }))}
+                />
+              </Field>
+              <Field label="Gambar">
+                <ImageUploader
+                  value={data.feedComposition?.image || ''}
+                  onChange={(url) => setData(d => ({
+                    ...d,
+                    feedComposition: { ...d.feedComposition, image: url }
+                  }))}
+                />
+              </Field>
             </div>
           )}
 
