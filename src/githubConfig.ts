@@ -1,5 +1,5 @@
 const JSONBIN_BIN_ID = '6a210ac6f5f4af5e29b61efa'
-const JSONBIN_API_KEY = '$2a$10$Vz43GIfa6uUmEzqMKb.RLudjrIeZYblUPHsuN6lUyu45N.ry7KD42'
+const JSONBIN_API_KEY = '$2a$10$Dm8NyoAhi0mTVceRd0C1S.Ka0R7W9.vBY/KqYkyl9Gz8yoWxohBhC'
 const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`
 
 export type SiteData = {
