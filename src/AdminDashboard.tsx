@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { getSiteData, saveSiteData, SiteData } from './supabaseClient'
 
-const ADMIN_PASSWORD = "harmafarm2025"
+const ADMIN_USER = "hartonolosgo"
+const ADMIN_PASSWORD = "harmafarm2020"
+
 const DEFAULT: SiteData = {
   contact: {
     phone: '+62 856-4111-4777',
@@ -86,37 +88,65 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 
 export default function AdminDashboard() {
   const [auth, setAuth] = useState(false)
+  const [un, setUn] = useState('')
   const [pw, setPw] = useState('')
   const [pwError, setPwError] = useState(false)
+  const [data, setData] = useState<SiteData>(DEFAULT)
+  const [tab, setTab] = useState<Tab>('hero')
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
+  const [toast, setToast] = useState('')
+
+  useEffect(() => {
+    getSiteData().then(d => { if (d) setData(d); setLoading(false) })
+  }, [])
+
+  const handleLogin = () => {
+    if (un === ADMIN_USER && pw === ADMIN_PASSWORD) {
+      setAuth(true)
+      setPwError(false)
+    } else {
+      setPwError(true)
+    }
+  }
 
   if (!auth) return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f7f4', fontFamily: 'system-ui' }}>
       <div style={{ background: '#fff', borderRadius: 16, padding: 40, border: '1px solid #d4e8d4', width: 340, textAlign: 'center' }}>
         <div style={{ fontSize: 40, marginBottom: 12 }}>🔒</div>
         <div style={{ fontWeight: 700, fontSize: 18, color: '#315B35', marginBottom: 4 }}>Admin LOSGo</div>
-        <div style={{ fontSize: 13, color: '#888', marginBottom: 24 }}>Masukkan password untuk melanjutkan</div>
+        <div style={{ fontSize: 13, color: '#888', marginBottom: 24 }}>Masukkan username & password</div>
+        <input
+          type="text"
+          placeholder="Username..."
+          value={un}
+          onChange={e => { setUn(e.target.value); setPwError(false) }}
+          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 10 }}
+        />
         <input
           type="password"
           placeholder="Password..."
           value={pw}
           onChange={e => { setPw(e.target.value); setPwError(false) }}
-          onKeyDown={e => { if (e.key === 'Enter') { if (pw === ADMIN_PASSWORD) setAuth(true); else setPwError(true) } }}
-          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box', marginBottom: 8 }}
+          onKeyDown={e => { if (e.key === 'Enter') handleLogin() }}
+          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 8 }}
         />
-        {pwError && <div style={{ color: '#e24b4a', fontSize: 12, marginBottom: 8 }}>Password salah. Coba lagi.</div>}
-        <button
-          onClick={() => { if (pw === ADMIN_PASSWORD) setAuth(true); else setPwError(true) }}
-          style={{ width: '100%', background: '#315B35', color: '#fff', border: 'none', borderRadius: 8, padding: '10px', fontWeight: 700, fontSize: 14, cursor: 'pointer' }}
-        >
+        {pwError && <div style={{ color: '#e24b4a', fontSize: 12, marginBottom: 8 }}>Username atau password salah.</div>}
+        <button onClick={handleLogin} style={{ width: '100%', background: '#315B35', color: '#fff', border: 'none', borderRadius: 8, padding: '10px', fontWeight: 700, fontSize: 14, cursor: 'pointer' }}>
           Masuk
         </button>
       </div>
     </div>
   )
 
-  useEffect(() => {
-    getSiteData().then(d => { if (d) setData(d); setLoading(false) })
-  }, [])
+  if (loading) return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f7f4', fontFamily: 'system-ui' }}>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ fontSize: 40, marginBottom: 12 }}>🐟</div>
+        <div style={{ color: '#315B35', fontWeight: 600 }}>Memuat data HarmaFarm...</div>
+      </div>
+    </div>
+  )
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 3000) }
 
@@ -145,31 +175,25 @@ export default function AdminDashboard() {
     { id: 'testimoni', label: 'Testimoni', icon: '⭐' },
   ]
 
-  if (loading) return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f7f4', fontFamily: 'system-ui' }}>
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: 40, marginBottom: 12 }}>🐟</div>
-        <div style={{ color: '#315B35', fontWeight: 600 }}>Memuat data HarmaFarm...</div>
-      </div>
-    </div>
-  )
-
   return (
     <div style={s.page}>
-      {/* Header */}
       <div style={s.header}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={s.badge}>ADMIN</span>
           <span style={{ fontWeight: 700, fontSize: 16 }}>LOSGo by HarmaFarm</span>
           <span style={s.liveDot}>● Live</span>
         </div>
-        <button onClick={handleSave} disabled={saving} style={s.saveBtn(saving)}>
-          {saving ? '⏳ Menyimpan...' : '💾 Simpan & Publish'}
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          <button onClick={() => setAuth(false)} style={{ background: 'none', border: '1px solid #d4e8d4', borderRadius: 8, padding: '7px 14px', fontSize: 13, cursor: 'pointer', color: '#555' }}>
+            🚪 Keluar
+          </button>
+          <button onClick={handleSave} disabled={saving} style={s.saveBtn(saving)}>
+            {saving ? '⏳ Menyimpan...' : '💾 Simpan & Publish'}
+          </button>
+        </div>
       </div>
 
       <div style={s.layout}>
-        {/* Sidebar */}
         <div style={s.sidebar}>
           <div style={s.sidebarNav}>
             {tabs.map(t => (
@@ -183,10 +207,8 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Main */}
         <div style={s.main}>
 
-          {/* HERO */}
           {tab === 'hero' && (
             <div>
               <div style={s.h2}>🏠 Hero Section</div>
@@ -226,7 +248,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* PRODUK */}
           {tab === 'produk' && (
             <div>
               <div style={s.h2}>🐟 Daftar Produk</div>
@@ -264,7 +285,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* KONTAK */}
           {tab === 'kontak' && (
             <div>
               <div style={s.h2}>📞 Kontak HarmaFarm</div>
@@ -288,13 +308,12 @@ export default function AdminDashboard() {
               <Field label="Link TikTok">
                 <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} />
               </Field>
-              <Field label="Link Embed Google Maps (untuk peta di website)">
+              <Field label="Link Embed Google Maps">
                 <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} />
               </Field>
             </div>
           )}
 
-          {/* DIGITAL */}
           {tab === 'digital' && (
             <div>
               <div style={s.h2}>📱 Sosmed & Digital Presence</div>
@@ -334,7 +353,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* FAQ */}
           {tab === 'faq' && (
             <div>
               <div style={s.h2}>❓ FAQ (Pertanyaan Umum)</div>
@@ -358,7 +376,6 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* TESTIMONI */}
           {tab === 'testimoni' && (
             <div>
               <div style={s.h2}>⭐ Testimoni Pelanggan</div>
@@ -395,7 +412,6 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      {/* Toast */}
       {toast && (
         <div style={{ position: 'fixed', bottom: 24, right: 24, background: toast.startsWith('✅') ? '#315B35' : '#e24b4a', color: '#fff', padding: '12px 20px', borderRadius: 10, fontWeight: 600, fontSize: 14, zIndex: 9999 }}>
           {toast}
