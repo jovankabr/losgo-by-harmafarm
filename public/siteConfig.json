@@ -1,0 +1,50 @@
+{
+  "contact": {
+    "phone": "+62 856-4111-4777",
+    "whatsappUrl": "https://wa.me/6285641114777?text=Halo%20HarmaFarm%20saya%20ingin%20memesan%20frozen%20food%20ikan%20probiotik%20yang%20enak%20dan%20sehat!",
+    "email": "hartonolosgo@gmail.com",
+    "address": "Dusun 4 Cirongge, Jl.Siliwangi Jl. Cipendok, Karangnangka, Cilongok, Kabupaten Banyumas, Jawa Tengah 53162",
+    "instagram": "https://www.instagram.com/harmafarm.losgo",
+    "tiktok": "https://www.tiktok.com/@harmafarm.losgo",
+    "mapsEmbed": "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6"
+  },
+  "hero": {
+    "badge": "Pasti Bersih, Pasti Enak!",
+    "headline": "Frozen Food Ikan Marinasi Siap Goreng, Siap Santap!",
+    "subheadline": "Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga.",
+    "cta1": "Katalog Produk",
+    "cta2": "Pesan Sekarang"
+  },
+  "brand": {
+    "name": "LOSGo by HarmaFarm",
+    "tagline": "Healthy Fish Frozen Food",
+    "description": "HarmaFarm menghadirkan berbagai pilihan olahan ikan berkualitas yang dapat disesuaikan dengan kebutuhan dan selera pelanggan.",
+    "operationalHours": "Setiap hari pukul 08:00 - 18:00 WIB"
+  },
+  "digital": {
+    "ig_handle": "@harmafarm.losgo",
+    "ig_metric": "300+ Followers",
+    "ig_url": "https://www.instagram.com/harmafarm.losgo",
+    "tt_handle": "@harmafarm.losgo",
+    "tt_metric": "1.3K+ Likes",
+    "tt_url": "https://www.tiktok.com/@harmafarm.losgo",
+    "gmaps_metric": "4.6/5 Rating (30+ Ulasan)",
+    "gmaps_url": "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6"
+  },
+  "products": [
+    {"id":"losgo800","name":"LOSGo 800 gr","badge":"TERLARIS","portion":"800 gr","description":"Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.","features":["Tinggi Protein","Alami Tanpa Pengawet","Proses Higienis"],"tags":["Lele"]},
+    {"id":"losgo400","name":"LOSGo 400 gr","badge":"FAVORIT","portion":"400 gr","description":"Pilihan praktis untuk keluarga kecil atau kebutuhan harian.","features":["Tinggi Protein","Alami Tanpa Pengawet","Proses Higienis"],"tags":["Lele"]},
+    {"id":"nilasigo800","name":"NilaSigo 800 gr","badge":"PREMIUM","portion":"800 gr","description":"Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.","features":["Bumbu Meresap","Alami Tanpa Pengawet","Proses Higienis"],"tags":["Nila"]},
+    {"id":"lekids","name":"Lekids Lele Fillet","badge":"PRAKTIS","portion":"200 gr","description":"Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.","features":["Tinggi Protein Omega 3","Cocok Untuk MPASI","Tanpa Duri"],"tags":["Lele"]},
+    {"id":"rolade","name":"Rolade Lele","badge":"UNIK","portion":"300 gr","description":"Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.","features":["Bergizi","Favorit Keluarga","Baik Untuk Otak dan Jantung"],"tags":["Rolade"]},
+    {"id":"bandeng","name":"Bandeng Presto","badge":"TERBARU","portion":"320 gr","description":"Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.","features":["Tinggi Kalsium","Tinggi Protein Omega 3","Alami Tanpa Pengawet"],"tags":["Bandeng"]}
+  ],
+  "faqs": [
+    {"id":"faq-1","question":"Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?","answer":"LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah."},
+    {"id":"faq-2","question":"Bagaimana Cara yang Tepat Menyimpan Produk Harma Farm?","answer":"Simpan produk dalam kondisi beku di dalam freezer dengan suhu stabil -18°C atau lebih rendah. Dengan kemasan yang tetap tertutup rapat, produk dapat bertahan hingga 6 bulan."}
+  ],
+  "testimonials": [
+    {"id":"testi-1","name":"Rina","role":"Ibu Rumah Tangga - Purwokerto","rating":5,"text":"Awalnya ragu coba produk HarmaFarm ini, tapi setelah dimasak ternyata rasanya lebih gurih. Anak-anak juga lebih suka."},
+    {"id":"testi-2","name":"Arif","role":"Dosen Universitas Jendral Soedirman - Purwokerto","rating":5,"text":"Tekstur dagingnya padat dan tidak mudah hancur saat dimasak. Sudah beberapa kali pesan dan kualitasnya selalu konsisten."}
+  ]
+}
