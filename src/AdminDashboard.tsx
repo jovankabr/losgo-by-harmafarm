@@ -446,6 +446,37 @@ export default function AdminDashboard() {
               <Field label="Link TikTok">
                 <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} />
               </Field>
+              <Field label="Nama Channel Youtube">
+  <input
+    style={s.input}
+    value={data.youtube?.channelName || ''}
+    onChange={e =>
+      setData(d => ({
+        ...d,
+        youtube: {
+          ...d.youtube,
+          channelName: e.target.value
+        }
+      }))
+    }
+  />
+</Field>
+
+<Field label="Link Channel Youtube">
+  <input
+    style={s.input}
+    value={data.youtube?.url || ''}
+    onChange={e =>
+      setData(d => ({
+        ...d,
+        youtube: {
+          ...d.youtube,
+          url: e.target.value
+        }
+      }))
+    }
+  />
+</Field>
               <Field label="Link Embed Google Maps">
                 <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} />
               </Field>
