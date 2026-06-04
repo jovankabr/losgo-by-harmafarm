@@ -580,6 +580,7 @@ export default function AdminDashboard() {
           {tab === 'branding' && (
             <div>
               <div style={s.h2}>🖼️ Gambar & Branding</div>
+            )}
 
               {/* --- LOGO --- */}
               <div style={s.card}>
