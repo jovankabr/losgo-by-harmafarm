@@ -38,6 +38,14 @@ export default function Contact() {
       color: "bg-pink-50 text-pink-600 border-pink-100",
     },
     {
+      title: "YouTube Channel",
+      value: "LOSGo Channel",
+      info: "Tonton video produk, proses produksi, edukasi budidaya, dan konten terbaru HarmaFarm.",
+      href: "https://www.youtube.com/@Losgochannel",
+      icon: Youtube,
+      color: "bg-red-50 text-red-600 border-red-100",
+    },
+    {
       title: "Rumah Produksi dan Penjualan",
       value: c?.address || 'Cilongok, Kabupaten Banyumas, Jawa Tengah',
       info: "Pusat produksi dan pengolahan produk HarmaFarm di Kabupaten Banyumas.",
