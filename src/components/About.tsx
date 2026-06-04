@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Sparkles, Check, Gem, ShieldCheck, HeartPulse, Recycle, ChevronLeft, ChevronRight } from "lucide-react";
 import { IMAGES } from "../data";
 import ownerlosgo from "../assets/ownerlosgo.jpeg";
+import timproduksi from "../assets/timproduksi.jpeg";
 import { useSiteData } from "../hooks/useSiteData";
 
 export default function About() {
@@ -15,7 +16,7 @@ export default function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const rawImages = data?.branding?.aboutImages?.filter(Boolean) ?? [];
-  const activeImages = rawImages.length > 0 ? rawImages : [ownerlosgo];
+  const activeImages = rawImages.length > 0 ? rawImages : [ownerlosgo, timproduksi];
 
   // Auto-slide setiap 4 detik jika ada lebih dari 1 gambar
   useEffect(() => {
