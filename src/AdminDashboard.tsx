@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getSiteData, saveSiteData, SiteData } from './githubConfig'
+import { getSiteData, saveSiteData, SiteData } from './supabaseClient'
 
 const ADMIN_USER = "hartonolosgo"
 const ADMIN_PASSWORD = "harmafarm2020"
@@ -44,6 +44,10 @@ const DEFAULT: SiteData = {
     { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'] },
     { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'] },
     { id: 'bandeng', name: 'Bandeng Presto', badge: 'TERBARU', portion: '320 gr', description: 'Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'] },
+    { id: 'guramelokal', name: 'Gurame Lokal', badge: 'LOKAL', portion: '500 gr', description: 'Gurame segar lokal pilihan dengan bumbu marinasi khas HarmaFarm.', features: ['Daging Tebal', 'Bumbu Meresap', 'Proses Higienis'], tags: ['Gurameh'] },
+    { id: 'guramemarinasi', name: 'Gurame Marinasi', badge: 'SPESIAL', portion: '500 gr', description: 'Gurame dengan marinasi bumbu rempah pilihan, siap goreng langsung dari freezer.', features: ['Kaya Rempah', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'] },
+    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '300 gr', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'] },
+    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '400 gr', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'] },
   ],
   faqs: [
     { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah.' },
