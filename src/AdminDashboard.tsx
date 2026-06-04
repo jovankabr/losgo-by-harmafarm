@@ -60,7 +60,7 @@ const DEFAULT: SiteData = {
   ],
 }
 
-type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni'
+type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding'
 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#f4f7f4', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1a1a1a' },
