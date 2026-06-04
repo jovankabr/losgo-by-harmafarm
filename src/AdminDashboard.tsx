@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getSiteData, saveSiteData, SiteData } from './supabaseClient'
+import { getSiteData, saveSiteData, SiteData } from './githubConfig'
 
 const ADMIN_USER = "hartonolosgo"
 const ADMIN_PASSWORD = "harmafarm2020"
