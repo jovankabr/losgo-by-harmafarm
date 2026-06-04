@@ -58,6 +58,10 @@ export type SiteData = {
     rating: number
     text: string
   }[]
+  branding: {
+    logoUrl: string
+    aboutImages: string[]
+  }
 }
 
 export async function getSiteData(): Promise<SiteData | null> {
