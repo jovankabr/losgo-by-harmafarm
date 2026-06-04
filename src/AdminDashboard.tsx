@@ -17,7 +17,7 @@ const DEFAULT: SiteData = {
   hero: {
     badge: 'Pasti Bersih, Pasti Enak!',
     headline: 'Frozen Food Ikan Marinasi Siap Goreng, Siap Santap!',
-    subheadline: 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga.',
+    subheadline: 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga. Diproduksi secara higienis dengan fasilitas bersertifikasi GMP serta menggunakan bahan baku yang telah memenuhi standar Halal.',
     cta1: 'Katalog Produk',
     cta2: 'Pesan Sekarang',
   },
