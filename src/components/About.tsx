@@ -131,9 +131,14 @@ export default function About() {
 
             {/* Experience or Focus Badge */}
             <div className="absolute -bottom-6 -right-6 lg:right-4 z-20 bg-brand-primary text-white py-4 px-5 rounded-2xl shadow-lg border border-brand-secondary">
-              <div className="font-display font-black text-xl text-brand-accent leading-none">HarmaFarm</div>
+              <div className="font-display font-black text-xl text-brand-accent leading-none">Hartono</div>
               <div className="text-[10px] uppercase tracking-widest font-bold text-white/80 mt-1 leading-tight">
-                Pasti Bersih!<br />Pasti Enak!
+                Owner HarmaFarm
+              </> ) : ( <> Tim Produksi
+      </>
+    )}
+  </div>
+</div>
               </div>
             </div>
           </motion.div>
