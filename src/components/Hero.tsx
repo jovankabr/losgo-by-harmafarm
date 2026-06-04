@@ -58,7 +58,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="text-base sm:text-lg md:text-xl text-brand-dark/70 leading-relaxed max-w-2xl mb-8"
           >
-            {hero?.subheadline || 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga.'}
+            {hero?.subheadline || 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga. Diproduksi secara higienis dengan fasilitas bersertifikasi GMP serta menggunakan bahan baku yang telah memenuhi standar Halal.'}
           </motion.p>
 
           <motion.div
