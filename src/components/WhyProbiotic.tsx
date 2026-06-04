@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Leaf, Check, X, ShieldCheck, Sparkles, Smile, Trophy, Award, BrainCircuit, Heart, Droplets } from "lucide-react";
 import { WHY_PROBIOTIC_CATFISH } from "../data";
+import komposisi from "../assets/komposisi.jpeg";
 
 export default function WhyProbiotic() {
   const [activeCard, setActiveCard] = useState<number>(0);
@@ -188,8 +189,66 @@ export default function WhyProbiotic() {
             </motion.div>
           </div>
 
-        </div>
+                </div>
+
+        {/* Komposisi Pakan Probiotik */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16"
+        >
+          <div className="bg-white rounded-3xl border border-brand-soft shadow-lg overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+              
+              <div className="p-8 lg:p-10 text-left">
+                <span className="inline-block bg-brand-soft text-brand-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
+                  Pakan Probiotik HarmaFarm
+                </span>
+
+                <h3 className="font-display font-black text-2xl sm:text-3xl text-brand-dark mb-4">
+                  Nutrisi Alami untuk Menghasilkan Ikan Berkualitas
+                </h3>
+
+                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                  Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan untuk membantu menjaga kesehatan ikan, kualitas daging, dan pertumbuhan yang optimal.
+                </p>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    "Pelet",
+                    "Nanas",
+                    "Gula Merah",
+                    "Air Kelapa",
+                    "Ragi",
+                    "Yakult"
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2 bg-brand-soft/20 rounded-xl px-3 py-2"
+                    >
+                      <Check className="w-4 h-4 text-brand-primary" />
+                      <span className="text-sm font-semibold text-brand-dark">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="h-full">
+                <img
+                  src={komposisi}
+                  alt="Komposisi Pakan Probiotik HarmaFarm"
+                  className="w-full h-full object-cover min-h-[350px]"
+                />
+              </div>
+
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
-  );
 }
