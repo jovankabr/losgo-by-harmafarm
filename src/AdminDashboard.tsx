@@ -79,7 +79,7 @@ const DEFAULT: SiteData = {
   },
 }
 
-type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding' | 'gallery' | 'sertifikasi' | 'youtube' | 'pakan'
+type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding' | 'gallery' | 'sertifikasi' | 'pakan'
 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#f4f7f4', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1a1a1a' },
@@ -294,7 +294,6 @@ export default function AdminDashboard() {
     { id: 'branding', label: 'Gambar & Branding', icon: '🖼️' },
     { id: 'gallery', label: 'Galeri', icon: '🖼️' },
     { id: 'sertifikasi', label: 'Sertifikasi', icon: '🏆' },
-    { id: 'youtube', label: 'Youtube', icon: '📺' },
     { id: 'pakan', label: 'Komposisi Pakan', icon: '🌾' },
   ]
 
@@ -600,6 +599,196 @@ export default function AdminDashboard() {
                   />
                 </Field>
               </div>
+            )}
+
+              {/* ================= GALERI ================= */}
+
+{tab === 'gallery' && (
+  <div>
+    <h2 style={s.h2}>🖼️ Galeri Website</h2>
+
+    {(data.gallery || []).map((item, i) => (
+      <div key={i} style={s.card}>
+        <Field label={`Foto ${i + 1}`}>
+          <ImageUploader
+            value={item.image}
+            onChange={(url) =>
+              setData(d => ({
+                ...d,
+                gallery: d.gallery.map((g, idx) =>
+                  idx === i ? { ...g, image: url } : g
+                )
+              }))
+            }
+          />
+        </Field>
+
+        <Field label="Judul">
+          <input
+            style={s.input}
+            value={item.title}
+            onChange={e =>
+              setData(d => ({
+                ...d,
+                gallery: d.gallery.map((g, idx) =>
+                  idx === i ? { ...g, title: e.target.value } : g
+                )
+              }))
+            }
+          />
+        </Field>
+
+        <Field label="Sub Judul">
+          <input
+            style={s.input}
+            value={item.subtitle}
+            onChange={e =>
+              setData(d => ({
+                ...d,
+                gallery: d.gallery.map((g, idx) =>
+                  idx === i ? { ...g, subtitle: e.target.value } : g
+                )
+              }))
+            }
+          />
+        </Field>
+      </div>
+    ))}
+
+    <button
+      style={s.addBtn}
+      onClick={() =>
+        setData(d => ({
+          ...d,
+          gallery: [
+            ...(d.gallery || []),
+            {
+              image: '',
+              title: '',
+              subtitle: ''
+            }
+          ]
+        }))
+      }
+    >
+      + Tambah Foto Galeri
+    </button>
+  </div>
+)}
+
+              {/* ================= SERTIFIKASI ================= */}
+
+{tab === 'sertifikasi' && (
+  <div>
+    <h2 style={s.h2}>🏆 Sertifikasi</h2>
+
+    {(data.certifications || []).map((item, i) => (
+      <div key={i} style={s.card}>
+        <Field label="Nama Sertifikasi">
+          <input
+            style={s.input}
+            value={item.name}
+            onChange={e =>
+              setData(d => ({
+                ...d,
+                certifications: d.certifications.map((c, idx) =>
+                  idx === i ? { ...c, name: e.target.value } : c
+                )
+              }))
+            }
+          />
+        </Field>
+
+        <Field label="Logo Sertifikasi">
+          <ImageUploader
+            value={item.image}
+            onChange={(url) =>
+              setData(d => ({
+                ...d,
+                certifications: d.certifications.map((c, idx) =>
+                  idx === i ? { ...c, image: url } : c
+                )
+              }))
+            }
+          />
+        </Field>
+      </div>
+    ))}
+
+    <button
+      style={s.addBtn}
+      onClick={() =>
+        setData(d => ({
+          ...d,
+          certifications: [
+            ...(d.certifications || []),
+            {
+              name: '',
+              image: ''
+            }
+          ]
+        }))
+      }
+    >
+      + Tambah Sertifikasi
+    </button>
+  </div>
+)}
+
+              {/* ================= KOMPOSISI PAKAN ================= */}
+
+{tab === 'pakan' && (
+  <div>
+    <h2 style={s.h2}>🌾 Komposisi Pakan</h2>
+
+    <Field label="Judul">
+      <input
+        style={s.input}
+        value={data.feedComposition?.title || ''}
+        onChange={e =>
+          setData(d => ({
+            ...d,
+            feedComposition: {
+              ...d.feedComposition,
+              title: e.target.value
+            }
+          }))
+        }
+      />
+    </Field>
+
+    <Field label="Deskripsi">
+      <textarea
+        style={s.textarea}
+        value={data.feedComposition?.description || ''}
+        onChange={e =>
+          setData(d => ({
+            ...d,
+            feedComposition: {
+              ...d.feedComposition,
+              description: e.target.value
+            }
+          }))
+        }
+      />
+    </Field>
+
+    <Field label="Gambar">
+      <ImageUploader
+        value={data.feedComposition?.image || ''}
+        onChange={(url) =>
+          setData(d => ({
+            ...d,
+            feedComposition: {
+              ...d.feedComposition,
+              image: url
+            }
+          }))
+        }
+      />
+    </Field>
+  </div>
+)}
 
               {/* --- SLIDESHOW TENTANG KAMI --- */}
               <div style={s.card}>
