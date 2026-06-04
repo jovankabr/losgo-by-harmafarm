@@ -83,6 +83,7 @@ feedComposition: {
   title: string
   description: string
 }
+}
 
 export async function getSiteData(): Promise<SiteData | null> {
   try {
