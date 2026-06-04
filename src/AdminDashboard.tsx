@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getSiteData, saveSiteData, SiteData } from './supabaseClient'
 
+const ADMIN_PASSWORD = "harmafarm2025"
 const DEFAULT: SiteData = {
   contact: {
     phone: '+62 856-4111-4777',
@@ -84,11 +85,34 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 export default function AdminDashboard() {
-  const [data, setData] = useState<SiteData>(DEFAULT)
-  const [tab, setTab] = useState<Tab>('hero')
-  const [loading, setLoading] = useState(true)
-  const [saving, setSaving] = useState(false)
-  const [toast, setToast] = useState('')
+  const [auth, setAuth] = useState(false)
+  const [pw, setPw] = useState('')
+  const [pwError, setPwError] = useState(false)
+
+  if (!auth) return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f7f4', fontFamily: 'system-ui' }}>
+      <div style={{ background: '#fff', borderRadius: 16, padding: 40, border: '1px solid #d4e8d4', width: 340, textAlign: 'center' }}>
+        <div style={{ fontSize: 40, marginBottom: 12 }}>🔒</div>
+        <div style={{ fontWeight: 700, fontSize: 18, color: '#315B35', marginBottom: 4 }}>Admin LOSGo</div>
+        <div style={{ fontSize: 13, color: '#888', marginBottom: 24 }}>Masukkan password untuk melanjutkan</div>
+        <input
+          type="password"
+          placeholder="Password..."
+          value={pw}
+          onChange={e => { setPw(e.target.value); setPwError(false) }}
+          onKeyDown={e => { if (e.key === 'Enter') { if (pw === ADMIN_PASSWORD) setAuth(true); else setPwError(true) } }}
+          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box', marginBottom: 8 }}
+        />
+        {pwError && <div style={{ color: '#e24b4a', fontSize: 12, marginBottom: 8 }}>Password salah. Coba lagi.</div>}
+        <button
+          onClick={() => { if (pw === ADMIN_PASSWORD) setAuth(true); else setPwError(true) }}
+          style={{ width: '100%', background: '#315B35', color: '#fff', border: 'none', borderRadius: 8, padding: '10px', fontWeight: 700, fontSize: 14, cursor: 'pointer' }}
+        >
+          Masuk
+        </button>
+      </div>
+    </div>
+  )
 
   useEffect(() => {
     getSiteData().then(d => { if (d) setData(d); setLoading(false) })
