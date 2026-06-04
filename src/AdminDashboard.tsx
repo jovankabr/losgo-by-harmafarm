@@ -580,7 +580,6 @@ export default function AdminDashboard() {
           {tab === 'branding' && (
             <div>
               <div style={s.h2}>🖼️ Gambar & Branding</div>
-            )}
 
               {/* --- LOGO --- */}
               <div style={s.card}>
@@ -600,7 +599,6 @@ export default function AdminDashboard() {
                   />
                 </Field>
               </div>
-            )}
 
               {/* ================= GALERI ================= */}
 
@@ -675,7 +673,6 @@ export default function AdminDashboard() {
       + Tambah Foto Galeri
     </button>
   </div>
-)}
 
               {/* ================= SERTIFIKASI ================= */}
 
@@ -734,7 +731,6 @@ export default function AdminDashboard() {
       + Tambah Sertifikasi
     </button>
   </div>
-)}
 
               {/* ================= KOMPOSISI PAKAN ================= */}
 
@@ -789,7 +785,6 @@ export default function AdminDashboard() {
       />
     </Field>
   </div>
-)}
 
               {/* --- SLIDESHOW TENTANG KAMI --- */}
               <div style={s.card}>
