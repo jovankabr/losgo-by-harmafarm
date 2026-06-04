@@ -498,7 +498,11 @@ export default function AdminDashboard() {
               ))}
               <button style={s.addBtn} onClick={() => setData(d => ({ ...d, testimonials: [...d.testimonials, { id: `testi-${Date.now()}`, name: '', role: '', rating: 5, text: '' }] }))}>
                 + Tambah Testimoni Baru
-              {tab === 'branding' && (
+              </button>
+            </div>
+          )}
+
+          {tab === 'branding' && (
             <div>
               <div style={s.h2}>🖼️ Gambar & Branding</div>
 
