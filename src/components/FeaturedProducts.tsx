@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 import { ShoppingCart, Heart, Check, Scale, Sparkles, Handshake } from "lucide-react";
 import { useSiteData } from "../hooks/useSiteData";
 
-// Import semua gambar produk
+// Import semua gambar produk lokal (fallback)
 import imgLOSGO from "../assets/LOSGO.png";
 import imgNILASIGO from "../assets/NILASIGO.png";
 import imgLEKIDS from "../assets/LEKIDS.png";
@@ -20,16 +20,19 @@ import imgLeleTerbang from "../assets/leleterbang.png";
 import imgNilaPresto from "../assets/nilapresto.png";
 import imgProdukLosgo from "../assets/produklosgo.png";
 
-// Map id produk ke gambar lokal
+// Gambar fallback per id produk
 const imageMap: Record<string, string> = {
   losgo800: imgLOSGO,
   losgo400: imgLOSGO,
   nilasigo800: imgNILASIGO,
+  nilasigo400: imgNILASIGO,
   lekids: imgLEKIDS,
   rolade: imgROLADE,
   bandeng: imgBandeng,
   guramelokal: imgGurameLokal,
   guramemarinasi: imgGurameMari,
+  guramebersih: imgGurameLokal,
+  guramekuning: imgGurameMari,
   leleterbang: imgLeleTerbang,
   nilapresto: imgNilaPresto,
 }
@@ -54,8 +57,9 @@ export default function FeaturedProducts() {
     return `${base}?text=${encodeURIComponent(`Halo HarmaFarm! Saya tertarik membeli produk "${name}". Bagaimana cara pemesanannya?`)}`
   }
 
-  const getImage = (id: string, imageUrl?: string) => {
-    if (imageUrl && imageUrl.startsWith('http')) return imageUrl
+  // Prioritas: gambar yang diupload dari dashboard (base64), lalu fallback lokal
+  const getImage = (id: string, image?: string) => {
+    if (image && image.length > 0) return image
     return imageMap[id] || imgProdukLosgo
   }
 
@@ -97,7 +101,7 @@ export default function FeaturedProducts() {
         <div id="products-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {filteredProducts.map((product, idx) => {
             const isFav = favorites.includes(product.id)
-            const imgSrc = getImage(product.id, (product as any).imageUrl)
+            const imgSrc = getImage(product.id, product.image)
             return (
               <motion.div
                 key={product.id}
@@ -137,6 +141,9 @@ export default function FeaturedProducts() {
                     <h3 className="font-display font-black text-brand-dark text-base sm:text-lg mb-2 leading-tight group-hover:text-brand-primary transition-colors">
                       {product.name}
                     </h3>
+                    {product.price && (
+                      <p className="text-sm font-bold text-brand-primary mb-2">{product.price}</p>
+                    )}
                     <p className="text-xs sm:text-sm text-brand-dark/60 leading-relaxed mb-4 line-clamp-3">
                       {product.description}
                     </p>
