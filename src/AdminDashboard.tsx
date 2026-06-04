@@ -38,16 +38,18 @@ const DEFAULT: SiteData = {
     gmaps_url: 'https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6',
   },
   products: [
+    products: [
     { id: 'losgo800', name: 'LOSGo 800 gr', badge: 'TERLARIS', portion: '800 gr', description: 'Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'] },
     { id: 'losgo400', name: 'LOSGo 400 gr', badge: 'FAVORIT', portion: '400 gr', description: 'Pilihan praktis untuk keluarga kecil atau kebutuhan harian.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'] },
     { id: 'nilasigo800', name: 'NilaSigo 800 gr', badge: 'PREMIUM', portion: '800 gr', description: 'Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'] },
+    { id: 'nilasigo400', name: 'NilaSigo 400 gr', badge: 'HEMAT', portion: '400 gr', description: 'Pilihan ekonomis ikan nila marinasi untuk keluarga kecil.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'] },
+    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '400 gr', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'] },
     { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'] },
     { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'] },
-    { id: 'bandeng', name: 'Bandeng Presto', badge: 'TERBARU', portion: '320 gr', description: 'Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'] },
-    { id: 'guramelokal', name: 'Gurame Lokal', badge: 'LOKAL', portion: '500 gr', description: 'Gurame segar lokal pilihan dengan bumbu marinasi khas HarmaFarm.', features: ['Daging Tebal', 'Bumbu Meresap', 'Proses Higienis'], tags: ['Gurameh'] },
-    { id: 'guramemarinasi', name: 'Gurame Marinasi', badge: 'SPESIAL', portion: '500 gr', description: 'Gurame dengan marinasi bumbu rempah pilihan, siap goreng langsung dari freezer.', features: ['Kaya Rempah', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'] },
-    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '300 gr', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'] },
-    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '400 gr', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'] },
+    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '150 gr', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'] },
+    { id: 'bandeng', name: 'Bandeng Presto', badge: 'GURIH', portion: '320 gr (2 pcs)', description: 'Bandeng presto empuk isi 2 pcs dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'] },
+    { id: 'guramelokal', name: 'Gurameh Lokal Bersih', badge: 'LOKAL', portion: 'per ekor', description: 'Gurameh segar lokal sudah dibersihkan siap masak, bebas sisik dan isi perut.', features: ['Segar Lokal', 'Sudah Dibersihkan', 'Siap Masak'], tags: ['Gurameh'] },
+    { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'] },
   ],
   faqs: [
     { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah.' },
