@@ -7,9 +7,11 @@ import React from "react";
 import { Fish, Leaf, Sparkles, Mail, Phone, ChevronRight, Heart, ArrowUp } from "lucide-react";
 import { CONTACT_INFO } from "../data";
 import harmafarm from "../assets/harmafarm.png";
+import { useSiteData } from "../hooks/useSiteData";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+    const { data } = useSiteData();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -64,7 +66,7 @@ export default function Footer() {
               className="flex items-center gap-2 group cursor-pointer"
             >
               <img
-                src={harmafarm}
+                src={data?.branding?.logoUrl || harmafarm}
                 alt="HarmaFarm"
                 className="h-12 w-auto"
               />
