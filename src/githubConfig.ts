@@ -83,12 +83,20 @@ export async function saveSiteData(data: SiteData): Promise<boolean> {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'X-Master-Key': JSONBIN_API_KEY
+        'X-Master-Key': JSONBIN_API_KEY,
+        'X-Bin-Versioning': 'false'
       },
       body: JSON.stringify(data)
     })
+
+    console.log("STATUS:", res.status)
+
+    const text = await res.text()
+    console.log("RESPONSE:", text)
+
     return res.ok
-  } catch {
+  } catch (err) {
+    console.error("ERROR:", err)
     return false
   }
 }
