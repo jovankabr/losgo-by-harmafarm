@@ -62,6 +62,26 @@ export type SiteData = {
     logoUrl: string
     aboutImages: string[]
   }
+  gallery: {
+  image: string
+  title: string
+  subtitle: string
+}[]
+
+certifications: {
+  name: string
+  image: string
+}[]
+
+youtube: {
+  channelName: string
+  url: string
+}
+
+feedComposition: {
+  image: string
+  title: string
+  description: string
 }
 
 export async function getSiteData(): Promise<SiteData | null> {
