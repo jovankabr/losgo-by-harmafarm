@@ -8,8 +8,24 @@ import { motion } from "motion/react";
 import { Sparkles, Check, Gem, ShieldCheck, HeartPulse, Recycle } from "lucide-react";
 import { IMAGES } from "../data";
 import ownerlosgo from "../assets/ownerlosgo.jpeg";
+import { useSiteData } from "../hooks/useSiteData";
 
 export default function About() {
+  const { data } = useSiteData();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const rawImages = data?.branding?.aboutImages?.filter(Boolean) ?? [];
+  const activeImages = rawImages.length > 0 ? rawImages : [ownerlosgo];
+
+  // Auto-slide setiap 4 detik jika ada lebih dari 1 gambar
+  useEffect(() => {
+    if (activeImages.length <= 1) return;
+    const timer = setInterval(() => {
+      setCurrentIndex(i => (i + 1) % activeImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [activeImages.length]);
+
   const highlights = [
     {
       title: "Kualitas Premium",
@@ -57,15 +73,59 @@ export default function About() {
             {/* Elegant background shadow card border */}
             <div className="absolute -inset-4 bg-brand-soft rounded-3xl -z-10 transform -rotate-1 scale-[0.98]" />
             
-            {/* Main Picture */}
+            {/* Main Picture — Slideshow */}
             <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-brand-light relative z-10 bg-brand-bg select-none">
-              <img
-                src={ownerlosgo}
-                alt="Owner HarmaFarm"
-                className="w-full object-cover aspect-[4/3] hover:scale-103 transition-transform duration-500"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-brand-primary/5 mix-blend-overlay" />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentIndex}
+                  src={activeImages[currentIndex]}
+                  alt={`HarmaFarm foto ${currentIndex + 1}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-full object-cover aspect-[4/3]"
+                />
+              </AnimatePresence>
+
+              {/* Overlay warna tipis */}
+              <div className="absolute inset-0 bg-brand-primary/5 mix-blend-overlay pointer-events-none" />
+
+              {/* Tombol panah kiri & kanan — hanya muncul jika ada lebih dari 1 gambar */}
+              {activeImages.length > 1 && (
+                <>
+                  <button
+                    onClick={() => setCurrentIndex(i => (i - 1 + activeImages.length) % activeImages.length)}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
+                    aria-label="Foto sebelumnya"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setCurrentIndex(i => (i + 1) % activeImages.length)}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition-colors"
+                    aria-label="Foto berikutnya"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+
+                  {/* Dot indicator di bawah gambar */}
+                  <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 z-20">
+                    {activeImages.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setCurrentIndex(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          i === currentIndex
+                            ? "bg-white w-5"
+                            : "bg-white/50 w-2"
+                        }`}
+                        aria-label={`Foto ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Experience or Focus Badge */}
