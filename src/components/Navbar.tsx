@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Phone, Fish, Leaf, Sparkles } from "lucide-react";
 import { CONTACT_INFO } from "../data";
 import harmafarm from "../assets/harmafarm.png";
+import { useSiteData } from "../hooks/useSiteData";
 
 interface NavbarProps {
   scrollProgress: number;
@@ -17,6 +18,7 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+    const { data } = useSiteData();
 
   const navLinks = [
     { name: "Home", href: "#home", id: "home" },
@@ -96,10 +98,10 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
           className="flex items-center group cursor-pointer"
         >
           <img
-            src={harmafarm}
+            src={data?.branding?.logoUrl || harmafarm}
             alt="HarmaFarm Logo"
             className="h-17 w-auto object-contain"
-        />
+          />
           
            <div className="leading-tight">
             <div className="font-display font-black text-2xl">
