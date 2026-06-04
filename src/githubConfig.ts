@@ -40,9 +40,11 @@ export type SiteData = {
     name: string
     badge: string
     portion: string
+    price?: string
     description: string
     features: string[]
     tags: string[]
+    image?: string
   }[]
   faqs: {
     id: string
