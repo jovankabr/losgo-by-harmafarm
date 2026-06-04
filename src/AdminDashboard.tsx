@@ -58,6 +58,10 @@ const DEFAULT: SiteData = {
     { id: 'testi-1', name: 'Rina', role: 'Ibu Rumah Tangga - Purwokerto', rating: 5, text: 'Awalnya ragu coba produk HarmaFarm ini, tapi setelah dimasak ternyata rasanya lebih gurih. Anak-anak juga lebih suka.' },
     { id: 'testi-2', name: 'Arif', role: 'Dosen Universitas Jendral Soedirman - Purwokerto', rating: 5, text: 'Tekstur dagingnya padat dan tidak mudah hancur saat dimasak. Sudah beberapa kali pesan dan kualitasnya selalu konsisten.' },
   ],
+  branding: {
+    logoUrl: '',
+    aboutImages: [],
+  },
 }
 
 type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding'
@@ -246,6 +250,7 @@ export default function AdminDashboard() {
     { id: 'digital', label: 'Sosmed & Digital', icon: '📱' },
     { id: 'faq', label: 'FAQ', icon: '❓' },
     { id: 'testimoni', label: 'Testimoni', icon: '⭐' },
+    { id: 'branding', label: 'Gambar & Branding', icon: '🖼️' },
   ]
 
   return (
@@ -493,7 +498,82 @@ export default function AdminDashboard() {
               ))}
               <button style={s.addBtn} onClick={() => setData(d => ({ ...d, testimonials: [...d.testimonials, { id: `testi-${Date.now()}`, name: '', role: '', rating: 5, text: '' }] }))}>
                 + Tambah Testimoni Baru
-              </button>
+              {tab === 'branding' && (
+            <div>
+              <div style={s.h2}>🖼️ Gambar & Branding</div>
+
+              {/* --- LOGO --- */}
+              <div style={s.card}>
+                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>🏷️ Logo (Navbar & Footer)</div>
+                <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
+                  Logo ini akan tampil di bagian atas (navbar) dan bawah (footer) website.<br />
+                  Gunakan gambar PNG dengan latar transparan untuk hasil terbaik.<br />
+                  Jika kosong, logo default HarmaFarm tetap tampil.
+                </p>
+                <Field label="Upload Logo">
+                  <ImageUploader
+                    value={data.branding?.logoUrl || ''}
+                    onChange={base64 => setData(d => ({
+                      ...d,
+                      branding: { ...d.branding, logoUrl: base64 }
+                    }))}
+                  />
+                </Field>
+              </div>
+
+              {/* --- SLIDESHOW TENTANG KAMI --- */}
+              <div style={s.card}>
+                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>📸 Gambar "Tentang Kami" (Slideshow)</div>
+                <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
+                  Upload beberapa gambar di sini — akan tampil sebagai slideshow otomatis di section Tentang Kami.<br />
+                  Maks 500KB per gambar. Kompres dulu di{' '}
+                  <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a>{' '}
+                  jika perlu.
+                </p>
+
+                {(data.branding?.aboutImages || []).map((img, i) => (
+                  <div key={i} style={{ ...s.card, marginBottom: 10 }}>
+                    <div style={s.cardHeader}>
+                      <strong style={{ fontSize: 13 }}>Gambar {i + 1}</strong>
+                      <button
+                        style={s.delBtn}
+                        onClick={() => setData(d => ({
+                          ...d,
+                          branding: {
+                            ...d.branding,
+                            aboutImages: d.branding.aboutImages.filter((_, idx) => idx !== i)
+                          }
+                        }))}
+                      >
+                        🗑 Hapus
+                      </button>
+                    </div>
+                    <ImageUploader
+                      value={img}
+                      onChange={base64 => setData(d => ({
+                        ...d,
+                        branding: {
+                          ...d.branding,
+                          aboutImages: d.branding.aboutImages.map((x, idx) => idx === i ? base64 : x)
+                        }
+                      }))}
+                    />
+                  </div>
+                ))}
+
+                <button
+                  style={s.addBtn}
+                  onClick={() => setData(d => ({
+                    ...d,
+                    branding: {
+                      ...d.branding,
+                      aboutImages: [...(d.branding?.aboutImages || []), '']
+                    }
+                  }))}
+                >
+                  + Tambah Gambar Slideshow
+                </button>
+              </div>
             </div>
           )}
 
