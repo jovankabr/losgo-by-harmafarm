@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { getSiteData, saveSiteData, SiteData } from './supabaseClient'
+import React, { useState, useEffect, useRef } from 'react'
+import { getSiteData, saveSiteData, SiteData } from './githubConfig'
 
 const ADMIN_USER = "hartonolosgo"
 const ADMIN_PASSWORD = "harmafarm2020"
@@ -38,17 +38,17 @@ const DEFAULT: SiteData = {
     gmaps_url: 'https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6',
   },
   products: [
-    { id: 'losgo800', name: 'LOSGo 800 gr', badge: 'TERLARIS', portion: '800 gr', description: 'Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'] },
-    { id: 'losgo400', name: 'LOSGo 400 gr', badge: 'FAVORIT', portion: '400 gr', description: 'Pilihan praktis untuk keluarga kecil atau kebutuhan harian.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'] },
-    { id: 'nilasigo800', name: 'NilaSigo 800 gr', badge: 'PREMIUM', portion: '800 gr', description: 'Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'] },
-    { id: 'nilasigo400', name: 'NilaSigo 400 gr', badge: 'HEMAT', portion: '400 gr', description: 'Pilihan ekonomis ikan nila marinasi untuk keluarga kecil.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'] },
-    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '400 gr', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'] },
-    { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'] },
-    { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'] },
-    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '150 gr', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'] },
-    { id: 'bandeng', name: 'Bandeng Presto', badge: 'GURIH', portion: '320 gr (2 pcs)', description: 'Bandeng presto empuk isi 2 pcs dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'] },
-    { id: 'guramelokal', name: 'Gurameh Lokal Bersih', badge: 'LOKAL', portion: 'per ekor', description: 'Gurameh segar lokal sudah dibersihkan siap masak, bebas sisik dan isi perut.', features: ['Segar Lokal', 'Sudah Dibersihkan', 'Siap Masak'], tags: ['Gurameh'] },
-    { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'] },
+    { id: 'losgo800', name: 'LOSGo 800 gr', badge: 'TERLARIS', portion: '800 gr', price: '', description: 'Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
+    { id: 'losgo400', name: 'LOSGo 400 gr', badge: 'FAVORIT', portion: '400 gr', price: '', description: 'Pilihan praktis untuk keluarga kecil atau kebutuhan harian.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
+    { id: 'nilasigo800', name: 'NilaSigo 800 gr', badge: 'PREMIUM', portion: '800 gr', price: '', description: 'Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
+    { id: 'nilasigo400', name: 'NilaSigo 400 gr', badge: 'HEMAT', portion: '400 gr', price: '', description: 'Pilihan ekonomis ikan nila marinasi untuk keluarga kecil.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
+    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '400 gr', price: '', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'], image: '' },
+    { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', price: '', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'], image: '' },
+    { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', price: '', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'], image: '' },
+    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '150 gr', price: '', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'], image: '' },
+    { id: 'bandeng', name: 'Bandeng Presto', badge: 'GURIH', portion: '320 gr (2 pcs)', price: '', description: 'Bandeng presto empuk isi 2 pcs dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'], image: '' },
+    { id: 'guramelokal', name: 'Gurameh Lokal Bersih', badge: 'LOKAL', portion: 'per ekor', price: '', description: 'Gurameh segar lokal sudah dibersihkan siap masak, bebas sisik dan isi perut.', features: ['Segar Lokal', 'Sudah Dibersihkan', 'Siap Masak'], tags: ['Gurameh'], image: '' },
+    { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', price: '', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'], image: '' },
   ],
   faqs: [
     { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah.' },
@@ -89,6 +89,71 @@ const s: Record<string, React.CSSProperties> = {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return <div style={s.fieldWrap}><label style={s.label}>{label}</label>{children}</div>
+}
+
+// Komponen upload gambar — gambar disimpan sebagai base64 di JSONBin
+function ImageUploader({ value, onChange }: { value: string; onChange: (base64: string) => void }) {
+  const fileRef = useRef<HTMLInputElement>(null)
+  const [uploading, setUploading] = useState(false)
+
+  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    if (file.size > 500 * 1024) {
+      alert('Ukuran gambar maksimal 500KB. Kompres dulu di https://squoosh.app')
+      return
+    }
+    setUploading(true)
+    const reader = new FileReader()
+    reader.onload = () => {
+      onChange(reader.result as string)
+      setUploading(false)
+    }
+    reader.readAsDataURL(file)
+  }
+
+  return (
+    <div>
+      <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleFile} />
+      <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+        {value ? (
+          <div style={{ position: 'relative', display: 'inline-block' }}>
+            <img
+              src={value}
+              alt="preview"
+              style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '1px solid #d4e8d4', display: 'block' }}
+            />
+            <button
+              onClick={() => onChange('')}
+              style={{ position: 'absolute', top: -6, right: -6, background: '#e24b4a', color: '#fff', border: 'none', borderRadius: '50%', width: 20, height: 20, fontSize: 11, cursor: 'pointer', lineHeight: '20px', padding: 0 }}
+            >✕</button>
+          </div>
+        ) : (
+          <div
+            onClick={() => fileRef.current?.click()}
+            style={{ width: 90, height: 90, border: '2px dashed #c5d9b3', borderRadius: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', background: '#f9fdf9', gap: 4 }}
+          >
+            <span style={{ fontSize: 24 }}>📷</span>
+            <span style={{ fontSize: 10, color: '#888', textAlign: 'center', lineHeight: 1.3 }}>Klik pilih<br/>gambar</span>
+          </div>
+        )}
+        <div style={{ flex: 1 }}>
+          <button
+            onClick={() => fileRef.current?.click()}
+            disabled={uploading}
+            style={{ background: '#e8f5ee', color: '#315B35', border: '1px solid #c5d9b3', borderRadius: 7, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'block', marginBottom: 6 }}
+          >
+            {uploading ? '⏳ Memproses...' : value ? '🔄 Ganti Gambar' : '📁 Pilih Gambar'}
+          </button>
+          <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>
+            Format: JPG/PNG/WEBP<br/>
+            Maks: 500KB<br/>
+            <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>Kompres di squoosh.app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function AdminDashboard() {
@@ -153,7 +218,7 @@ export default function AdminDashboard() {
     </div>
   )
 
-  const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 3000) }
+  const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 3500) }
 
   const handleSave = async () => {
     setSaving(true)
@@ -170,6 +235,9 @@ export default function AdminDashboard() {
     setData(d => ({ ...d, brand: { ...d.brand, [k]: v } }))
   const setDigital = (k: keyof SiteData['digital'], v: string) =>
     setData(d => ({ ...d, digital: { ...d.digital, [k]: v } }))
+
+  const updateProduct = (i: number, patch: Partial<SiteData['products'][0]>) =>
+    setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, ...patch } : x) }))
 
   const tabs: { id: Tab; label: string; icon: string }[] = [
     { id: 'hero', label: 'Hero Section', icon: '🏠' },
@@ -256,35 +324,50 @@ export default function AdminDashboard() {
           {tab === 'produk' && (
             <div>
               <div style={s.h2}>🐟 Daftar Produk</div>
+              <div style={{ background: '#fffbe6', border: '1px solid #ffe58f', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#7c5800' }}>
+                📸 <strong>Upload gambar produk:</strong> Klik area foto di tiap produk. Ukuran maks 500KB — kompres dulu di <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a> jika perlu.
+              </div>
               {data.products.map((p, i) => (
                 <div key={p.id} style={s.card}>
                   <div style={s.cardHeader}>
                     <strong style={{ fontSize: 14 }}>{p.name || `Produk ${i + 1}`}</strong>
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, products: d.products.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
+
+                  {/* Foto Produk */}
+                  <Field label="Foto Produk">
+                    <ImageUploader
+                      value={p.image || ''}
+                      onChange={base64 => updateProduct(i, { image: base64 })}
+                    />
+                  </Field>
+
                   <div style={s.grid2}>
                     <Field label="Nama Produk">
-                      <input style={s.input} value={p.name} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, name: e.target.value } : x) }))} />
+                      <input style={s.input} value={p.name} onChange={e => updateProduct(i, { name: e.target.value })} />
                     </Field>
                     <Field label="Badge (TERLARIS, FAVORIT, dll)">
-                      <input style={s.input} value={p.badge} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, badge: e.target.value } : x) }))} />
+                      <input style={s.input} value={p.badge} onChange={e => updateProduct(i, { badge: e.target.value })} />
                     </Field>
                     <Field label="Porsi / Berat">
-                      <input style={s.input} value={p.portion} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, portion: e.target.value } : x) }))} />
+                      <input style={s.input} value={p.portion} onChange={e => updateProduct(i, { portion: e.target.value })} />
                     </Field>
-                    <Field label="Tag (Lele, Nila, dll)">
-                      <input style={s.input} value={p.tags.join(', ')} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, tags: e.target.value.split(',').map(t => t.trim()) } : x) }))} />
+                    <Field label="Harga (misal: Rp 35.000)">
+                      <input style={s.input} value={p.price || ''} onChange={e => updateProduct(i, { price: e.target.value })} placeholder="Rp 35.000" />
                     </Field>
                   </div>
+                  <Field label="Tag (Lele, Nila, dll)">
+                    <input style={s.input} value={p.tags.join(', ')} onChange={e => updateProduct(i, { tags: e.target.value.split(',').map(t => t.trim()) })} />
+                  </Field>
                   <Field label="Deskripsi Produk">
-                    <textarea style={s.textarea} value={p.description} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, description: e.target.value } : x) }))} />
+                    <textarea style={s.textarea} value={p.description} onChange={e => updateProduct(i, { description: e.target.value })} />
                   </Field>
                   <Field label="Fitur / Keunggulan (pisah dengan koma)">
-                    <input style={s.input} value={p.features.join(', ')} onChange={e => setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, features: e.target.value.split(',').map(f => f.trim()) } : x) }))} />
+                    <input style={s.input} value={p.features.join(', ')} onChange={e => updateProduct(i, { features: e.target.value.split(',').map(f => f.trim()) })} />
                   </Field>
                 </div>
               ))}
-              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, products: [...d.products, { id: `prod-${Date.now()}`, name: 'Produk Baru', badge: 'BARU', portion: '200 gr', description: '', features: [], tags: [] }] }))}>
+              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, products: [...d.products, { id: `prod-${Date.now()}`, name: 'Produk Baru', badge: 'BARU', portion: '200 gr', price: '', description: '', features: [], tags: [], image: '' }] }))}>
                 + Tambah Produk Baru
               </button>
             </div>
