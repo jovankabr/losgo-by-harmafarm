@@ -25,12 +25,16 @@ export default function TrustBar() {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
           {logos.map((logo) => (
-            <img
+            <div
               key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
-            />
+              className="flex items-center justify-center h-20 w-32"
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-12 max-w-full object-contain transition-transform duration-300 hover:scale-105"
+              />
+            </div>
           ))}
         </div>
       </div>
