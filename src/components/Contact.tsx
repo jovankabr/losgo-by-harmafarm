@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, YouTube } from "lucide-react";
 import { useSiteData } from "../hooks/useSiteData";
 
 export default function Contact() {
