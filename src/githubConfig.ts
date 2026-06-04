@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = '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'
+const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN as string
 const GITHUB_OWNER = 'jovankabr'
 const GITHUB_REPO = 'losgo-by-harmafarm'
 const CONFIG_PATH = 'public/siteConfig.json'
