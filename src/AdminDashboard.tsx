@@ -62,9 +62,24 @@ const DEFAULT: SiteData = {
     logoUrl: '',
     aboutImages: [],
   },
+
+  gallery: [],
+
+  certifications: [],
+
+  youtube: {
+    channelName: '',
+    url: ''
+  },
+
+  feedComposition: {
+    image: '',
+    title: '',
+    description: ''
+  },
 }
 
-type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding'
+type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding' | 'gallery' | 'sertifikasi' | 'youtube' | 'pakan'
 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#f4f7f4', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1a1a1a' },
@@ -277,6 +292,10 @@ export default function AdminDashboard() {
     { id: 'faq', label: 'FAQ', icon: '❓' },
     { id: 'testimoni', label: 'Testimoni', icon: '⭐' },
     { id: 'branding', label: 'Gambar & Branding', icon: '🖼️' },
+    { id: 'gallery', label: 'Galeri', icon: '🖼️' },
+    { id: 'sertifikasi', label: 'Sertifikasi', icon: '🏆' },
+    { id: 'youtube', label: 'Youtube', icon: '📺' },
+    { id: 'pakan', label: 'Komposisi Pakan', icon: '🌾' },
   ]
 
   return (
