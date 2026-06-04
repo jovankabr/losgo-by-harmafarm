@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
-import { motion } from "motion/react";
-import { Sparkles, Check, Gem, ShieldCheck, HeartPulse, Recycle } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Sparkles, Check, Gem, ShieldCheck, HeartPulse, Recycle, ChevronLeft, ChevronRight } from "lucide-react";
 import { IMAGES } from "../data";
 import ownerlosgo from "../assets/ownerlosgo.jpeg";
 import { useSiteData } from "../hooks/useSiteData";
