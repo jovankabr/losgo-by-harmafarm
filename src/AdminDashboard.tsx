@@ -95,6 +95,29 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return <div style={s.fieldWrap}><label style={s.label}>{label}</label>{children}</div>
 }
 
+async function uploadToCloudinary(file: File): Promise<string> {
+  const formData = new FormData()
+
+  formData.append("file", file)
+  formData.append("upload_preset", "losgo-upload")
+
+  const res = await fetch(
+    "https://api.cloudinary.com/v1_1/dtpj53z21/image/upload",
+    {
+      method: "POST",
+      body: formData
+    }
+  )
+
+  if (!res.ok) {
+    throw new Error("Upload gagal")
+  }
+
+  const data = await res.json()
+
+  return data.secure_url
+}
+
 // Komponen upload gambar — gambar disimpan sebagai base64 di JSONBin
 function ImageUploader({ value, onChange }: { value: string; onChange: (base64: string) => void }) {
   const fileRef = useRef<HTMLInputElement>(null)
@@ -108,12 +131,15 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (base64: 
       return
     }
     setUploading(true)
-    const reader = new FileReader()
-    reader.onload = () => {
-      onChange(reader.result as string)
-      setUploading(false)
-    }
-    reader.readAsDataURL(file)
+    uploadToCloudinary(file)
+  .then((url) => {
+    onChange(url)
+    setUploading(false)
+  })
+  .catch(() => {
+    alert("Upload ke Cloudinary gagal")
+    setUploading(false)
+  })
   }
 
   return (
