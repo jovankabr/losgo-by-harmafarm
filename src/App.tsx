@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
+import AdminDashboard from "./components/../AdminDashboard";
 import { motion, AnimatePresence } from "motion/react";
 import { Phone, ArrowUp, Fish, Leaf, Sparkles } from "lucide-react";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,8 @@ import logoo from "./assets/logoo.png";
 import harmafarm from "./assets/harmafarm.png";
 
 export default function App() {
+  if (window.location.pathname === '/admin') {
+  return <AdminDashboard />;
   const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
