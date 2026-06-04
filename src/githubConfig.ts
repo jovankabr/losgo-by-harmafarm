@@ -1,7 +1,6 @@
-const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN as string
-const GITHUB_OWNER = 'jovankabr'
-const GITHUB_REPO = 'losgo-by-harmafarm'
-const CONFIG_PATH = 'public/siteConfig.json'
+const JSONBIN_BIN_ID = '6a210ac6f5f4af5e29b61efa'
+const JSONBIN_API_KEY = '$2a$10$F8eMn.hLXo5yWtblovoaEORum6rYERIQshZYjAiiq5rgGhZz632oG'
+const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`
 
 export type SiteData = {
   contact: {
@@ -61,9 +60,12 @@ export type SiteData = {
 
 export async function getSiteData(): Promise<SiteData | null> {
   try {
-    const res = await fetch(`/siteConfig.json?t=${Date.now()}`)
+    const res = await fetch(JSONBIN_URL + '/latest', {
+      headers: { 'X-Master-Key': JSONBIN_API_KEY }
+    })
     if (!res.ok) return null
-    return await res.json()
+    const json = await res.json()
+    return json.record as SiteData
   } catch {
     return null
   }
@@ -71,33 +73,15 @@ export async function getSiteData(): Promise<SiteData | null> {
 
 export async function saveSiteData(data: SiteData): Promise<boolean> {
   try {
-    // Get current file SHA (required by GitHub API to update)
-    const getRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${CONFIG_PATH}`,
-      { headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: 'application/vnd.github.v3+json' } }
-    )
-    const fileInfo = await getRes.json()
-    const sha = fileInfo.sha
-
-    // Update file
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))))
-    const updateRes = await fetch(
-      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${CONFIG_PATH}`,
-      {
-        method: 'PUT',
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-          Accept: 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: 'Update site config via admin dashboard',
-          content,
-          sha,
-        }),
-      }
-    )
-    return updateRes.ok
+    const res = await fetch(JSONBIN_URL, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': JSONBIN_API_KEY
+      },
+      body: JSON.stringify(data)
+    })
+    return res.ok
   } catch {
     return false
   }
