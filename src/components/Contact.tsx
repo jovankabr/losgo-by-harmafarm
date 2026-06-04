@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, YouTube } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, PlayCircle } from "lucide-react";
 import { useSiteData } from "../hooks/useSiteData";
 
 export default function Contact() {
@@ -42,7 +42,7 @@ export default function Contact() {
       value: "LOSGo Channel",
       info: "Tonton video produk, proses produksi, edukasi budidaya, dan konten terbaru HarmaFarm.",
       href: "https://www.youtube.com/@Losgochannel",
-      icon: Youtube,
+      icon: PlayCircle,
       color: "bg-red-50 text-red-600 border-red-100",
     },
     {
