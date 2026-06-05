@@ -3,6 +3,10 @@ const JSONBIN_API_KEY = '$2a$10$Dm8NyoAhi0mTVceRd0C1S.Ka0R7W9.vBY/KqYkyl9Gz8yoWx
 const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`
 
 export type SiteData = {
+  branding: {
+    logoUrl: string
+    aboutImages: string[]
+  }
   contact: {
     phone: string
     whatsappUrl: string
@@ -40,11 +44,10 @@ export type SiteData = {
     name: string
     badge: string
     portion: string
-    price?: string
     description: string
     features: string[]
     tags: string[]
-    image?: string
+    imageUrl?: string
   }[]
   faqs: {
     id: string
@@ -58,31 +61,6 @@ export type SiteData = {
     rating: number
     text: string
   }[]
-  branding: {
-    logoUrl: string
-    aboutImages: string[]
-  }
-  gallery: {
-  image: string
-  title: string
-  subtitle: string
-}[]
-
-certifications: {
-  name: string
-  image: string
-}[]
-
-youtube: {
-  channelName: string
-  url: string
-}
-
-feedComposition: {
-  image: string
-  title: string
-  description: string
-}
 }
 
 export async function getSiteData(): Promise<SiteData | null> {
@@ -104,20 +82,32 @@ export async function saveSiteData(data: SiteData): Promise<boolean> {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        'X-Master-Key': JSONBIN_API_KEY,
-        'X-Bin-Versioning': 'false'
+        'X-Master-Key': JSONBIN_API_KEY
       },
       body: JSON.stringify(data)
     })
-
-    console.log("STATUS:", res.status)
-
-    const text = await res.text()
-    console.log("RESPONSE:", text)
-
     return res.ok
-  } catch (err) {
-    console.error("ERROR:", err)
+  } catch {
     return false
+  }
+}
+
+// Upload gambar ke Cloudinary
+export async function uploadImage(file: File): Promise<string | null> {
+  try {
+    const CLOUD_NAME = 'harmafarm'
+    const UPLOAD_PRESET = 'harmafarm_unsigned'
+    const formData = new FormData()
+    formData.append('file', file)
+    formData.append('upload_preset', UPLOAD_PRESET)
+    const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+      method: 'POST',
+      body: formData
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    return data.secure_url
+  } catch {
+    return null
   }
 }
