@@ -426,8 +426,6 @@ export default function AdminDashboard() {
                 <Field label="Instagram — Link URL">
                   <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://instagram.com/..." />
                 </Field>
-              </div>
-              <div style={s.grid2}>
                 <Field label="TikTok — Username">
                   <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
                 </Field>
