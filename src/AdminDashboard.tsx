@@ -418,12 +418,22 @@ export default function AdminDashboard() {
               <Field label="Alamat Lengkap">
                 <textarea style={s.textarea} value={data.contact.address} onChange={e => setContact('address', e.target.value)} />
               </Field>
-              <Field label="Link Instagram">
-                <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} />
-              </Field>
-              <Field label="Link TikTok">
-                <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} />
-              </Field>
+              <hr style={s.divider} />
+              <div style={s.grid2}>
+                <Field label="Instagram — Username">
+                  <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} placeholder="@harmafarm.losgo" />
+                </Field>
+                <Field label="Instagram — Link URL">
+                  <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://instagram.com/..." />
+                </Field>
+              </div>
+              <div style={s.grid2}>
+                <Field label="TikTok — Username">
+                  <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
+                </Field>
+                <Field label="TikTok — Link URL">
+                  <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://tiktok.com/@..." />
+                </Field>
               <Field label="Nama Channel Youtube">
                 <input
                   style={s.input}
