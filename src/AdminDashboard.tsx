@@ -264,16 +264,16 @@ export default function AdminDashboard() {
     setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, ...patch } : x) }))
 
   const tabs: { id: Tab; label: string; icon: string }[] = [
-    { id: 'hero', label: 'Hero Section', icon: '🏠' },
-    { id: 'produk', label: 'Produk', icon: '🐟' },
-    { id: 'kontak', label: 'Kontak', icon: '📞' },
-    { id: 'digital', label: 'Sosmed & Digital', icon: '📱' },
-    { id: 'faq', label: 'FAQ', icon: '❓' },
-    { id: 'testimoni', label: 'Testimoni', icon: '⭐' },
-    { id: 'branding', label: 'Gambar & Branding', icon: '🖼️' },
-    { id: 'gallery', label: 'Galeri', icon: '🖼️' },
-    { id: 'sertifikasi', label: 'Sertifikasi', icon: '🏆' },
-    { id: 'pakan', label: 'Komposisi Pakan', icon: '🌾' },
+    { id: 'hero', label: '🏠 Home', icon: '' },
+    { id: 'produk', label: '🐟 Produk', icon: '' },
+    { id: 'branding', label: '🏪 Tentang Kami', icon: '' },
+    { id: 'digital', label: '📊 Keunggulan & Digital', icon: '' },
+    { id: 'gallery', label: '🖼️ Galeri & Proses', icon: '' },
+    { id: 'kontak', label: '📞 Kontak', icon: '' },
+    { id: 'faq', label: '❓ FAQ', icon: '' },
+    { id: 'testimoni', label: '⭐ Testimoni', icon: '' },
+    { id: 'sertifikasi', label: '🏆 Sertifikasi', icon: '' },
+    { id: 'pakan', label: '🌾 Komposisi Pakan', icon: '' },
   ]
 
   return (
