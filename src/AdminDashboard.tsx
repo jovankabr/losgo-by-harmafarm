@@ -38,21 +38,23 @@ const DEFAULT: SiteData = {
     gmaps_url: 'https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6',
   },
   products: [
-    { id: 'losgo800', name: 'LOSGo 800 gr', badge: 'TERLARIS', portion: '800 gr', price: '', description: 'Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
-    { id: 'losgo400', name: 'LOSGo 400 gr', badge: 'FAVORIT', portion: '400 gr', price: '', description: 'Pilihan praktis untuk keluarga kecil atau kebutuhan harian.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
-    { id: 'nilasigo800', name: 'NilaSigo 800 gr', badge: 'PREMIUM', portion: '800 gr', price: '', description: 'Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
-    { id: 'nilasigo400', name: 'NilaSigo 400 gr', badge: 'HEMAT', portion: '400 gr', price: '', description: 'Pilihan ekonomis ikan nila marinasi untuk keluarga kecil.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
-    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '400 gr', price: '', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'], image: '' },
-    { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', price: '', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'], image: '' },
-    { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', price: '', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'], image: '' },
-    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '150 gr', price: '', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'], image: '' },
-    { id: 'bandeng', name: 'Bandeng Presto', badge: 'GURIH', portion: '320 gr (2 pcs)', price: '', description: 'Bandeng presto empuk isi 2 pcs dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'], image: '' },
-    { id: 'guramelokal', name: 'Gurameh Lokal Bersih', badge: 'LOKAL', portion: 'per ekor', price: '', description: 'Gurameh segar lokal sudah dibersihkan siap masak, bebas sisik dan isi perut.', features: ['Segar Lokal', 'Sudah Dibersihkan', 'Siap Masak'], tags: ['Gurameh'], image: '' },
-    { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', price: '', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'], image: '' },
+    { id: 'losgo800', name: 'LOSGo 800 gr', badge: 'TERLARIS', portion: '800 gr', price: 'Rp 35.000', description: 'Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
+    { id: 'losgo400', name: 'LOSGo 400 gr', badge: 'FAVORIT', portion: '400 gr', price: 'Rp 20.000', description: 'Pilihan praktis untuk keluarga kecil atau kebutuhan harian.', features: ['Tinggi Protein', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Lele'], image: '' },
+    { id: 'nilasigo800', name: 'NilaSigo 800 gr', badge: 'PREMIUM', portion: '800 gr', price: 'Rp 44.000', description: 'Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
+    { id: 'nilasigo400', name: 'NilaSigo 400 gr', badge: 'HEMAT', portion: '400 gr', price: 'Rp 23.000', description: 'Pilihan ekonomis ikan nila marinasi untuk keluarga kecil.', features: ['Bumbu Meresap', 'Alami Tanpa Pengawet', 'Proses Higienis'], tags: ['Nila'], image: '' },
+    { id: 'leleterbang', name: 'Lele Terbang', badge: 'HITS', portion: '400 gr', price: 'Rp 23.000', description: 'Olahan lele dengan teknik khusus menghasilkan tekstur renyah dan gurih.', features: ['Super Renyah', 'Tinggi Protein', 'Cocok Semua Usia'], tags: ['Lele'], image: '' },
+    { id: 'lekids', name: 'Lekids Lele Fillet', badge: 'PRAKTIS', portion: '200 gr', price: 'Rp 20.000', description: 'Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.', features: ['Tinggi Protein Omega 3', 'Cocok Untuk MPASI', 'Tanpa Duri'], tags: ['Lele'], image: '' },
+    { id: 'rolade', name: 'Rolade Lele', badge: 'UNIK', portion: '300 gr', price: 'Rp 24.000', description: 'Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.', features: ['Bergizi', 'Favorit Keluarga', 'Baik Untuk Otak dan Jantung'], tags: ['Rolade'], image: '' },
+    { id: 'nilapresto', name: 'Nila Presto', badge: 'EMPUK', portion: '150 gr', price: 'Rp 18.000', description: 'Ikan nila presto empuk hingga tulang, kaya kalsium dan protein.', features: ['Tulang Lunak', 'Tinggi Kalsium', 'Alami Tanpa Pengawet'], tags: ['Nila'], image: '' },
+    { id: 'bandeng', name: 'Bandeng Presto', badge: 'GURIH', portion: '320 gr (2 pcs)', price: 'Rp 25.000', description: 'Bandeng presto empuk isi 2 pcs dengan cita rasa khas dan mudah dinikmati.', features: ['Tinggi Kalsium', 'Tinggi Protein Omega 3', 'Alami Tanpa Pengawet'], tags: ['Bandeng'], image: '' },
+    { id: 'guramelokal', name: 'Gurameh Lokal Bersih', badge: 'LOKAL', portion: 'per ekor', price: 'Rp 7.700', description: 'Gurameh segar lokal sudah dibersihkan siap masak, bebas sisik dan isi perut.', features: ['Segar Lokal', 'Sudah Dibersihkan', 'Siap Masak'], tags: ['Gurameh'], image: '' },
+    { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', price: 'Rp 8.000', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'], image: '' },
   ],
   faqs: [
     { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah.' },
     { id: 'faq-2', question: 'Bagaimana Cara yang Tepat Menyimpan Produk Harma Farm?', answer: 'Simpan produk dalam kondisi beku di dalam freezer dengan suhu stabil -18°C atau lebih rendah. Dengan kemasan yang tetap tertutup rapat, produk dapat bertahan hingga 6 bulan.' },
+    { id: 'faq-3', question: 'Apakah Produk Harma Farm Aman Dikonsumsi oleh Ibu Hamil dan Anak-Anak?', answer: 'Ya, produk HarmaFarm aman dikonsumsi oleh ibu hamil dan anak-anak karena dibuat dari bahan alami tanpa pengawet berbahaya dan diproses secara higienis sesuai standar keamanan pangan.' },
+    { id: 'faq-4', question: 'Bagaimana Cara Melakukan Pemesanan Produk Harma Farm? Apakah Tersedia Titik Penjualan Offline?', answer: 'Pemesanan dapat dilakukan melalui WhatsApp admin kami. Kami juga melayani pengiriman ke area Banyumas dan sekitarnya. Untuk informasi titik penjualan offline, silakan hubungi kami langsung.' },
   ],
   testimonials: [
     { id: 'testi-1', name: 'Rina', role: 'Ibu Rumah Tangga - Purwokerto', rating: 5, text: 'Awalnya ragu coba produk HarmaFarm ini, tapi setelah dimasak ternyata rasanya lebih gurih. Anak-anak juga lebih suka.' },
@@ -70,12 +72,12 @@ const DEFAULT: SiteData = {
   },
   feedComposition: {
     image: '',
-    title: '',
-    description: ''
+    title: 'Nutrisi Alami untuk Menghasilkan Ikan Berkualitas',
+    description: 'Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan untuk membantu menjaga kesehatan ikan, kualitas daging, dan pertumbuhan yang optimal.',
   },
 }
 
-type Tab = 'hero' | 'produk' | 'kontak' | 'digital' | 'faq' | 'testimoni' | 'branding' | 'gallery' | 'sertifikasi' | 'pakan'
+type Tab = 'home' | 'produk' | 'tentang' | 'keunggulan' | 'proses' | 'kontak' | 'faq' | 'testimoni' | 'sertifikasi' | 'pakan'
 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#f4f7f4', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1a1a1a' },
@@ -84,12 +86,14 @@ const s: Record<string, React.CSSProperties> = {
   liveDot: { fontSize: 12, color: '#1D9E75', background: '#e1f5ee', padding: '2px 8px', borderRadius: 10 },
   saveBtn: (saving: boolean): React.CSSProperties => ({ background: saving ? '#9FE1CB' : '#315B35', color: '#fff', border: 'none', padding: '9px 20px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: saving ? 'not-allowed' : 'pointer' }),
   layout: { display: 'flex', maxWidth: 1100, margin: '0 auto', padding: '24px 16px', gap: 20 },
-  sidebar: { width: 200, flexShrink: 0 },
+  sidebar: { width: 210, flexShrink: 0 },
   sidebarNav: { background: '#fff', borderRadius: 12, border: '1px solid #d4e8d4', overflow: 'hidden' },
-  navBtn: (active: boolean): React.CSSProperties => ({ display: 'flex', alignItems: 'center', gap: 8, width: '100%', padding: '12px 16px', border: 'none', background: active ? '#e8f5ee' : 'transparent', color: active ? '#315B35' : '#555', fontWeight: active ? 700 : 400, fontSize: 13, cursor: 'pointer', textAlign: 'left', borderLeft: active ? '3px solid #315B35' : '3px solid transparent' }),
+  navBtn: (active: boolean): React.CSSProperties => ({ display: 'flex', alignItems: 'center', gap: 8, width: '100%', padding: '11px 16px', border: 'none', background: active ? '#e8f5ee' : 'transparent', color: active ? '#315B35' : '#555', fontWeight: active ? 700 : 400, fontSize: 13, cursor: 'pointer', textAlign: 'left', borderLeft: active ? '3px solid #315B35' : '3px solid transparent' }),
   tip: { marginTop: 12, background: '#e8f5ee', borderRadius: 10, padding: '10px 14px', fontSize: 12, color: '#315B35', lineHeight: 1.5 },
   main: { flex: 1, background: '#fff', borderRadius: 12, border: '1px solid #d4e8d4', padding: 24 },
-  h2: { fontSize: 18, fontWeight: 700, marginBottom: 20, color: '#315B35' },
+  h2: { fontSize: 18, fontWeight: 700, marginBottom: 4, color: '#315B35' },
+  h2sub: { fontSize: 12, color: '#888', marginBottom: 20 },
+  h3: { fontSize: 14, fontWeight: 700, marginBottom: 12, color: '#315B35', borderBottom: '1px solid #e8f5ee', paddingBottom: 8 },
   label: { display: 'block', fontSize: 11, fontWeight: 700, color: '#555', marginBottom: 5, textTransform: 'uppercase' as const, letterSpacing: '0.05em' },
   input: { width: '100%', border: '1px solid #c5d9b3', borderRadius: 8, padding: '8px 12px', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', background: '#fff', outline: 'none', boxSizing: 'border-box' as const },
   textarea: { width: '100%', border: '1px solid #c5d9b3', borderRadius: 8, padding: '8px 12px', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', background: '#fff', outline: 'none', boxSizing: 'border-box' as const, resize: 'vertical' as const, minHeight: 80 },
@@ -100,6 +104,8 @@ const s: Record<string, React.CSSProperties> = {
   addBtn: { width: '100%', padding: 10, border: '1.5px dashed #9FE1CB', borderRadius: 10, background: 'transparent', color: '#315B35', fontSize: 14, fontWeight: 500, cursor: 'pointer', marginTop: 4 },
   fieldWrap: { marginBottom: 16 },
   divider: { border: 'none', borderTop: '1px solid #d4e8d4', margin: '20px 0' },
+  infoBox: { background: '#e8f5ee', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#315B35', lineHeight: 1.6 },
+  warnBox: { background: '#fffbe6', border: '1px solid #ffe58f', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#7c5800', lineHeight: 1.6 },
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -110,16 +116,13 @@ async function uploadToCloudinary(file: File): Promise<string> {
   const formData = new FormData()
   formData.append("file", file)
   formData.append("upload_preset", "losgo-upload")
-  const res = await fetch(
-    "https://api.cloudinary.com/v1_1/dtpj53z21/image/upload",
-    { method: "POST", body: formData }
-  )
+  const res = await fetch("https://api.cloudinary.com/v1_1/dtpj53z21/image/upload", { method: "POST", body: formData })
   if (!res.ok) throw new Error("Upload gagal")
   const data = await res.json()
   return data.secure_url
 }
 
-function ImageUploader({ value, onChange }: { value: string; onChange: (base64: string) => void }) {
+function ImageUploader({ value, onChange }: { value: string; onChange: (url: string) => void }) {
   const fileRef = useRef<HTMLInputElement>(null)
   const [uploading, setUploading] = useState(false)
 
@@ -142,36 +145,21 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (base64: 
       <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
         {value ? (
           <div style={{ position: 'relative', display: 'inline-block' }}>
-            <img
-              src={value}
-              alt="preview"
-              style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '1px solid #d4e8d4', display: 'block' }}
-            />
-            <button
-              onClick={() => onChange('')}
-              style={{ position: 'absolute', top: -6, right: -6, background: '#e24b4a', color: '#fff', border: 'none', borderRadius: '50%', width: 20, height: 20, fontSize: 11, cursor: 'pointer', lineHeight: '20px', padding: 0 }}
-            >✕</button>
+            <img src={value} alt="preview" style={{ width: 90, height: 90, objectFit: 'cover', borderRadius: 8, border: '1px solid #d4e8d4', display: 'block' }} />
+            <button onClick={() => onChange('')} style={{ position: 'absolute', top: -6, right: -6, background: '#e24b4a', color: '#fff', border: 'none', borderRadius: '50%', width: 20, height: 20, fontSize: 11, cursor: 'pointer', lineHeight: '20px', padding: 0 }}>✕</button>
           </div>
         ) : (
-          <div
-            onClick={() => fileRef.current?.click()}
-            style={{ width: 90, height: 90, border: '2px dashed #c5d9b3', borderRadius: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', background: '#f9fdf9', gap: 4 }}
-          >
+          <div onClick={() => fileRef.current?.click()} style={{ width: 90, height: 90, border: '2px dashed #c5d9b3', borderRadius: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', background: '#f9fdf9', gap: 4 }}>
             <span style={{ fontSize: 24 }}>📷</span>
             <span style={{ fontSize: 10, color: '#888', textAlign: 'center', lineHeight: 1.3 }}>Klik pilih<br />gambar</span>
           </div>
         )}
         <div style={{ flex: 1 }}>
-          <button
-            onClick={() => fileRef.current?.click()}
-            disabled={uploading}
-            style={{ background: '#e8f5ee', color: '#315B35', border: '1px solid #c5d9b3', borderRadius: 7, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'block', marginBottom: 6 }}
-          >
+          <button onClick={() => fileRef.current?.click()} disabled={uploading} style={{ background: '#e8f5ee', color: '#315B35', border: '1px solid #c5d9b3', borderRadius: 7, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'block', marginBottom: 6 }}>
             {uploading ? '⏳ Memproses...' : value ? '🔄 Ganti Gambar' : '📁 Pilih Gambar'}
           </button>
           <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>
-            Format: JPG/PNG/WEBP<br />
-            Maks: 500KB<br />
+            Format: JPG/PNG/WEBP<br />Maks: 500KB<br />
             <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>Kompres di squoosh.app</a>
           </div>
         </div>
@@ -186,7 +174,7 @@ export default function AdminDashboard() {
   const [pw, setPw] = useState('')
   const [pwError, setPwError] = useState(false)
   const [data, setData] = useState<SiteData>(DEFAULT)
-  const [tab, setTab] = useState<Tab>('hero')
+  const [tab, setTab] = useState<Tab>('home')
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [toast, setToast] = useState('')
@@ -196,12 +184,8 @@ export default function AdminDashboard() {
   }, [])
 
   const handleLogin = () => {
-    if (un === ADMIN_USER && pw === ADMIN_PASSWORD) {
-      setAuth(true)
-      setPwError(false)
-    } else {
-      setPwError(true)
-    }
+    if (un === ADMIN_USER && pw === ADMIN_PASSWORD) { setAuth(true); setPwError(false) }
+    else setPwError(true)
   }
 
   if (!auth) return (
@@ -210,25 +194,10 @@ export default function AdminDashboard() {
         <div style={{ fontSize: 40, marginBottom: 12 }}>🔒</div>
         <div style={{ fontWeight: 700, fontSize: 18, color: '#315B35', marginBottom: 4 }}>Admin LOSGo</div>
         <div style={{ fontSize: 13, color: '#888', marginBottom: 24 }}>Masukkan username & password</div>
-        <input
-          type="text"
-          placeholder="Username..."
-          value={un}
-          onChange={e => { setUn(e.target.value); setPwError(false) }}
-          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 10 }}
-        />
-        <input
-          type="password"
-          placeholder="Password..."
-          value={pw}
-          onChange={e => { setPw(e.target.value); setPwError(false) }}
-          onKeyDown={e => { if (e.key === 'Enter') handleLogin() }}
-          style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 8 }}
-        />
+        <input type="text" placeholder="Username..." value={un} onChange={e => { setUn(e.target.value); setPwError(false) }} style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 10 }} />
+        <input type="password" placeholder="Password..." value={pw} onChange={e => { setPw(e.target.value); setPwError(false) }} onKeyDown={e => { if (e.key === 'Enter') handleLogin() }} style={{ width: '100%', border: `1px solid ${pwError ? '#e24b4a' : '#c5d9b3'}`, borderRadius: 8, padding: '10px 14px', fontSize: 14, fontFamily: 'inherit', outline: 'none', boxSizing: 'border-box' as const, marginBottom: 8 }} />
         {pwError && <div style={{ color: '#e24b4a', fontSize: 12, marginBottom: 8 }}>Username atau password salah.</div>}
-        <button onClick={handleLogin} style={{ width: '100%', background: '#315B35', color: '#fff', border: 'none', borderRadius: 8, padding: '10px', fontWeight: 700, fontSize: 14, cursor: 'pointer' }}>
-          Masuk
-        </button>
+        <button onClick={handleLogin} style={{ width: '100%', background: '#315B35', color: '#fff', border: 'none', borderRadius: 8, padding: '10px', fontWeight: 700, fontSize: 14, cursor: 'pointer' }}>Masuk</button>
       </div>
     </div>
   )
@@ -243,7 +212,6 @@ export default function AdminDashboard() {
   )
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(''), 3500) }
-
   const handleSave = async () => {
     setSaving(true)
     const ok = await saveSiteData(data)
@@ -251,29 +219,24 @@ export default function AdminDashboard() {
     showToast(ok ? '✅ Tersimpan! Perubahan langsung live di website.' : '❌ Gagal menyimpan. Coba lagi.')
   }
 
-  const setContact = (k: keyof SiteData['contact'], v: string) =>
-    setData(d => ({ ...d, contact: { ...d.contact, [k]: v } }))
-  const setHero = (k: keyof SiteData['hero'], v: string) =>
-    setData(d => ({ ...d, hero: { ...d.hero, [k]: v } }))
-  const setBrand = (k: keyof SiteData['brand'], v: string) =>
-    setData(d => ({ ...d, brand: { ...d.brand, [k]: v } }))
-  const setDigital = (k: keyof SiteData['digital'], v: string) =>
-    setData(d => ({ ...d, digital: { ...d.digital, [k]: v } }))
-
+  const setContact = (k: keyof SiteData['contact'], v: string) => setData(d => ({ ...d, contact: { ...d.contact, [k]: v } }))
+  const setHero = (k: keyof SiteData['hero'], v: string) => setData(d => ({ ...d, hero: { ...d.hero, [k]: v } }))
+  const setBrand = (k: keyof SiteData['brand'], v: string) => setData(d => ({ ...d, brand: { ...d.brand, [k]: v } }))
+  const setDigital = (k: keyof SiteData['digital'], v: string) => setData(d => ({ ...d, digital: { ...d.digital, [k]: v } }))
   const updateProduct = (i: number, patch: Partial<SiteData['products'][0]>) =>
     setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, ...patch } : x) }))
 
-  const tabs: { id: Tab; label: string; icon: string }[] = [
-    { id: 'hero', label: '🏠 Home', icon: '' },
-    { id: 'produk', label: '🐟 Produk', icon: '' },
-    { id: 'branding', label: '🏪 Tentang Kami', icon: '' },
-    { id: 'digital', label: '📊 Keunggulan & Digital', icon: '' },
-    { id: 'gallery', label: '🖼️ Galeri & Proses', icon: '' },
-    { id: 'kontak', label: '📞 Kontak', icon: '' },
-    { id: 'faq', label: '❓ FAQ', icon: '' },
-    { id: 'testimoni', label: '⭐ Testimoni', icon: '' },
-    { id: 'sertifikasi', label: '🏆 Sertifikasi', icon: '' },
-    { id: 'pakan', label: '🌾 Komposisi Pakan', icon: '' },
+  const tabs: { id: Tab; label: string }[] = [
+    { id: 'home',       label: '🏠 Home' },
+    { id: 'produk',     label: '🐟 Produk' },
+    { id: 'tentang',    label: '🏪 Tentang Kami' },
+    { id: 'keunggulan', label: '⭐ Keunggulan' },
+    { id: 'proses',     label: '⚙️ Proses' },
+    { id: 'kontak',     label: '📞 Kontak' },
+    { id: 'faq',        label: '❓ FAQ' },
+    { id: 'testimoni',  label: '💬 Testimoni' },
+    { id: 'sertifikasi',label: '🏆 Sertifikasi' },
+    { id: 'pakan',      label: '🌾 Komposisi Pakan' },
   ]
 
   return (
@@ -285,12 +248,8 @@ export default function AdminDashboard() {
           <span style={s.liveDot}>● Live</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <button onClick={() => setAuth(false)} style={{ background: 'none', border: '1px solid #d4e8d4', borderRadius: 8, padding: '7px 14px', fontSize: 13, cursor: 'pointer', color: '#555' }}>
-            🚪 Keluar
-          </button>
-          <button onClick={handleSave} disabled={saving} style={s.saveBtn(saving)}>
-            {saving ? '⏳ Menyimpan...' : '💾 Simpan & Publish'}
-          </button>
+          <button onClick={() => setAuth(false)} style={{ background: 'none', border: '1px solid #d4e8d4', borderRadius: 8, padding: '7px 14px', fontSize: 13, cursor: 'pointer', color: '#555' }}>🚪 Keluar</button>
+          <button onClick={handleSave} disabled={saving} style={s.saveBtn(saving)}>{saving ? '⏳ Menyimpan...' : '💾 Simpan & Publish'}</button>
         </div>
       </div>
 
@@ -298,65 +257,72 @@ export default function AdminDashboard() {
         <div style={s.sidebar}>
           <div style={s.sidebarNav}>
             {tabs.map(t => (
-              <button key={t.id} onClick={() => setTab(t.id)} style={s.navBtn(tab === t.id)}>
-                <span>{t.icon}</span>{t.label}
-              </button>
+              <button key={t.id} onClick={() => setTab(t.id)} style={s.navBtn(tab === t.id)}>{t.label}</button>
             ))}
           </div>
-          <div style={s.tip}>
-            <strong>💡 Tips:</strong> Setelah edit, klik <strong>Simpan & Publish</strong> — perubahan langsung tampil di website dalam hitungan detik.
-          </div>
+          <div style={s.tip}><strong>💡 Tips:</strong> Setelah edit, klik <strong>Simpan & Publish</strong> — perubahan langsung tampil di website dalam hitungan detik.</div>
         </div>
 
         <div style={s.main}>
 
-          {/* ===== TAB: HERO ===== */}
-          {tab === 'hero' && (
+          {/* ===== HOME ===== */}
+          {tab === 'home' && (
             <div>
-              <div style={s.h2}>🏠 Hero Section</div>
-              <Field label="Badge (teks kecil di atas headline)">
+              <div style={s.h2}>🏠 Home</div>
+              <div style={s.h2sub}>Bagian pertama yang dilihat pengunjung website</div>
+
+              <div style={s.h3}>Teks Hero</div>
+              <Field label="Badge / Label kecil (contoh: Pasti Bersih, Pasti Enak!)">
                 <input style={s.input} value={data.hero.badge} onChange={e => setHero('badge', e.target.value)} />
               </Field>
-              <Field label="Headline Utama">
+              <Field label="Headline Utama (judul besar)">
                 <textarea style={s.textarea} value={data.hero.headline} onChange={e => setHero('headline', e.target.value)} />
               </Field>
-              <Field label="Subheadline / Deskripsi">
+              <Field label="Subheadline / Deskripsi singkat">
                 <textarea style={{ ...s.textarea, minHeight: 100 }} value={data.hero.subheadline} onChange={e => setHero('subheadline', e.target.value)} />
               </Field>
               <div style={s.grid2}>
-                <Field label="Tombol CTA 1 (Katalog)">
+                <Field label="Tombol Kiri (contoh: Katalog Produk)">
                   <input style={s.input} value={data.hero.cta1} onChange={e => setHero('cta1', e.target.value)} />
                 </Field>
-                <Field label="Tombol CTA 2 (Pesan)">
+                <Field label="Tombol Kanan (contoh: Pesan Sekarang)">
                   <input style={s.input} value={data.hero.cta2} onChange={e => setHero('cta2', e.target.value)} />
                 </Field>
               </div>
+
               <hr style={s.divider} />
-              <div style={s.h2}>🏪 Brand & Loading Screen</div>
+              <div style={s.h3}>Identitas Brand & Loading Screen</div>
+              <div style={s.infoBox}>Nama brand dan tagline tampil di loading screen saat website pertama dibuka.</div>
               <div style={s.grid2}>
                 <Field label="Nama Brand">
                   <input style={s.input} value={data.brand.name} onChange={e => setBrand('name', e.target.value)} />
                 </Field>
-                <Field label="Tagline (di loading screen)">
+                <Field label="Tagline">
                   <input style={s.input} value={data.brand.tagline} onChange={e => setBrand('tagline', e.target.value)} />
                 </Field>
               </div>
-              <Field label="Deskripsi Brand">
-                <textarea style={s.textarea} value={data.brand.description} onChange={e => setBrand('description', e.target.value)} />
+              <Field label="Jam Operasional (tampil di section Kontak)">
+                <input style={s.input} value={data.brand.operationalHours} onChange={e => setBrand('operationalHours', e.target.value)} placeholder="Setiap hari pukul 08:00 - 18:00 WIB" />
               </Field>
-              <Field label="Jam Operasional (muncul di kontak)">
-                <input style={s.input} value={data.brand.operationalHours} onChange={e => setBrand('operationalHours', e.target.value)} />
+
+              <hr style={s.divider} />
+              <div style={s.h3}>Logo Website</div>
+              <div style={s.infoBox}>Logo tampil di navbar (atas) dan footer (bawah) website. Gunakan PNG dengan latar transparan.</div>
+              <Field label="Upload Logo">
+                <ImageUploader
+                  value={data.branding?.logoUrl || ''}
+                  onChange={url => setData(d => ({ ...d, branding: { ...d.branding, logoUrl: url } }))}
+                />
               </Field>
             </div>
           )}
 
-          {/* ===== TAB: PRODUK ===== */}
+          {/* ===== PRODUK ===== */}
           {tab === 'produk' && (
             <div>
-              <div style={s.h2}>🐟 Daftar Produk</div>
-              <div style={{ background: '#fffbe6', border: '1px solid #ffe58f', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#7c5800' }}>
-                📸 <strong>Upload gambar produk:</strong> Klik area foto di tiap produk. Ukuran maks 500KB — kompres dulu di <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a> jika perlu.
-              </div>
+              <div style={s.h2}>🐟 Katalog Produk</div>
+              <div style={s.h2sub}>Produk yang tampil di halaman Produk website</div>
+              <div style={s.warnBox}>📸 Upload gambar produk maks 500KB. Kompres dulu di <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a> jika perlu.</div>
               {data.products.map((p, i) => (
                 <div key={p.id} style={s.card}>
                   <div style={s.cardHeader}>
@@ -364,33 +330,30 @@ export default function AdminDashboard() {
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, products: d.products.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
                   <Field label="Foto Produk">
-                    <ImageUploader
-                      value={p.image || ''}
-                      onChange={base64 => updateProduct(i, { image: base64 })}
-                    />
+                    <ImageUploader value={p.image || ''} onChange={url => updateProduct(i, { image: url })} />
                   </Field>
                   <div style={s.grid2}>
                     <Field label="Nama Produk">
                       <input style={s.input} value={p.name} onChange={e => updateProduct(i, { name: e.target.value })} />
                     </Field>
-                    <Field label="Badge (TERLARIS, FAVORIT, dll)">
+                    <Field label="Badge (TERLARIS / FAVORIT / dll)">
                       <input style={s.input} value={p.badge} onChange={e => updateProduct(i, { badge: e.target.value })} />
                     </Field>
-                    <Field label="Porsi / Berat">
+                    <Field label="Porsi / Berat (contoh: 800 gr)">
                       <input style={s.input} value={p.portion} onChange={e => updateProduct(i, { portion: e.target.value })} />
                     </Field>
-                    <Field label="Harga (misal: Rp 35.000)">
+                    <Field label="Harga (contoh: Rp 35.000)">
                       <input style={s.input} value={p.price || ''} onChange={e => updateProduct(i, { price: e.target.value })} placeholder="Rp 35.000" />
                     </Field>
                   </div>
-                  <Field label="Tag (Lele, Nila, dll)">
+                  <Field label="Kategori / Tag (contoh: Lele, Nila, Bandeng — pisah koma)">
                     <input style={s.input} value={p.tags.join(', ')} onChange={e => updateProduct(i, { tags: e.target.value.split(',').map(t => t.trim()) })} />
                   </Field>
                   <Field label="Deskripsi Produk">
                     <textarea style={s.textarea} value={p.description} onChange={e => updateProduct(i, { description: e.target.value })} />
                   </Field>
-                  <Field label="Fitur / Keunggulan (pisah dengan koma)">
-                    <input style={s.input} value={p.features.join(', ')} onChange={e => updateProduct(i, { features: e.target.value.split(',').map(f => f.trim()) })} />
+                  <Field label="Poin Keunggulan (pisah dengan koma)">
+                    <input style={s.input} value={p.features.join(', ')} onChange={e => updateProduct(i, { features: e.target.value.split(',').map(f => f.trim()) })} placeholder="Tinggi Protein, Alami Tanpa Pengawet, Proses Higienis" />
                   </Field>
                 </div>
               ))}
@@ -400,66 +363,52 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* ===== TAB: KONTAK ===== */}
-          {tab === 'kontak' && (
+          {/* ===== TENTANG KAMI ===== */}
+          {tab === 'tentang' && (
             <div>
-              <div style={s.h2}>📞 Kontak HarmaFarm</div>
-              <div style={s.grid2}>
-                <Field label="Nomor Telepon (tampil di website)">
-                  <input style={s.input} value={data.contact.phone} onChange={e => setContact('phone', e.target.value)} />
-                </Field>
-                <Field label="Email">
-                  <input style={s.input} value={data.contact.email} onChange={e => setContact('email', e.target.value)} />
-                </Field>
-              </div>
-              <Field label="Link WhatsApp (wa.me/...)">
-                <input style={s.input} value={data.contact.whatsappUrl} onChange={e => setContact('whatsappUrl', e.target.value)} />
+              <div style={s.h2}>🏪 Tentang Kami</div>
+              <div style={s.h2sub}>Section "Mengolah Ikan Lokal Menjadi Hidangan Praktis dan Bernutrisi"</div>
+
+              <div style={s.h3}>Teks Tentang Kami</div>
+              <Field label="Deskripsi Paragraf 1 (asal usul & visi HarmaFarm)">
+                <textarea style={{ ...s.textarea, minHeight: 100 }} value={data.brand.description} onChange={e => setBrand('description', e.target.value)} placeholder="HarmaFarm hadir sebagai UMKM inovatif asal Cilongok, Banyumas..." />
               </Field>
-              <Field label="Alamat Lengkap">
-                <textarea style={s.textarea} value={data.contact.address} onChange={e => setContact('address', e.target.value)} />
-              </Field>
+
               <hr style={s.divider} />
+              <div style={s.h3}>Foto Slideshow "Tentang Kami"</div>
+              <div style={s.infoBox}>Foto-foto ini tampil sebagai slideshow di sisi kiri section Tentang Kami. Upload foto tim, fasilitas produksi, atau kegiatan HarmaFarm. Maks 500KB per foto.</div>
+              {(data.branding?.aboutImages || []).map((img, i) => (
+                <div key={i} style={{ ...s.card, marginBottom: 10 }}>
+                  <div style={s.cardHeader}>
+                    <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
+                    <button style={s.delBtn} onClick={() => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: d.branding.aboutImages.filter((_, idx) => idx !== i) } }))}>🗑 Hapus</button>
+                  </div>
+                  <ImageUploader
+                    value={img}
+                    onChange={url => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: d.branding.aboutImages.map((x, idx) => idx === i ? url : x) } }))}
+                  />
+                </div>
+              ))}
+              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: [...(d.branding?.aboutImages || []), ''] } }))}>
+                + Tambah Foto Slideshow
+              </button>
+            </div>
+          )}
+
+          {/* ===== KEUNGGULAN ===== */}
+          {tab === 'keunggulan' && (
+            <div>
+              <div style={s.h2}>⭐ Keunggulan & Digital Presence</div>
+              <div style={s.h2sub}>Section "Mengapa HarmaFarm Menjadi Pilihan Banyak Orang?" + statistik platform digital</div>
+
+              <div style={s.h3}>Statistik Platform Digital</div>
+              <div style={s.infoBox}>Angka-angka ini tampil di bagian bawah section Keunggulan — kartu Instagram, TikTok, Google Maps, dan Website.</div>
               <div style={s.grid2}>
                 <Field label="Instagram — Username">
                   <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} placeholder="@harmafarm.losgo" />
                 </Field>
-                <Field label="Instagram — Link URL">
-                  <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://instagram.com/..." />
-                </Field>
-                <Field label="TikTok — Username">
-                  <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
-                </Field>
-                <Field label="TikTok — Link URL">
-                  <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://tiktok.com/@..." />
-                </Field>
-              </div>
-              <div style={s.grid2}>
-                <Field label="YouTube — Nama Channel">
-                  <input style={s.input} value={data.youtube?.channelName || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))} />
-                </Field>
-                <Field label="YouTube — Link URL">
-                  <input style={s.input} value={data.youtube?.url || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))} />
-                </Field>
-              </div>
-              <Field label="Link Embed Google Maps">
-                <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} />
-              </Field>
-            </div>
-          )}
-          
-          {/* ===== TAB: DIGITAL ===== */}
-          {tab === 'digital' && (
-            <div>
-              <div style={s.h2}>📱 Sosmed & Digital Presence</div>
-              <div style={{ background: '#e8f5ee', borderRadius: 8, padding: 12, marginBottom: 20, fontSize: 13, color: '#315B35' }}>
-                Bagian ini mengatur statistik yang muncul di section "Digital Presence" website kamu.
-              </div>
-              <div style={s.grid2}>
-                <Field label="Instagram — Username">
-                  <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} />
-                </Field>
                 <Field label="Instagram — Statistik">
-                  <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} />
+                  <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} placeholder="300+ Followers" />
                 </Field>
               </div>
               <Field label="Instagram — Link URL">
@@ -468,10 +417,10 @@ export default function AdminDashboard() {
               <hr style={s.divider} />
               <div style={s.grid2}>
                 <Field label="TikTok — Username">
-                  <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} />
+                  <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
                 </Field>
                 <Field label="TikTok — Statistik">
-                  <input style={s.input} value={data.digital.tt_metric} onChange={e => setDigital('tt_metric', e.target.value)} />
+                  <input style={s.input} value={data.digital.tt_metric} onChange={e => setDigital('tt_metric', e.target.value)} placeholder="1.3K+ Likes" />
                 </Field>
               </div>
               <Field label="TikTok — Link URL">
@@ -479,7 +428,7 @@ export default function AdminDashboard() {
               </Field>
               <hr style={s.divider} />
               <Field label="Google Maps — Rating & Ulasan">
-                <input style={s.input} value={data.digital.gmaps_metric} onChange={e => setDigital('gmaps_metric', e.target.value)} />
+                <input style={s.input} value={data.digital.gmaps_metric} onChange={e => setDigital('gmaps_metric', e.target.value)} placeholder="4.6/5 Rating (30+ Ulasan)" />
               </Field>
               <Field label="Google Maps — Link URL">
                 <input style={s.input} value={data.digital.gmaps_url} onChange={e => setDigital('gmaps_url', e.target.value)} />
@@ -487,10 +436,91 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* ===== TAB: FAQ ===== */}
+          {/* ===== PROSES ===== */}
+          {tab === 'proses' && (
+            <div>
+              <div style={s.h2}>⚙️ Proses & Galeri</div>
+              <div style={s.h2sub}>Section "Proses Produksi HarmaFarm" — foto galeri proses produksi</div>
+
+              <div style={s.h3}>Foto Galeri Proses Produksi</div>
+              <div style={s.infoBox}>Upload foto-foto proses produksi (seleksi bahan baku, pembersihan, marinasi, pengemasan, dll). Foto ini tampil di section Proses website. Maks 500KB per foto.</div>
+              {(data.gallery || []).map((item, i) => (
+                <div key={i} style={s.card}>
+                  <div style={s.cardHeader}>
+                    <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
+                    <button style={s.delBtn} onClick={() => setData(d => ({ ...d, gallery: d.gallery.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
+                  </div>
+                  <Field label="Foto">
+                    <ImageUploader
+                      value={item.image}
+                      onChange={url => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g) }))}
+                    />
+                  </Field>
+                  <div style={s.grid2}>
+                    <Field label="Judul Foto (contoh: Seleksi Bahan Baku)">
+                      <input style={s.input} value={item.title} onChange={e => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, title: e.target.value } : g) }))} />
+                    </Field>
+                    <Field label="Sub Judul (contoh: Tahap 1)">
+                      <input style={s.input} value={item.subtitle} onChange={e => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, subtitle: e.target.value } : g) }))} />
+                    </Field>
+                  </div>
+                </div>
+              ))}
+              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, gallery: [...(d.gallery || []), { image: '', title: '', subtitle: '' }] }))}>
+                + Tambah Foto Proses
+              </button>
+            </div>
+          )}
+
+          {/* ===== KONTAK ===== */}
+          {tab === 'kontak' && (
+            <div>
+              <div style={s.h2}>📞 Kontak</div>
+              <div style={s.h2sub}>Informasi kontak yang tampil di section Kontak dan footer website</div>
+
+              <div style={s.h3}>Informasi Kontak</div>
+              <div style={s.grid2}>
+                <Field label="Nomor Telepon / WA (tampil di website)">
+                  <input style={s.input} value={data.contact.phone} onChange={e => setContact('phone', e.target.value)} placeholder="+62 856-4111-4777" />
+                </Field>
+                <Field label="Email">
+                  <input style={s.input} value={data.contact.email} onChange={e => setContact('email', e.target.value)} />
+                </Field>
+              </div>
+              <Field label="Link WhatsApp lengkap (wa.me/... termasuk pesan otomatis)">
+                <input style={s.input} value={data.contact.whatsappUrl} onChange={e => setContact('whatsappUrl', e.target.value)} />
+              </Field>
+              <Field label="Alamat Lengkap">
+                <textarea style={s.textarea} value={data.contact.address} onChange={e => setContact('address', e.target.value)} />
+              </Field>
+              <Field label="Link Embed Google Maps">
+                <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} placeholder="https://maps.app.goo.gl/..." />
+              </Field>
+
+              <hr style={s.divider} />
+              <div style={s.h3}>Media Sosial</div>
+              <div style={s.grid2}>
+                <Field label="Instagram — Link URL">
+                  <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://instagram.com/harmafarm.losgo" />
+                </Field>
+                <Field label="TikTok — Link URL">
+                  <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://tiktok.com/@harmafarm.losgo" />
+                </Field>
+                <Field label="YouTube — Nama Channel">
+                  <input style={s.input} value={data.youtube?.channelName || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))} />
+                </Field>
+                <Field label="YouTube — Link URL">
+                  <input style={s.input} value={data.youtube?.url || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))} />
+                </Field>
+              </div>
+            </div>
+          )}
+
+          {/* ===== FAQ ===== */}
           {tab === 'faq' && (
             <div>
-              <div style={s.h2}>❓ FAQ (Pertanyaan Umum)</div>
+              <div style={s.h2}>❓ FAQ</div>
+              <div style={s.h2sub}>Section "Pertanyaan Seputar Produk HarmaFarm"</div>
               {data.faqs.map((f, i) => (
                 <div key={f.id} style={s.card}>
                   <div style={s.cardHeader}>
@@ -511,10 +541,11 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* ===== TAB: TESTIMONI ===== */}
+          {/* ===== TESTIMONI ===== */}
           {tab === 'testimoni' && (
             <div>
-              <div style={s.h2}>⭐ Testimoni Pelanggan</div>
+              <div style={s.h2}>💬 Testimoni Pelanggan</div>
+              <div style={s.h2sub}>Section "Apa Kata Pelanggan HarmaFarm?" — tampil sebagai slideshow</div>
               {data.testimonials.map((t, i) => (
                 <div key={t.id} style={s.card}>
                   <div style={s.cardHeader}>
@@ -522,19 +553,19 @@ export default function AdminDashboard() {
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, testimonials: d.testimonials.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
                   <div style={s.grid2}>
-                    <Field label="Nama">
+                    <Field label="Nama Pelanggan">
                       <input style={s.input} value={t.name} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, name: e.target.value } : x) }))} />
                     </Field>
-                    <Field label="Jabatan / Asal">
+                    <Field label="Jabatan / Asal (contoh: Ibu Rumah Tangga - Purwokerto)">
                       <input style={s.input} value={t.role} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, role: e.target.value } : x) }))} />
                     </Field>
                   </div>
-                  <Field label="Rating (1-5)">
+                  <Field label="Rating (1-5 bintang)">
                     <select style={s.input} value={t.rating} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, rating: Number(e.target.value) } : x) }))}>
-                      {[1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n} bintang</option>)}
+                      {[1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n} bintang {'⭐'.repeat(n)}</option>)}
                     </select>
                   </Field>
-                  <Field label="Isi Testimoni">
+                  <Field label="Isi Testimoni (kutipan dari pelanggan)">
                     <textarea style={{ ...s.textarea, minHeight: 90 }} value={t.text} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, text: e.target.value } : x) }))} />
                   </Field>
                 </div>
@@ -545,218 +576,52 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {/* ===== TAB: BRANDING ===== */}
-          {tab === 'branding' && (
-            <div>
-              <div style={s.h2}>🖼️ Gambar & Branding</div>
-
-              {/* Logo */}
-              <div style={s.card}>
-                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>🏷️ Logo (Navbar & Footer)</div>
-                <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
-                  Logo ini akan tampil di bagian atas (navbar) dan bawah (footer) website.<br />
-                  Gunakan gambar PNG dengan latar transparan untuk hasil terbaik.<br />
-                  Jika kosong, logo default HarmaFarm tetap tampil.
-                </p>
-                <Field label="Upload Logo">
-                  <ImageUploader
-                    value={data.branding?.logoUrl || ''}
-                    onChange={base64 => setData(d => ({ ...d, branding: { ...d.branding, logoUrl: base64 } }))}
-                  />
-                </Field>
-              </div>
-
-              {/* Slideshow Tentang Kami */}
-              <div style={s.card}>
-                <div style={{ fontWeight: 700, fontSize: 14, marginBottom: 6 }}>📸 Gambar "Tentang Kami" (Slideshow)</div>
-                <p style={{ fontSize: 12, color: '#888', marginBottom: 14, lineHeight: 1.6 }}>
-                  Upload beberapa gambar di sini — akan tampil sebagai slideshow otomatis di section Tentang Kami.<br />
-                  Maks 500KB per gambar. Kompres dulu di{' '}
-                  <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a>{' '}
-                  jika perlu.
-                </p>
-                {(data.branding?.aboutImages || []).map((img, i) => (
-                  <div key={i} style={{ ...s.card, marginBottom: 10 }}>
-                    <div style={s.cardHeader}>
-                      <strong style={{ fontSize: 13 }}>Gambar {i + 1}</strong>
-                      <button
-                        style={s.delBtn}
-                        onClick={() => setData(d => ({
-                          ...d,
-                          branding: {
-                            ...d.branding,
-                            aboutImages: d.branding.aboutImages.filter((_, idx) => idx !== i)
-                          }
-                        }))}
-                      >
-                        🗑 Hapus
-                      </button>
-                    </div>
-                    <ImageUploader
-                      value={img}
-                      onChange={base64 => setData(d => ({
-                        ...d,
-                        branding: {
-                          ...d.branding,
-                          aboutImages: d.branding.aboutImages.map((x, idx) => idx === i ? base64 : x)
-                        }
-                      }))}
-                    />
-                  </div>
-                ))}
-                <button
-                  style={s.addBtn}
-                  onClick={() => setData(d => ({
-                    ...d,
-                    branding: {
-                      ...d.branding,
-                      aboutImages: [...(d.branding?.aboutImages || []), '']
-                    }
-                  }))}
-                >
-                  + Tambah Gambar Slideshow
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* ===== TAB: GALLERY ===== */}
-          {tab === 'gallery' && (
-            <div>
-              <div style={s.h2}>🖼️ Galeri Website</div>
-              {(data.gallery || []).map((item, i) => (
-                <div key={i} style={s.card}>
-                  <div style={s.cardHeader}>
-                    <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
-                    <button
-                      style={s.delBtn}
-                      onClick={() => setData(d => ({ ...d, gallery: d.gallery.filter((_, idx) => idx !== i) }))}
-                    >
-                      🗑 Hapus
-                    </button>
-                  </div>
-                  <Field label={`Foto ${i + 1}`}>
-                    <ImageUploader
-                      value={item.image}
-                      onChange={(url) => setData(d => ({
-                        ...d,
-                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g)
-                      }))}
-                    />
-                  </Field>
-                  <Field label="Judul">
-                    <input
-                      style={s.input}
-                      value={item.title}
-                      onChange={e => setData(d => ({
-                        ...d,
-                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, title: e.target.value } : g)
-                      }))}
-                    />
-                  </Field>
-                  <Field label="Sub Judul">
-                    <input
-                      style={s.input}
-                      value={item.subtitle}
-                      onChange={e => setData(d => ({
-                        ...d,
-                        gallery: d.gallery.map((g, idx) => idx === i ? { ...g, subtitle: e.target.value } : g)
-                      }))}
-                    />
-                  </Field>
-                </div>
-              ))}
-              <button
-                style={s.addBtn}
-                onClick={() => setData(d => ({
-                  ...d,
-                  gallery: [...(d.gallery || []), { image: '', title: '', subtitle: '' }]
-                }))}
-              >
-                + Tambah Foto Galeri
-              </button>
-            </div>
-          )}
-
-          {/* ===== TAB: SERTIFIKASI ===== */}
+          {/* ===== SERTIFIKASI ===== */}
           {tab === 'sertifikasi' && (
             <div>
-              <div style={s.h2}>🏆 Sertifikasi</div>
+              <div style={s.h2}>🏆 Sertifikasi & Legalitas</div>
+              <div style={s.h2sub}>Logo sertifikasi yang tampil di bagian bawah Home (Halal, GMP, Better Banyumas, dll)</div>
+              <div style={s.infoBox}>Upload logo sertifikasi dalam format PNG transparan untuk hasil terbaik. Maks 500KB per logo.</div>
               {(data.certifications || []).map((item, i) => (
                 <div key={i} style={s.card}>
                   <div style={s.cardHeader}>
-                    <strong style={{ fontSize: 13 }}>Sertifikasi {i + 1}</strong>
-                    <button
-                      style={s.delBtn}
-                      onClick={() => setData(d => ({ ...d, certifications: d.certifications.filter((_, idx) => idx !== i) }))}
-                    >
-                      🗑 Hapus
-                    </button>
+                    <strong style={{ fontSize: 13 }}>{item.name || `Sertifikasi ${i + 1}`}</strong>
+                    <button style={s.delBtn} onClick={() => setData(d => ({ ...d, certifications: d.certifications.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
-                  <Field label="Nama Sertifikasi">
-                    <input
-                      style={s.input}
-                      value={item.name}
-                      onChange={e => setData(d => ({
-                        ...d,
-                        certifications: d.certifications.map((c, idx) => idx === i ? { ...c, name: e.target.value } : c)
-                      }))}
-                    />
+                  <Field label="Nama Sertifikasi (contoh: Halal MUI, GMP, Better Banyumas)">
+                    <input style={s.input} value={item.name} onChange={e => setData(d => ({ ...d, certifications: d.certifications.map((c, idx) => idx === i ? { ...c, name: e.target.value } : c) }))} />
                   </Field>
                   <Field label="Logo Sertifikasi">
                     <ImageUploader
                       value={item.image}
-                      onChange={(url) => setData(d => ({
-                        ...d,
-                        certifications: d.certifications.map((c, idx) => idx === i ? { ...c, image: url } : c)
-                      }))}
+                      onChange={url => setData(d => ({ ...d, certifications: d.certifications.map((c, idx) => idx === i ? { ...c, image: url } : c) }))}
                     />
                   </Field>
                 </div>
               ))}
-              <button
-                style={s.addBtn}
-                onClick={() => setData(d => ({
-                  ...d,
-                  certifications: [...(d.certifications || []), { name: '', image: '' }]
-                }))}
-              >
+              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, certifications: [...(d.certifications || []), { name: '', image: '' }] }))}>
                 + Tambah Sertifikasi
               </button>
             </div>
           )}
 
-          {/* ===== TAB: PAKAN ===== */}
+          {/* ===== PAKAN ===== */}
           {tab === 'pakan' && (
             <div>
-              <div style={s.h2}>🌾 Komposisi Pakan</div>
-              <Field label="Judul">
-                <input
-                  style={s.input}
-                  value={data.feedComposition?.title || ''}
-                  onChange={e => setData(d => ({
-                    ...d,
-                    feedComposition: { ...d.feedComposition, title: e.target.value }
-                  }))}
-                />
+              <div style={s.h2}>🌾 Komposisi Pakan Probiotik</div>
+              <div style={s.h2sub}>Section "Nutrisi Alami untuk Menghasilkan Ikan Berkualitas" di bagian bawah Keunggulan</div>
+              <div style={s.infoBox}>Section ini menjelaskan bahan-bahan pakan probiotik yang digunakan HarmaFarm: Pelet, Gula Merah, Ragi, Nanas, Air Kelapa, Yakult, dll.</div>
+
+              <Field label="Judul Section">
+                <input style={s.input} value={data.feedComposition?.title || ''} onChange={e => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, title: e.target.value } }))} placeholder="Nutrisi Alami untuk Menghasilkan Ikan Berkualitas" />
               </Field>
-              <Field label="Deskripsi">
-                <textarea
-                  style={s.textarea}
-                  value={data.feedComposition?.description || ''}
-                  onChange={e => setData(d => ({
-                    ...d,
-                    feedComposition: { ...d.feedComposition, description: e.target.value }
-                  }))}
-                />
+              <Field label="Deskripsi (paragraf penjelasan pakan probiotik)">
+                <textarea style={{ ...s.textarea, minHeight: 120 }} value={data.feedComposition?.description || ''} onChange={e => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, description: e.target.value } }))} placeholder="Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan..." />
               </Field>
-              <Field label="Gambar">
+              <Field label="Foto Komposisi Pakan (foto bahan-bahan pakan)">
                 <ImageUploader
                   value={data.feedComposition?.image || ''}
-                  onChange={(url) => setData(d => ({
-                    ...d,
-                    feedComposition: { ...d.feedComposition, image: url }
-                  }))}
+                  onChange={url => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, image: url } }))}
                 />
               </Field>
             </div>
