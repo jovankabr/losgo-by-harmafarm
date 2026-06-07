@@ -432,26 +432,21 @@ export default function AdminDashboard() {
                 <Field label="TikTok — Link URL">
                   <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://tiktok.com/@..." />
                 </Field>
-              <Field label="Nama Channel Youtube">
-                <input
-                  style={s.input}
-                  value={data.youtube?.channelName || ''}
-                  onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))}
-                />
-              </Field>
-              <Field label="Link Channel Youtube">
-                <input
-                  style={s.input}
-                  value={data.youtube?.url || ''}
-                  onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))}
-                />
-              </Field>
+              </div>
+              <div style={s.grid2}>
+                <Field label="YouTube — Nama Channel">
+                  <input style={s.input} value={data.youtube?.channelName || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))} />
+                </Field>
+                <Field label="YouTube — Link URL">
+                  <input style={s.input} value={data.youtube?.url || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))} />
+                </Field>
+              </div>
               <Field label="Link Embed Google Maps">
                 <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} />
               </Field>
             </div>
           )}
-
+          
           {/* ===== TAB: DIGITAL ===== */}
           {tab === 'digital' && (
             <div>
