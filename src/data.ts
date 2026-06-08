@@ -323,7 +323,7 @@ export const FAQS: FaqItem[] = [
   {
     id: "faq-1",
     question: "Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?",
-    answer: "LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah. Dengan kondisi yang lebih bersih, minim bau amis, dan siap masak, LOSGo memberikan kemudahan bagi konsumen tanpa mengurangi kualitas maupun cita rasa ikan lele."
+    answer: "LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, pakan full pelet menggunakan probiotik, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah. Dengan kondisi yang lebih bersih, minim bau amis, dan siap masak, HarmaFarm memberikan kemudahan bagi konsumen tanpa mengurangi kualitas maupun cita rasa ikan lele."
   },
   {
     id: "faq-2",
