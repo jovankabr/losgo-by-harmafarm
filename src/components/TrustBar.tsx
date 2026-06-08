@@ -27,12 +27,12 @@ export default function TrustBar() {
           {logos.map((logo) => (
             <div
               key={logo.alt}
-              className="flex items-center justify-center h-20 w-32"
+              className="flex items-center justify-center h-24 w-40"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-12 max-w-full object-contain transition-transform duration-300 hover:scale-105"
+                className="max-h-20 max-w-full object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
           ))}
