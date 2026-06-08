@@ -467,24 +467,26 @@ export default function AdminDashboard() {
           {/* ===== KONTAK ===== */}
           {tab === 'kontak' && (
             <div>
-              <div style={s.h2}>📞 Kontak</div>
-              <div style={s.h2sub}>Section "Kami Selalu Ada untuk Anda" — informasi kontak yang tampil di website</div>
-
               <div style={s.h3}>WhatsApp & Email</div>
               <div style={s.grid2}>
-                <Field label="Nomor WhatsApp (tampil di website, contoh: +62 856-4111-4777)">
+                <Field label="Nomor WhatsApp 1 (tampil di website)">
                   <input style={s.input} value={data.contact.phone} onChange={e => setContact('phone', e.target.value)} />
                 </Field>
                 <Field label="Email Resmi">
                   <input style={s.input} value={data.contact.email} onChange={e => setContact('email', e.target.value)} />
                 </Field>
               </div>
-              <Field label="Link WhatsApp lengkap dengan pesan otomatis (wa.me/62...)">
+              <Field label="Link WhatsApp 1 (wa.me/62...)">
                 <input style={s.input} value={data.contact.whatsappUrl} onChange={e => setContact('whatsappUrl', e.target.value)} />
               </Field>
-
-              <hr style={s.divider} />
-              <div style={s.h3}>Media Sosial (tampil sebagai kartu di section Kontak)</div>
+              <div style={s.grid2}>
+                <Field label="Nomor WhatsApp 2 (opsional — nomor kedua)">
+                  <input style={s.input} value={(data.contact as any).phone2 || ''} onChange={e => setData(d => ({ ...d, contact: { ...d.contact, phone2: e.target.value } }))} placeholder="+62 812-xxxx-xxxx" />
+                </Field>
+                <Field label="Link WhatsApp 2 (wa.me/62...)">
+                  <input style={s.input} value={(data.contact as any).whatsappUrl2 || ''} onChange={e => setData(d => ({ ...d, contact: { ...d.contact, whatsappUrl2: e.target.value } }))} placeholder="https://wa.me/628xxx..." />
+                </Field>
+              </div>
 
               {/* Instagram di Kontak */}
               <div style={s.fieldGroup}>
