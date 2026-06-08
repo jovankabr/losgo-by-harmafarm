@@ -21,6 +21,14 @@ export default function Contact() {
       icon: Phone,
       color: "bg-emerald-50 text-emerald-600 border-emerald-100",
     },
+    ...(c?.phone2 ? [{
+      title: "WhatsApp Order & Reseller 2",
+      value: c.phone2 || '+62 856-4111-3777',
+      info: "Hubungi kami untuk pemesanan produk, konsultasi, dan informasi reseller.",
+      href: c?.whatsappUrl2 || `https://wa.me/${c.phone2.replace(/\D/g, '')}`,
+      icon: Phone,
+      color: "bg-emerald-50 text-emerald-600 border-emerald-100",
+    }] : []),
     {
       title: "E-mail Resmi",
       value: c?.email || 'hartonolosgo@gmail.com',
