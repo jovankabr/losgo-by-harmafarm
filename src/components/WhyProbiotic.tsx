@@ -66,7 +66,7 @@ export default function WhyProbiotic() {
             Mengapa HarmaFarm Menjadi Pilihan <span className="text-brand-primary">Banyak Orang?</span>
           </h2>
           <p className="text-base text-brand-dark/70">
-            Produk HarmaFarm diolah dari ikan pilihan, dimarinasi dengan bumbu berkualitas, dan diproses secara higienis untuk menghadirkan cita rasa terbaik bagi Orang Indonesia.
+            Produk HarmaFarm diolah dari ikan pilihan yang dipastikan <strong>tanpa bau tanah</strong>, dimarinasi dengan bumbu berkualitas, dan diproses secara higienis untuk menghadirkan cita rasa terbaik bagi Orang Indonesia.
           </p>
         </div>
 
