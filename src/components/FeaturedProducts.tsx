@@ -187,7 +187,10 @@ export default function FeaturedProducts() {
             <div>
               <h4 className="font-display font-black text-base sm:text-lg mb-1">Ingin Menjadi Reseller HarmaFarm?</h4>
               <p className="text-xs text-white/80 max-w-xl">
-                Bergabung sebagai mitra reseller dan dapatkan akses produk frozen food ikan berkualitas dengan harga khusus serta dukungan promosi dari HarmaFarm.
+                Bergabung sebagai mitra reseller dan dapatkan akses produk frozen food ikan berkualitas dengan harga khusus serta dukungan promosi dari HarmaFarm. 
+              </p>
+              <p className="text-xs text-white/80 max-w-xl">
+                Terbukti sudah banyak reseller di berbagai kota yang repeat order. 
               </p>
             </div>
           </div>
