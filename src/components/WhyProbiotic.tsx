@@ -212,7 +212,7 @@ export default function WhyProbiotic() {
                 </h3>
 
                 <p className="text-brand-dark/70 leading-relaxed mb-6">
-                  Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan untuk membantu menjaga kesehatan ikan, kualitas daging, dan pertumbuhan yang optimal.
+                  Ikan HarmaFarm dibudidayakan menggunakan pakan full pelet dan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan untuk membantu menjaga kesehatan ikan, kualitas daging, dan pertumbuhan yang optimal.
                 </p>
 
                 <div className="grid grid-cols-2 gap-3">
