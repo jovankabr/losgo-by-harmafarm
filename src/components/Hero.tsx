@@ -108,7 +108,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-[420px] aspect-square flex items-center justify-center"
+            className="relative w-full max-w-[520px] aspect-square flex items-center justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/10 to-brand-soft rounded-full -z-10" />
             <div className="absolute w-[85%] h-[85%] rounded-full border-2 border-dashed border-brand-secondary/20 -z-5 animate-pulse" />
