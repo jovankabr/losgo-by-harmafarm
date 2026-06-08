@@ -17,7 +17,7 @@ const DEFAULT: SiteData = {
   hero: {
     badge: 'Pasti Bersih, Pasti Enak!',
     headline: 'Frozen Food Ikan Marinasi Siap Goreng, Siap Santap!',
-    subheadline: 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga. Diproduksi secara higienis dengan fasilitas bersertifikasi GMP serta menggunakan bahan baku yang telah memenuhi standar Halal.',
+    subheadline: 'Berbagai pilihan olahan ikan berkualitas dari HarmaFarm yang telah dimarinasi dengan bumbu pilihan, praktis disajikan, dan siap menjadi hidangan favorit keluarga.',
     cta1: 'Katalog Produk',
     cta2: 'Pesan Sekarang',
   },
@@ -51,30 +51,20 @@ const DEFAULT: SiteData = {
     { id: 'guramemarinasi', name: 'Gurameh Lokal Bumbu Kuning', badge: 'SPESIAL', portion: 'per ekor', price: 'Rp 8.000', description: 'Gurameh lokal dengan marinasi bumbu kuning khas, siap goreng langsung dari freezer.', features: ['Bumbu Kuning Khas', 'Alami Tanpa Pengawet', 'Siap Goreng'], tags: ['Gurameh'], image: '' },
   ],
   faqs: [
-    { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas. Lele dipilih dari budidaya yang terjaga kualitasnya, kemudian dibersihkan secara higienis dan diproses dengan bumbu pilihan sehingga siap diolah.' },
-    { id: 'faq-2', question: 'Bagaimana Cara yang Tepat Menyimpan Produk Harma Farm?', answer: 'Simpan produk dalam kondisi beku di dalam freezer dengan suhu stabil -18°C atau lebih rendah. Dengan kemasan yang tetap tertutup rapat, produk dapat bertahan hingga 6 bulan.' },
-    { id: 'faq-3', question: 'Apakah Produk Harma Farm Aman Dikonsumsi oleh Ibu Hamil dan Anak-Anak?', answer: 'Ya, produk HarmaFarm aman dikonsumsi oleh ibu hamil dan anak-anak karena dibuat dari bahan alami tanpa pengawet berbahaya dan diproses secara higienis sesuai standar keamanan pangan.' },
-    { id: 'faq-4', question: 'Bagaimana Cara Melakukan Pemesanan Produk Harma Farm? Apakah Tersedia Titik Penjualan Offline?', answer: 'Pemesanan dapat dilakukan melalui WhatsApp admin kami. Kami juga melayani pengiriman ke area Banyumas dan sekitarnya. Untuk informasi titik penjualan offline, silakan hubungi kami langsung.' },
+    { id: 'faq-1', question: 'Apa Perbedaan Lele Biasa dengan LOSGo by Harma Farm?', answer: 'LOSGo by Harma Farm hadir sebagai solusi yang lebih praktis untuk menikmati olahan ikan berkualitas.' },
+    { id: 'faq-2', question: 'Bagaimana Cara yang Tepat Menyimpan Produk Harma Farm?', answer: 'Simpan produk dalam kondisi beku di dalam freezer dengan suhu stabil -18°C atau lebih rendah.' },
+    { id: 'faq-3', question: 'Apakah Produk Harma Farm Aman Dikonsumsi oleh Ibu Hamil dan Anak-Anak?', answer: 'Ya, produk HarmaFarm aman dikonsumsi karena dibuat dari bahan alami tanpa pengawet berbahaya.' },
+    { id: 'faq-4', question: 'Bagaimana Cara Melakukan Pemesanan Produk Harma Farm?', answer: 'Pemesanan dapat dilakukan melalui WhatsApp admin kami. Kami melayani pengiriman ke area Banyumas dan sekitarnya.' },
   ],
   testimonials: [
     { id: 'testi-1', name: 'Rina', role: 'Ibu Rumah Tangga - Purwokerto', rating: 5, text: 'Awalnya ragu coba produk HarmaFarm ini, tapi setelah dimasak ternyata rasanya lebih gurih. Anak-anak juga lebih suka.' },
     { id: 'testi-2', name: 'Arif', role: 'Dosen Universitas Jendral Soedirman - Purwokerto', rating: 5, text: 'Tekstur dagingnya padat dan tidak mudah hancur saat dimasak. Sudah beberapa kali pesan dan kualitasnya selalu konsisten.' },
   ],
-  branding: {
-    logoUrl: '',
-    aboutImages: [],
-  },
+  branding: { logoUrl: '', aboutImages: [] },
   gallery: [],
   certifications: [],
-  youtube: {
-    channelName: '',
-    url: ''
-  },
-  feedComposition: {
-    image: '',
-    title: 'Nutrisi Alami untuk Menghasilkan Ikan Berkualitas',
-    description: 'Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan untuk membantu menjaga kesehatan ikan, kualitas daging, dan pertumbuhan yang optimal.',
-  },
+  youtube: { channelName: '', url: '' },
+  feedComposition: { image: '', title: 'Nutrisi Alami untuk Menghasilkan Ikan Berkualitas', description: 'Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan.' },
 }
 
 type Tab = 'home' | 'produk' | 'tentang' | 'keunggulan' | 'proses' | 'kontak' | 'faq' | 'testimoni' | 'sertifikasi' | 'pakan'
@@ -82,7 +72,7 @@ type Tab = 'home' | 'produk' | 'tentang' | 'keunggulan' | 'proses' | 'kontak' | 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: '100vh', background: '#f4f7f4', fontFamily: 'system-ui, -apple-system, sans-serif', color: '#1a1a1a' },
   header: { background: '#fff', borderBottom: '1px solid #d4e8d4', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 60, position: 'sticky', top: 0, zIndex: 100 },
-  badge: { background: '#315B35', color: '#fff', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 6 },
+  headerBadge: { background: '#315B35', color: '#fff', fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 6 },
   liveDot: { fontSize: 12, color: '#1D9E75', background: '#e1f5ee', padding: '2px 8px', borderRadius: 10 },
   saveBtn: (saving: boolean): React.CSSProperties => ({ background: saving ? '#9FE1CB' : '#315B35', color: '#fff', border: 'none', padding: '9px 20px', borderRadius: 8, fontWeight: 600, fontSize: 14, cursor: saving ? 'not-allowed' : 'pointer' }),
   layout: { display: 'flex', maxWidth: 1100, margin: '0 auto', padding: '24px 16px', gap: 20 },
@@ -91,9 +81,9 @@ const s: Record<string, React.CSSProperties> = {
   navBtn: (active: boolean): React.CSSProperties => ({ display: 'flex', alignItems: 'center', gap: 8, width: '100%', padding: '11px 16px', border: 'none', background: active ? '#e8f5ee' : 'transparent', color: active ? '#315B35' : '#555', fontWeight: active ? 700 : 400, fontSize: 13, cursor: 'pointer', textAlign: 'left', borderLeft: active ? '3px solid #315B35' : '3px solid transparent' }),
   tip: { marginTop: 12, background: '#e8f5ee', borderRadius: 10, padding: '10px 14px', fontSize: 12, color: '#315B35', lineHeight: 1.5 },
   main: { flex: 1, background: '#fff', borderRadius: 12, border: '1px solid #d4e8d4', padding: 24 },
-  h2: { fontSize: 18, fontWeight: 700, marginBottom: 4, color: '#315B35' },
+  h2: { fontSize: 18, fontWeight: 700, marginBottom: 2, color: '#315B35' },
   h2sub: { fontSize: 12, color: '#888', marginBottom: 20 },
-  h3: { fontSize: 14, fontWeight: 700, marginBottom: 12, color: '#315B35', borderBottom: '1px solid #e8f5ee', paddingBottom: 8 },
+  h3: { fontSize: 13, fontWeight: 700, color: '#315B35', borderBottom: '1px solid #e8f5ee', paddingBottom: 8, marginBottom: 14 },
   label: { display: 'block', fontSize: 11, fontWeight: 700, color: '#555', marginBottom: 5, textTransform: 'uppercase' as const, letterSpacing: '0.05em' },
   input: { width: '100%', border: '1px solid #c5d9b3', borderRadius: 8, padding: '8px 12px', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', background: '#fff', outline: 'none', boxSizing: 'border-box' as const },
   textarea: { width: '100%', border: '1px solid #c5d9b3', borderRadius: 8, padding: '8px 12px', fontSize: 13, fontFamily: 'inherit', color: '#1a1a1a', background: '#fff', outline: 'none', boxSizing: 'border-box' as const, resize: 'vertical' as const, minHeight: 80 },
@@ -106,6 +96,8 @@ const s: Record<string, React.CSSProperties> = {
   divider: { border: 'none', borderTop: '1px solid #d4e8d4', margin: '20px 0' },
   infoBox: { background: '#e8f5ee', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#315B35', lineHeight: 1.6 },
   warnBox: { background: '#fffbe6', border: '1px solid #ffe58f', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#7c5800', lineHeight: 1.6 },
+  // field group visual separator
+  fieldGroup: { background: '#f9fdf9', borderRadius: 10, padding: '14px 16px', marginBottom: 16, border: '1px solid #e8f5ee' },
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -129,10 +121,7 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (url: str
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
-    if (file.size > 500 * 1024) {
-      alert('Ukuran gambar maksimal 500KB. Kompres dulu di https://squoosh.app')
-      return
-    }
+    if (file.size > 500 * 1024) { alert('Ukuran gambar maksimal 500KB. Kompres dulu di https://squoosh.app'); return }
     setUploading(true)
     uploadToCloudinary(file)
       .then((url) => { onChange(url); setUploading(false) })
@@ -158,10 +147,7 @@ function ImageUploader({ value, onChange }: { value: string; onChange: (url: str
           <button onClick={() => fileRef.current?.click()} disabled={uploading} style={{ background: '#e8f5ee', color: '#315B35', border: '1px solid #c5d9b3', borderRadius: 7, padding: '7px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer', display: 'block', marginBottom: 6 }}>
             {uploading ? '⏳ Memproses...' : value ? '🔄 Ganti Gambar' : '📁 Pilih Gambar'}
           </button>
-          <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>
-            Format: JPG/PNG/WEBP<br />Maks: 500KB<br />
-            <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>Kompres di squoosh.app</a>
-          </div>
+          <div style={{ fontSize: 11, color: '#888', lineHeight: 1.5 }}>Format: JPG/PNG/WEBP<br />Maks: 500KB<br /><a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>Kompres di squoosh.app</a></div>
         </div>
       </div>
     </div>
@@ -179,9 +165,7 @@ export default function AdminDashboard() {
   const [saving, setSaving] = useState(false)
   const [toast, setToast] = useState('')
 
-  useEffect(() => {
-    getSiteData().then(d => { if (d) setData(d); setLoading(false) })
-  }, [])
+  useEffect(() => { getSiteData().then(d => { if (d) setData(d); setLoading(false) }) }, [])
 
   const handleLogin = () => {
     if (un === ADMIN_USER && pw === ADMIN_PASSWORD) { setAuth(true); setPwError(false) }
@@ -204,10 +188,7 @@ export default function AdminDashboard() {
 
   if (loading) return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f4f7f4', fontFamily: 'system-ui' }}>
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: 40, marginBottom: 12 }}>🐟</div>
-        <div style={{ color: '#315B35', fontWeight: 600 }}>Memuat data HarmaFarm...</div>
-      </div>
+      <div style={{ textAlign: 'center' }}><div style={{ fontSize: 40, marginBottom: 12 }}>🐟</div><div style={{ color: '#315B35', fontWeight: 600 }}>Memuat data HarmaFarm...</div></div>
     </div>
   )
 
@@ -227,23 +208,23 @@ export default function AdminDashboard() {
     setData(d => ({ ...d, products: d.products.map((x, idx) => idx === i ? { ...x, ...patch } : x) }))
 
   const tabs: { id: Tab; label: string }[] = [
-    { id: 'home',       label: '🏠 Home' },
-    { id: 'produk',     label: '🐟 Produk' },
-    { id: 'tentang',    label: '🏪 Tentang Kami' },
-    { id: 'keunggulan', label: '⭐ Keunggulan' },
-    { id: 'proses',     label: '⚙️ Proses' },
-    { id: 'kontak',     label: '📞 Kontak' },
-    { id: 'faq',        label: '❓ FAQ' },
-    { id: 'testimoni',  label: '💬 Testimoni' },
-    { id: 'sertifikasi',label: '🏆 Sertifikasi' },
-    { id: 'pakan',      label: '🌾 Komposisi Pakan' },
+    { id: 'home',        label: '🏠 Home' },
+    { id: 'produk',      label: '🐟 Produk' },
+    { id: 'tentang',     label: '🏪 Tentang Kami' },
+    { id: 'keunggulan',  label: '⭐ Keunggulan' },
+    { id: 'proses',      label: '⚙️ Proses' },
+    { id: 'kontak',      label: '📞 Kontak' },
+    { id: 'faq',         label: '❓ FAQ' },
+    { id: 'testimoni',   label: '💬 Testimoni' },
+    { id: 'sertifikasi', label: '🏆 Sertifikasi' },
+    { id: 'pakan',       label: '🌾 Komposisi Pakan' },
   ]
 
   return (
     <div style={s.page}>
       <div style={s.header}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={s.badge}>ADMIN</span>
+          <span style={s.headerBadge}>ADMIN</span>
           <span style={{ fontWeight: 700, fontSize: 16 }}>LOSGo by HarmaFarm</span>
           <span style={s.liveDot}>● Live</span>
         </div>
@@ -256,11 +237,9 @@ export default function AdminDashboard() {
       <div style={s.layout}>
         <div style={s.sidebar}>
           <div style={s.sidebarNav}>
-            {tabs.map(t => (
-              <button key={t.id} onClick={() => setTab(t.id)} style={s.navBtn(tab === t.id)}>{t.label}</button>
-            ))}
+            {tabs.map(t => <button key={t.id} onClick={() => setTab(t.id)} style={s.navBtn(tab === t.id)}>{t.label}</button>)}
           </div>
-          <div style={s.tip}><strong>💡 Tips:</strong> Setelah edit, klik <strong>Simpan & Publish</strong> — perubahan langsung tampil di website dalam hitungan detik.</div>
+          <div style={s.tip}><strong>💡 Tips:</strong> Setelah edit, klik <strong>Simpan & Publish</strong> — perubahan langsung tampil di website.</div>
         </div>
 
         <div style={s.main}>
@@ -272,8 +251,8 @@ export default function AdminDashboard() {
               <div style={s.h2sub}>Bagian pertama yang dilihat pengunjung website</div>
 
               <div style={s.h3}>Teks Hero</div>
-              <Field label="Badge / Label kecil (contoh: Pasti Bersih, Pasti Enak!)">
-                <input style={s.input} value={data.hero.badge} onChange={e => setHero('badge', e.target.value)} />
+              <Field label="Badge / Label kecil di atas judul">
+                <input style={s.input} value={data.hero.badge} onChange={e => setHero('badge', e.target.value)} placeholder="Pasti Bersih, Pasti Enak!" />
               </Field>
               <Field label="Headline Utama (judul besar)">
                 <textarea style={s.textarea} value={data.hero.headline} onChange={e => setHero('headline', e.target.value)} />
@@ -282,10 +261,10 @@ export default function AdminDashboard() {
                 <textarea style={{ ...s.textarea, minHeight: 100 }} value={data.hero.subheadline} onChange={e => setHero('subheadline', e.target.value)} />
               </Field>
               <div style={s.grid2}>
-                <Field label="Tombol Kiri (contoh: Katalog Produk)">
+                <Field label="Label Tombol Kiri (Katalog)">
                   <input style={s.input} value={data.hero.cta1} onChange={e => setHero('cta1', e.target.value)} />
                 </Field>
-                <Field label="Tombol Kanan (contoh: Pesan Sekarang)">
+                <Field label="Label Tombol Kanan (Pesan)">
                   <input style={s.input} value={data.hero.cta2} onChange={e => setHero('cta2', e.target.value)} />
                 </Field>
               </div>
@@ -307,12 +286,9 @@ export default function AdminDashboard() {
 
               <hr style={s.divider} />
               <div style={s.h3}>Logo Website</div>
-              <div style={s.infoBox}>Logo tampil di navbar (atas) dan footer (bawah) website. Gunakan PNG dengan latar transparan.</div>
+              <div style={s.infoBox}>Logo tampil di navbar (atas) dan footer (bawah) website. Gunakan PNG dengan latar transparan untuk hasil terbaik.</div>
               <Field label="Upload Logo">
-                <ImageUploader
-                  value={data.branding?.logoUrl || ''}
-                  onChange={url => setData(d => ({ ...d, branding: { ...d.branding, logoUrl: url } }))}
-                />
+                <ImageUploader value={data.branding?.logoUrl || ''} onChange={url => setData(d => ({ ...d, branding: { ...d.branding, logoUrl: url } }))} />
               </Field>
             </div>
           )}
@@ -321,8 +297,8 @@ export default function AdminDashboard() {
           {tab === 'produk' && (
             <div>
               <div style={s.h2}>🐟 Katalog Produk</div>
-              <div style={s.h2sub}>Produk yang tampil di halaman Produk website</div>
-              <div style={s.warnBox}>📸 Upload gambar produk maks 500KB. Kompres dulu di <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#315B35' }}>squoosh.app</a> jika perlu.</div>
+              <div style={s.h2sub}>Tampil di halaman Produk — bisa filter per kategori (Lele, Nila, Bandeng, dll)</div>
+              <div style={s.warnBox}>📸 Upload foto produk maks 500KB. Kompres dulu di <a href="https://squoosh.app" target="_blank" rel="noreferrer" style={{ color: '#7c5800' }}>squoosh.app</a> jika perlu.</div>
               {data.products.map((p, i) => (
                 <div key={p.id} style={s.card}>
                   <div style={s.cardHeader}>
@@ -339,21 +315,21 @@ export default function AdminDashboard() {
                     <Field label="Badge (TERLARIS / FAVORIT / dll)">
                       <input style={s.input} value={p.badge} onChange={e => updateProduct(i, { badge: e.target.value })} />
                     </Field>
-                    <Field label="Porsi / Berat (contoh: 800 gr)">
-                      <input style={s.input} value={p.portion} onChange={e => updateProduct(i, { portion: e.target.value })} />
+                    <Field label="Porsi / Berat">
+                      <input style={s.input} value={p.portion} onChange={e => updateProduct(i, { portion: e.target.value })} placeholder="800 gr" />
                     </Field>
-                    <Field label="Harga (contoh: Rp 35.000)">
+                    <Field label="Harga">
                       <input style={s.input} value={p.price || ''} onChange={e => updateProduct(i, { price: e.target.value })} placeholder="Rp 35.000" />
                     </Field>
                   </div>
-                  <Field label="Kategori / Tag (contoh: Lele, Nila, Bandeng — pisah koma)">
+                  <Field label="Kategori / Tag (pisah koma — contoh: Lele, Nila)">
                     <input style={s.input} value={p.tags.join(', ')} onChange={e => updateProduct(i, { tags: e.target.value.split(',').map(t => t.trim()) })} />
                   </Field>
                   <Field label="Deskripsi Produk">
                     <textarea style={s.textarea} value={p.description} onChange={e => updateProduct(i, { description: e.target.value })} />
                   </Field>
-                  <Field label="Poin Keunggulan (pisah dengan koma)">
-                    <input style={s.input} value={p.features.join(', ')} onChange={e => updateProduct(i, { features: e.target.value.split(',').map(f => f.trim()) })} placeholder="Tinggi Protein, Alami Tanpa Pengawet, Proses Higienis" />
+                  <Field label="Poin Keunggulan (pisah koma — contoh: Tinggi Protein, Tanpa Pengawet)">
+                    <input style={s.input} value={p.features.join(', ')} onChange={e => updateProduct(i, { features: e.target.value.split(',').map(f => f.trim()) })} />
                   </Field>
                 </div>
               ))}
@@ -369,24 +345,24 @@ export default function AdminDashboard() {
               <div style={s.h2}>🏪 Tentang Kami</div>
               <div style={s.h2sub}>Section "Mengolah Ikan Lokal Menjadi Hidangan Praktis dan Bernutrisi"</div>
 
-              <div style={s.h3}>Teks Tentang Kami</div>
-              <Field label="Deskripsi Paragraf 1 (asal usul & visi HarmaFarm)">
-                <textarea style={{ ...s.textarea, minHeight: 100 }} value={data.brand.description} onChange={e => setBrand('description', e.target.value)} placeholder="HarmaFarm hadir sebagai UMKM inovatif asal Cilongok, Banyumas..." />
+              <div style={s.h3}>Deskripsi Tentang HarmaFarm</div>
+              <Field label="Paragraf Tentang Kami (asal usul, visi, komitmen HarmaFarm)">
+                <textarea style={{ ...s.textarea, minHeight: 120 }} value={data.brand.description} onChange={e => setBrand('description', e.target.value)} placeholder="HarmaFarm hadir sebagai UMKM inovatif asal Cilongok, Banyumas yang mengembangkan berbagai olahan makanan beku (frozen food) siap saji berbasis probiotik berkualitas tinggi." />
               </Field>
 
               <hr style={s.divider} />
               <div style={s.h3}>Foto Slideshow "Tentang Kami"</div>
-              <div style={s.infoBox}>Foto-foto ini tampil sebagai slideshow di sisi kiri section Tentang Kami. Upload foto tim, fasilitas produksi, atau kegiatan HarmaFarm. Maks 500KB per foto.</div>
+              <div style={s.infoBox}>
+                Foto-foto ini tampil sebagai slideshow di sisi kiri section Tentang Kami.<br />
+                Upload foto tim produksi, fasilitas, atau kegiatan HarmaFarm. Maks 500KB per foto.
+              </div>
               {(data.branding?.aboutImages || []).map((img, i) => (
                 <div key={i} style={{ ...s.card, marginBottom: 10 }}>
                   <div style={s.cardHeader}>
                     <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: d.branding.aboutImages.filter((_, idx) => idx !== i) } }))}>🗑 Hapus</button>
                   </div>
-                  <ImageUploader
-                    value={img}
-                    onChange={url => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: d.branding.aboutImages.map((x, idx) => idx === i ? url : x) } }))}
-                  />
+                  <ImageUploader value={img} onChange={url => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: d.branding.aboutImages.map((x, idx) => idx === i ? url : x) } }))} />
                 </div>
               ))}
               <button style={s.addBtn} onClick={() => setData(d => ({ ...d, branding: { ...d.branding, aboutImages: [...(d.branding?.aboutImages || []), ''] } }))}>
@@ -398,63 +374,79 @@ export default function AdminDashboard() {
           {/* ===== KEUNGGULAN ===== */}
           {tab === 'keunggulan' && (
             <div>
-              <div style={s.h2}>⭐ Keunggulan & Digital Presence</div>
-              <div style={s.h2sub}>Section "Mengapa HarmaFarm Menjadi Pilihan Banyak Orang?" + statistik platform digital</div>
+              <div style={s.h2}>⭐ Keunggulan</div>
+              <div style={s.h2sub}>Section "Mengapa HarmaFarm Menjadi Pilihan Banyak Orang?" + kartu platform digital</div>
 
-              <div style={s.h3}>Statistik Platform Digital</div>
-              <div style={s.infoBox}>Angka-angka ini tampil di bagian bawah section Keunggulan — kartu Instagram, TikTok, Google Maps, dan Website.</div>
-              <div style={s.grid2}>
-                <Field label="Instagram — Username">
-                  <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} placeholder="@harmafarm.losgo" />
-                </Field>
-                <Field label="Instagram — Statistik">
-                  <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} placeholder="300+ Followers" />
+              <div style={s.h3}>Kartu Platform Digital</div>
+              <div style={s.infoBox}>
+                Kartu-kartu ini tampil di bagian bawah section Keunggulan dengan judul <strong>"Temukan HarmaFarm di Berbagai Platform"</strong>.<br />
+                Isi username <strong>(@handle)</strong> dan angka statistiknya di sini.
+              </div>
+
+              {/* Instagram */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>📸 Instagram</div>
+                <div style={s.grid2}>
+                  <Field label="Username tampil (contoh: @harmafarm.losgo)">
+                    <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} placeholder="@harmafarm.losgo" />
+                  </Field>
+                  <Field label="Statistik (contoh: 300+ Followers)">
+                    <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} placeholder="300+ Followers" />
+                  </Field>
+                </div>
+                <Field label="Link URL Instagram">
+                  <input style={s.input} value={data.digital.ig_url} onChange={e => setDigital('ig_url', e.target.value)} />
                 </Field>
               </div>
-              <Field label="Instagram — Link URL">
-                <input style={s.input} value={data.digital.ig_url} onChange={e => setDigital('ig_url', e.target.value)} />
-              </Field>
-              <hr style={s.divider} />
-              <div style={s.grid2}>
-                <Field label="TikTok — Username">
-                  <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
-                </Field>
-                <Field label="TikTok — Statistik">
-                  <input style={s.input} value={data.digital.tt_metric} onChange={e => setDigital('tt_metric', e.target.value)} placeholder="1.3K+ Likes" />
+
+              {/* TikTok */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>🎵 TikTok</div>
+                <div style={s.grid2}>
+                  <Field label="Username tampil (contoh: @harmafarm.losgo)">
+                    <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
+                  </Field>
+                  <Field label="Statistik (contoh: 1.3K+ Likes)">
+                    <input style={s.input} value={data.digital.tt_metric} onChange={e => setDigital('tt_metric', e.target.value)} placeholder="1.3K+ Likes" />
+                  </Field>
+                </div>
+                <Field label="Link URL TikTok">
+                  <input style={s.input} value={data.digital.tt_url} onChange={e => setDigital('tt_url', e.target.value)} />
                 </Field>
               </div>
-              <Field label="TikTok — Link URL">
-                <input style={s.input} value={data.digital.tt_url} onChange={e => setDigital('tt_url', e.target.value)} />
-              </Field>
-              <hr style={s.divider} />
-              <Field label="Google Maps — Rating & Ulasan">
-                <input style={s.input} value={data.digital.gmaps_metric} onChange={e => setDigital('gmaps_metric', e.target.value)} placeholder="4.6/5 Rating (30+ Ulasan)" />
-              </Field>
-              <Field label="Google Maps — Link URL">
-                <input style={s.input} value={data.digital.gmaps_url} onChange={e => setDigital('gmaps_url', e.target.value)} />
-              </Field>
+
+              {/* Google Maps */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>📍 Google Maps</div>
+                <Field label="Rating & Ulasan (contoh: 4.6/5 Rating (30+ Ulasan))">
+                  <input style={s.input} value={data.digital.gmaps_metric} onChange={e => setDigital('gmaps_metric', e.target.value)} placeholder="4.6/5 Rating (30+ Ulasan)" />
+                </Field>
+                <Field label="Link URL Google Maps">
+                  <input style={s.input} value={data.digital.gmaps_url} onChange={e => setDigital('gmaps_url', e.target.value)} />
+                </Field>
+              </div>
             </div>
           )}
 
           {/* ===== PROSES ===== */}
           {tab === 'proses' && (
             <div>
-              <div style={s.h2}>⚙️ Proses & Galeri</div>
-              <div style={s.h2sub}>Section "Proses Produksi HarmaFarm" — foto galeri proses produksi</div>
+              <div style={s.h2}>⚙️ Proses</div>
+              <div style={s.h2sub}>Section "Proses Produksi HarmaFarm" — galeri foto proses</div>
 
               <div style={s.h3}>Foto Galeri Proses Produksi</div>
-              <div style={s.infoBox}>Upload foto-foto proses produksi (seleksi bahan baku, pembersihan, marinasi, pengemasan, dll). Foto ini tampil di section Proses website. Maks 500KB per foto.</div>
+              <div style={s.infoBox}>
+                Upload foto-foto proses produksi (seleksi bahan baku, pembersihan, marinasi, pengemasan, dll).<br />
+                Foto tampil di section Proses website. Maks 500KB per foto.
+              </div>
               {(data.gallery || []).map((item, i) => (
                 <div key={i} style={s.card}>
                   <div style={s.cardHeader}>
-                    <strong style={{ fontSize: 13 }}>Foto {i + 1}</strong>
+                    <strong style={{ fontSize: 13 }}>Foto {i + 1}{item.title ? ` — ${item.title}` : ''}</strong>
                     <button style={s.delBtn} onClick={() => setData(d => ({ ...d, gallery: d.gallery.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
                   </div>
                   <Field label="Foto">
-                    <ImageUploader
-                      value={item.image}
-                      onChange={url => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g) }))}
-                    />
+                    <ImageUploader value={item.image} onChange={url => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g) }))} />
                   </Field>
                   <div style={s.grid2}>
                     <Field label="Judul Foto (contoh: Seleksi Bahan Baku)">
@@ -476,43 +468,64 @@ export default function AdminDashboard() {
           {tab === 'kontak' && (
             <div>
               <div style={s.h2}>📞 Kontak</div>
-              <div style={s.h2sub}>Informasi kontak yang tampil di section Kontak dan footer website</div>
+              <div style={s.h2sub}>Section "Kami Selalu Ada untuk Anda" — informasi kontak yang tampil di website</div>
 
-              <div style={s.h3}>Informasi Kontak</div>
+              <div style={s.h3}>WhatsApp & Email</div>
               <div style={s.grid2}>
-                <Field label="Nomor Telepon / WA (tampil di website)">
-                  <input style={s.input} value={data.contact.phone} onChange={e => setContact('phone', e.target.value)} placeholder="+62 856-4111-4777" />
+                <Field label="Nomor WhatsApp (tampil di website, contoh: +62 856-4111-4777)">
+                  <input style={s.input} value={data.contact.phone} onChange={e => setContact('phone', e.target.value)} />
                 </Field>
-                <Field label="Email">
+                <Field label="Email Resmi">
                   <input style={s.input} value={data.contact.email} onChange={e => setContact('email', e.target.value)} />
                 </Field>
               </div>
-              <Field label="Link WhatsApp lengkap (wa.me/... termasuk pesan otomatis)">
+              <Field label="Link WhatsApp lengkap dengan pesan otomatis (wa.me/62...)">
                 <input style={s.input} value={data.contact.whatsappUrl} onChange={e => setContact('whatsappUrl', e.target.value)} />
-              </Field>
-              <Field label="Alamat Lengkap">
-                <textarea style={s.textarea} value={data.contact.address} onChange={e => setContact('address', e.target.value)} />
-              </Field>
-              <Field label="Link Embed Google Maps">
-                <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} placeholder="https://maps.app.goo.gl/..." />
               </Field>
 
               <hr style={s.divider} />
-              <div style={s.h3}>Media Sosial</div>
-              <div style={s.grid2}>
-                <Field label="Instagram — Link URL">
-                  <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://instagram.com/harmafarm.losgo" />
-                </Field>
-                <Field label="TikTok — Link URL">
-                  <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://tiktok.com/@harmafarm.losgo" />
-                </Field>
-                <Field label="YouTube — Nama Channel">
-                  <input style={s.input} value={data.youtube?.channelName || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))} />
-                </Field>
-                <Field label="YouTube — Link URL">
-                  <input style={s.input} value={data.youtube?.url || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))} />
+              <div style={s.h3}>Media Sosial (tampil sebagai kartu di section Kontak)</div>
+
+              {/* Instagram di Kontak */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>📸 Instagram Utama</div>
+                <div style={s.infoBox} style={{ marginBottom: 10, fontSize: 11 }}>
+                  ⚠️ Username Instagram di kartu Kontak diatur di tab <strong>Keunggulan</strong> (field "Username tampil"). Field di bawah ini hanya untuk link URL-nya.
+                </div>
+                <Field label="Link URL Instagram (untuk tombol klik)">
+                  <input style={s.input} value={data.contact.instagram} onChange={e => setContact('instagram', e.target.value)} placeholder="https://www.instagram.com/harmafarm.losgo" />
                 </Field>
               </div>
+
+              {/* TikTok di Kontak */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>🎵 TikTok</div>
+                <Field label="Link URL TikTok (untuk tombol klik)">
+                  <input style={s.input} value={data.contact.tiktok} onChange={e => setContact('tiktok', e.target.value)} placeholder="https://www.tiktok.com/@harmafarm.losgo" />
+                </Field>
+              </div>
+
+              {/* YouTube di Kontak */}
+              <div style={s.fieldGroup}>
+                <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>▶️ YouTube Channel</div>
+                <div style={s.grid2}>
+                  <Field label="Nama Channel (tampil sebagai teks)">
+                    <input style={s.input} value={data.youtube?.channelName || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, channelName: e.target.value } }))} placeholder="LOSGo Channel" />
+                  </Field>
+                  <Field label="Link URL YouTube">
+                    <input style={s.input} value={data.youtube?.url || ''} onChange={e => setData(d => ({ ...d, youtube: { ...d.youtube, url: e.target.value } }))} />
+                  </Field>
+                </div>
+              </div>
+
+              <hr style={s.divider} />
+              <div style={s.h3}>Alamat & Lokasi</div>
+              <Field label="Alamat Lengkap Rumah Produksi">
+                <textarea style={s.textarea} value={data.contact.address} onChange={e => setContact('address', e.target.value)} />
+              </Field>
+              <Field label="Link Google Maps (untuk tombol Petunjuk Rute)">
+                <input style={s.input} value={data.contact.mapsEmbed} onChange={e => setContact('mapsEmbed', e.target.value)} placeholder="https://maps.app.goo.gl/..." />
+              </Field>
             </div>
           )}
 
@@ -520,7 +533,7 @@ export default function AdminDashboard() {
           {tab === 'faq' && (
             <div>
               <div style={s.h2}>❓ FAQ</div>
-              <div style={s.h2sub}>Section "Pertanyaan Seputar Produk HarmaFarm"</div>
+              <div style={s.h2sub}>Section "Pertanyaan Seputar Produk HarmaFarm" — accordion tanya jawab</div>
               {data.faqs.map((f, i) => (
                 <div key={f.id} style={s.card}>
                   <div style={s.cardHeader}>
@@ -556,16 +569,16 @@ export default function AdminDashboard() {
                     <Field label="Nama Pelanggan">
                       <input style={s.input} value={t.name} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, name: e.target.value } : x) }))} />
                     </Field>
-                    <Field label="Jabatan / Asal (contoh: Ibu Rumah Tangga - Purwokerto)">
+                    <Field label="Profil (contoh: Ibu Rumah Tangga - Purwokerto)">
                       <input style={s.input} value={t.role} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, role: e.target.value } : x) }))} />
                     </Field>
                   </div>
-                  <Field label="Rating (1-5 bintang)">
+                  <Field label="Rating Bintang">
                     <select style={s.input} value={t.rating} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, rating: Number(e.target.value) } : x) }))}>
                       {[1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n} bintang {'⭐'.repeat(n)}</option>)}
                     </select>
                   </Field>
-                  <Field label="Isi Testimoni (kutipan dari pelanggan)">
+                  <Field label="Isi Testimoni (kutipan langsung dari pelanggan)">
                     <textarea style={{ ...s.textarea, minHeight: 90 }} value={t.text} onChange={e => setData(d => ({ ...d, testimonials: d.testimonials.map((x, idx) => idx === i ? { ...x, text: e.target.value } : x) }))} />
                   </Field>
                 </div>
@@ -581,7 +594,7 @@ export default function AdminDashboard() {
             <div>
               <div style={s.h2}>🏆 Sertifikasi & Legalitas</div>
               <div style={s.h2sub}>Logo sertifikasi yang tampil di bagian bawah Home (Halal, GMP, Better Banyumas, dll)</div>
-              <div style={s.infoBox}>Upload logo sertifikasi dalam format PNG transparan untuk hasil terbaik. Maks 500KB per logo.</div>
+              <div style={s.infoBox}>Upload logo sertifikasi dalam format PNG transparan. Maks 500KB per logo.</div>
               {(data.certifications || []).map((item, i) => (
                 <div key={i} style={s.card}>
                   <div style={s.cardHeader}>
@@ -592,10 +605,7 @@ export default function AdminDashboard() {
                     <input style={s.input} value={item.name} onChange={e => setData(d => ({ ...d, certifications: d.certifications.map((c, idx) => idx === i ? { ...c, name: e.target.value } : c) }))} />
                   </Field>
                   <Field label="Logo Sertifikasi">
-                    <ImageUploader
-                      value={item.image}
-                      onChange={url => setData(d => ({ ...d, certifications: d.certifications.map((c, idx) => idx === i ? { ...c, image: url } : c) }))}
-                    />
+                    <ImageUploader value={item.image} onChange={url => setData(d => ({ ...d, certifications: d.certifications.map((c, idx) => idx === i ? { ...c, image: url } : c) }))} />
                   </Field>
                 </div>
               ))}
@@ -610,19 +620,15 @@ export default function AdminDashboard() {
             <div>
               <div style={s.h2}>🌾 Komposisi Pakan Probiotik</div>
               <div style={s.h2sub}>Section "Nutrisi Alami untuk Menghasilkan Ikan Berkualitas" di bagian bawah Keunggulan</div>
-              <div style={s.infoBox}>Section ini menjelaskan bahan-bahan pakan probiotik yang digunakan HarmaFarm: Pelet, Gula Merah, Ragi, Nanas, Air Kelapa, Yakult, dll.</div>
-
+              <div style={s.infoBox}>Section ini menjelaskan bahan pakan probiotik HarmaFarm: Pelet, Gula Merah, Ragi, Nanas, Air Kelapa, Yakult, dll.</div>
               <Field label="Judul Section">
                 <input style={s.input} value={data.feedComposition?.title || ''} onChange={e => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, title: e.target.value } }))} placeholder="Nutrisi Alami untuk Menghasilkan Ikan Berkualitas" />
               </Field>
               <Field label="Deskripsi (paragraf penjelasan pakan probiotik)">
-                <textarea style={{ ...s.textarea, minHeight: 120 }} value={data.feedComposition?.description || ''} onChange={e => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, description: e.target.value } }))} placeholder="Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik yang diracik dari bahan-bahan alami pilihan..." />
+                <textarea style={{ ...s.textarea, minHeight: 120 }} value={data.feedComposition?.description || ''} onChange={e => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, description: e.target.value } }))} placeholder="Ikan HarmaFarm dibudidayakan menggunakan pakan fermentasi probiotik..." />
               </Field>
-              <Field label="Foto Komposisi Pakan (foto bahan-bahan pakan)">
-                <ImageUploader
-                  value={data.feedComposition?.image || ''}
-                  onChange={url => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, image: url } }))}
-                />
+              <Field label="Foto Bahan-Bahan Pakan">
+                <ImageUploader value={data.feedComposition?.image || ''} onChange={url => setData(d => ({ ...d, feedComposition: { ...d.feedComposition, image: url } }))} />
               </Field>
             </div>
           )}
