@@ -6,6 +6,8 @@ export type SiteData = {
   contact: {
     phone: string
     whatsappUrl: string
+    phone2?: string
+    whatsappUrl2?: string
     email: string
     address: string
     instagram: string
