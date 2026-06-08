@@ -134,7 +134,7 @@ export default function WhyProbiotic() {
                     </h4>
                     <p className="text-xs text-brand-dark/50">Mengapa produk HarmaFarm menjadi pilihan praktis untuk kebutuhan sehari-hari.</p>
                   </div>
-                  <div className="bg-brand-primary text-brand-light font-bold text-[11px] uppercase py-2 px-4 rounded-xl leading-tight text-center">
+                  <div className="bg-brand-primary text-brand-light font-black text-xs uppercase py-3 px-5 rounded-xl text-center leading-tight min-w-[110px]">
                     PASTI BERSIH,
                     <br />
                     PASTI ENAK!
