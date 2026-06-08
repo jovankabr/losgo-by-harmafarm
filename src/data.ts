@@ -110,7 +110,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "800 gr",
     tags: ["Lele"],
-    description: "Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm.",
+    description: "Lele organik siap goreng dengan bumbu marinasi yang meresap dan cita rasa khas HarmaFarm. Pilihan isi 7-10 ekor per pack sesuai selera.",
     features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"],
   },
   {
@@ -120,7 +120,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "400 gr",
     tags: ["Lele"],
-    description: "Pilihan praktis untuk keluarga kecil atau kebutuhan harian.",
+    description: "Pilihan praktis untuk keluarga kecil atau kebutuhan harian. Pilihan isi 3-6 ekor per pack sesuai selera.",
     features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"],
   },
   {
@@ -130,7 +130,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "800 gr",
     tags: ["Nila"],
-    description: "Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih.",
+    description: "Ikan nila marinasi berbumbu pilihan dengan tekstur lembut dan rasa gurih. Pilihan isi 3-7 ekor per pack sesuai selera.",
     features: ["Bumbu Meresap", "Alami Tanpa Pengawet", "Proses Higienis"],
   },
   {
@@ -140,7 +140,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "400 gr",
     tags: ["Nila"],
-    description: "Ukuran praktis untuk sajian keluarga kecil maupun anak kos.",
+    description: "Ukuran praktis untuk sajian keluarga kecil maupun anak kos. Pilihan isi 2-4 ekor per pack sesuai selera.",
     features: ["Bumbu Meresap", "Alami Tanpa Pengawet", "Proses Higienis"]
   },
   {
@@ -150,8 +150,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "400 gr",
     tags: ["Lele"],
-    description: "Lele utuh siap goreng dengan tekstur renyah dan rasa gurih.",
-    features: ["Tinggi Protein", "Alami Tanpa Pengawet", "Proses Higienis"]
+    description: "Lele utuh siap goreng dengan tekstur renyah dan rasa gurih. Pilihan isi 4-5 ekor per pack sesuai selera.",
+    features: ["Cocok dijadikan Lele Crispy", "Tinggi Protein", "Lebih disukai Anak-anak"]
   },
   {
     id: "lekids",
@@ -160,7 +160,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "200 gr",
     tags: ["Lele"],
-    description: "Fillet lele tanpa duri yang mudah diolah untuk berbagai menu favorit.",
+    description: "Fillet lele premium tanpa duri yang mudah diolah untuk berbagai menu favorit.",
     features: ["Tinggi Protein Omega 3", "Cocok Untuk MPASI", "Tanpa Duri"],
   },
   {
@@ -170,8 +170,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "300 gr",
     tags: ["Rolade"],
-    description: "Olahan lele premium berbentuk rolade dengan tekstur lembut dan rasa gurih.",
-    features: ["Bergizi", "Favorit Keluarga", "Baik Untuk Otak dan Jantung"],
+    description: "Olahan lele premium dicampur sayuran berbalut telur yang berbentuk rolade dengan tekstur lembut dan rasa gurih. Isi 18pcs.",
+    features: ["Cara Unik Makan Lele Organik", "Favorit Keluarga", "Baik Untuk Otak dan Jantung"],
   },
   {
     id: "bandeng",
@@ -180,7 +180,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "320 gr",
     tags: ["Bandeng"],
-    description: "Bandeng presto empuk dengan cita rasa khas dan mudah dinikmati.",
+    description: "Bandeng presto enak duri lunak Isi 2pcs dengan cita rasa khas dan mudah dinikmati.",
     features: ["Tinggi Kalsium", "Tinggi Protein Omega 3", "Alami Tanpa Pengawet"],
   },
   {
@@ -190,7 +190,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "150 gr",
     tags: ["Nila"],
-    description: "Nila presto empuk dengan tulang lunak dan rasa gurih alami.",
+    description: "Ikan nila presto empuk hingga tulang, bumbu meresap, kaya kalsium dan protein, serta rasa yang unik.",
     features: ["Rendah Lemak", "Tinggi Protein dan Asam Folat", "Proses Higienis"]
   },
   {
@@ -200,8 +200,8 @@ export const FEATURED_PRODUCTS: Product[] = [
     image: IMAGES.heroDish,
     portion: "Fresh",
     tags: ["Gurame"],
-    description: "Gurame segar yang telah dibersihkan dan siap diolah.",
-    features: ["Kaya Kalsium dan Fosfor", "Alami Tanpa Pengawet", "Aman Untuk Ibu Hamil"]
+    description: "Gurame segar lokal asal Banyumas yang sudah dibersihkan siap masak, bebas sisik dan isi perut.",
+    features: ["Kaya Kalsium dan Fosfor", "Tanpa Bau Tanah", "Aman Untuk Ibu Hamil"]
   },
   {
     id: "guramekuning",
@@ -211,7 +211,7 @@ export const FEATURED_PRODUCTS: Product[] = [
     portion: "Fresh",
     tags: ["Gurame"],
     description: "Gurame segar dengan marinasi bumbu kuning khas HarmaFarm.",
-    features: ["Bebas Amis", "Kaya Antioksidan", "Melancarkan Pencernaan"]
+    features: ["Bebas Amis", "Kaya Antioksidan", "Tanpa Bau Tanah"]
   }
 ];
 
