@@ -144,7 +144,7 @@ export default function FeaturedProducts() {
                     {product.price && (
                       <p className="text-sm font-bold text-brand-primary mb-2">{product.price}</p>
                     )}
-                    <p className="text-xs sm:text-sm text-brand-dark/60 leading-relaxed mb-4 line-clamp-3">
+                    <p className="text-xs sm:text-sm text-brand-dark/60 leading-relaxed mb-4">
                       {product.description}
                     </p>
                   </div>
