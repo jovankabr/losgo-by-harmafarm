@@ -232,19 +232,19 @@ export const PRODUCTION_PROCESS: ProcessStep[] = [
   {
     id: 2,
     title: "Pembersihan Higienis",
-    description: "Bahan baku dibersihkan secara menyeluruh untuk menjaga kualitas dan kenyamanan saat diolah.",
+    description: "Bahan baku dibersihkan secara menyeluruh untuk menjaga kualitas dan kenyamanan saat diolah sesuai SOP.",
     duration: "TAHAP 2"
   },
   {
     id: 3,
     title: "Marinasi Bumbu Pilihan",
-    description: "Produk dimarinasi menggunakan bumbu pilihan agar cita rasa lebih meresap dan konsisten.",
+    description: "Produk dimarinasi menggunakan bumbu pilihan berkualitas agar menghasilkan cita rasa yang otentik.",
     duration: "TAHAP 3"
   },
   {
     id: 4,
     title: "Pengemasan & Pembekuan",
-    description: "Produk dikemas dan disimpan dalam suhu terkontrol untuk menjaga kualitas hingga sampai ke pelanggan.",
+    description: "Produk dikemas vacuum sealer dan disimpan dalam suhu terkontrol untuk menjaga kualitas hingga sampai ke pelanggan.",
     duration: "TAHAP 4"
   },
   {
