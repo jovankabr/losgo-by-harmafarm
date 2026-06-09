@@ -31,66 +31,37 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
 
-      // Simple active link detection
-      const offsets = navLinks.map((link) => {
-        const el = document.getElementById(link.id);
+    const sections = navLinks.map((link) => {
+      const el = document.getElementById(link.id);
 
-        if (!el) {
-          return {
-          id: link.id,
-          top: Infinity
-         };
-        }
+      if (!el) return null;
 
-  const rect = el.getBoundingClientRect();
-
-  return {
-    id: link.id,
-    top: Math.abs(rect.top)
-  };
-});
-
-const closest = offsets.sort((a, b) => a.top - b.top)[0];
-
-if (closest) {
-  setActiveSection(closest.id);
-}
-
-      const handleScroll = () => {
-  setScrolled(window.scrollY > 20);
-
-  const offsets = navLinks.map((link) => {
-    const el = document.getElementById(link.id);
-
-    if (!el) {
       return {
         id: link.id,
-        top: Infinity,
+        top: el.offsetTop - 150,
       };
+    }).filter(Boolean);
+
+    const current = sections
+      .reverse()
+      .find(section => window.scrollY >= section!.top);
+
+    if (current) {
+      setActiveSection(current.id);
     }
+  };
 
-    const rect = el.getBoundingClientRect();
+  window.addEventListener("scroll", handleScroll);
 
-    return {
-      id: link.id,
-      top: Math.abs(rect.top - 120),
-    };
-  });
+  handleScroll();
 
-  const closest = offsets.sort((a, b) => a.top - b.top)[0];
-
-  if (closest) {
-    setActiveSection(closest.id);
-  }
-};
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
