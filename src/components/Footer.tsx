@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { Fish, Leaf, Sparkles, Mail, Phone, ChevronRight, Heart, ArrowUp } from "lucide-react";
+import { Fish, Leaf, Sparkles, Mail, Phone, ChevronRight, Heart, ArrowUp, Instagram } from "lucide-react";
 import { CONTACT_INFO } from "../data";
 import harmafarm from "../assets/harmafarm.png";
 import { useSiteData } from "../hooks/useSiteData";
@@ -102,7 +102,7 @@ export default function Footer() {
                 className="w-8 h-8 rounded-full bg-white/5 hover:bg-brand-primary text-white hover:text-brand-accent flex items-center justify-center transition-colors shadow-inner"
                 aria-label="Follow us on Instagram"
               >
-                <Mail className="w-4 h-4" />
+               <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
