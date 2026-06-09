@@ -131,11 +131,10 @@ export default function Contact() {
         </a>
       )}
     </div>
-  ) : (
-  <a
-    <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">
-      {card.value}
-    </div>
+ ) : (
+  <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">
+    {card.value}
+  </div>
 )}
 
   <p className="text-xs text-brand-dark/50 mt-1">
@@ -161,7 +160,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <motion.a
+          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
