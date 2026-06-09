@@ -26,8 +26,8 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
     { name: "Tentang Kami", href: "#tentang-kami", id: "tentang-kami" },
     { name: "Keunggulan", href: "#keunggulan", id: "keunggulan" },
     { name: "Proses", href: "#proses", id: "proses" },
-    { name: "Kontak", href: "#kontak", id: "kontak" },
     { name: "Testimoni", href: "#testimonial", id: "testimonial" },
+    { name: "Kontak", href: "#kontak", id: "kontak" },
   ];
 
   useEffect(() => {
