@@ -18,12 +18,16 @@ export default function Footer() {
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
     if (element) {
-      const offsetPos = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetPos,
-        behavior: "smooth",
-      });
-    }
+  const y =
+    element.getBoundingClientRect().top +
+    window.scrollY -
+    80;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth",
+  });
+}
   };
 
   const footerLinks = {
