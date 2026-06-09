@@ -21,7 +21,7 @@ export default function Testimonials() {
   const current = testimonials[activeIndex] || testimonials[0]
 
   return (
-    <section id="testimoni" className="py-24 bg-brand-bg relative overflow-hidden">
+    <section id="testimonial" className="py-24 bg-brand-bg relative overflow-hidden">
       <div className="absolute top-1/4 -left-20 w-80 h-80 bg-brand-soft/20 rounded-full blur-3xl -z-10" />
 
       <div className="max-w-5xl mx-auto px-6 md:px-8">
