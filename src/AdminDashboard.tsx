@@ -480,7 +480,7 @@ export default function AdminDashboard() {
           )}
 
           {/* ===== PROSES ===== */}
-          {tab === 'proses' && (
+{tab === 'proses' && (
   <div>
     <div style={s.h2}>⚙️ Proses Produksi</div>
     <div style={s.h2sub}>
@@ -494,10 +494,7 @@ export default function AdminDashboard() {
     </div>
   </div>
 )}
-              </button>
-            </div>
-          )}
-
+          
           {/* ===== KONTAK ===== */}
           {tab === 'kontak' && (
             <div>
