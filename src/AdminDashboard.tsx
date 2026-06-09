@@ -429,10 +429,16 @@ export default function AdminDashboard() {
                 </Field>
               </div>
 
-              {/* YouTube */}
-
-              <div style={s.fieldGroup}>
-  <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>
+{/* YouTube */}
+<div style={s.fieldGroup}>
+  <div
+    style={{
+      fontWeight: 700,
+      fontSize: 13,
+      marginBottom: 10,
+      color: "#315B35",
+    }}
+  >
     ▶️ YouTube
   </div>
 
@@ -441,19 +447,19 @@ export default function AdminDashboard() {
       <input
         style={s.input}
         value={data.digital.yt_handle}
-        onChange={e => setDigital('yt_handle', e.target.value)}
+        onChange={(e) => setDigital("yt_handle", e.target.value)}
       />
     </Field>
 
-  <Field label="Link YouTube">
-    <input
-      style={s.input}
-      value={data.digital.yt_url}
-      onChange={e => setDigital('yt_url', e.target.value)}
-    />
-  </Field>
+    <Field label="Link YouTube">
+      <input
+        style={s.input}
+        value={data.digital.yt_url}
+        onChange={(e) => setDigital("yt_url", e.target.value)}
+      />
+    </Field>
+  </div>
 </div>
-
               {/* Google Maps */}
               <div style={s.fieldGroup}>
                 <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>📍 Google Maps</div>
