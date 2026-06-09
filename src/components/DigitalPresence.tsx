@@ -13,7 +13,7 @@ const PlatformIcons = {
   TikTok: Smartphone, // Using Smartphone to represent mobile-first shortform video TikTok
   "Google Maps": MapPin,
   Website: MousePointer,
-  YouTube: Play,
+  YouTube: YouTube,
 };
 
 export default function DigitalPresence() {
