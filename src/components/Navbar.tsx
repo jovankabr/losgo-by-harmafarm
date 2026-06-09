@@ -37,12 +37,27 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
       // Simple active link detection
       const offsets = navLinks.map((link) => {
         const el = document.getElementById(link.id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          return { id: link.id, top: Math.abs(rect.top), visible: rect.top < 300 && rect.bottom > 100 };
+
+        if (!el) {
+          return {
+          id: link.id,
+          top: Infinity
+         };
         }
-        return { id: link.id, top: Infinity, visible: false };
-      });
+
+  const rect = el.getBoundingClientRect();
+
+  return {
+    id: link.id,
+    top: Math.abs(rect.top)
+  };
+});
+
+const closest = offsets.sort((a, b) => a.top - b.top)[0];
+
+if (closest) {
+  setActiveSection(closest.id);
+}
 
       const currentlyVisible = offsets.find((o) => o.visible);
       if (currentlyVisible) {
