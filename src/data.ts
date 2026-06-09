@@ -369,6 +369,14 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
     url: "https://www.tiktok.com/@harmafarm.losgo?_r=1&_t=ZS-96s87slWO38"
   },
   {
+    platform: "YouTube",
+    handle: "@Losgochannel",
+    metric: "Video Edukasi & Produk",
+    change: "Konten Budidaya & Frozen Food",
+    actionText: "Tonton Channel",
+    url: "https://www.youtube.com/@Losgochannel"
+  },
+  {
     platform: "Google Maps",
     handle: "LOSGO LELE ORGANIK HARMAFARM",
     metric: "4.6/5 Rating (30+ Ulasan)",
@@ -376,14 +384,6 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
     actionText: "Rute Petunjuk Produksi",
     url: "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6?g_st=ic"
   },
-  {
-    platform: "Website",
-    handle: "losgo-by-harmafarm",
-    metric: "98% Kepuasan Pelanggan",
-    change: "Sistem Order 24/7 Terbuka",
-    actionText: "Hubungi Admin WhatsApp",
-    url: "https://wa.me/6285641114777?text=Halo%20HarmaFarm%20saya%20tertarik%20dengan%20produk%20frozen%20food%ikan%20probiotik%20sehat!"
-  }
 ];
 
 export const CONTACT_INFO = {
