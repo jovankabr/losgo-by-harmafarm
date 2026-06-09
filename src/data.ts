@@ -25,7 +25,7 @@ export const TRUST_INDICATORS: TrustIndicator[] = [
     id: "quality",
     title: "Bahan Baku Berkualitas",
     description: "Menggunakan ikan pilihan yang diproses dengan standar mutu dan kebersihan yang terjaga.",
-    iconName: "Award"
+    iconName: "Award"| "Website";
   },
   {
     id: "signature",
@@ -343,7 +343,7 @@ export const FAQS: FaqItem[] = [
 ];
 
 export interface SocialMediaStat {
-  platform: "Instagram" | "TikTok" | "Google Maps" | "Website";
+  platform: "Instagram" | "TikTok" | "Google Maps" | "Youtube";
   handle: string;
   metric: string;
   change: string;
