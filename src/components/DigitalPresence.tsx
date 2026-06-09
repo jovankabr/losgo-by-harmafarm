@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Instagram, Smartphone, MapPin, MousePointer, TrendingUp, Users, ThumbsUp, Play, Star, ArrowUpRight, YouTube} from "lucide-react";
+import { Instagram, Smartphone, MapPin, MousePointer, TrendingUp, Users, ThumbsUp, Play, Star, ArrowUpRight} from "lucide-react";
 import { DIGITAL_PRESENCE, SocialMediaStat } from "../data";
 
 const PlatformIcons = {
