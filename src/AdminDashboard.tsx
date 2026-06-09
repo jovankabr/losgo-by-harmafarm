@@ -450,7 +450,9 @@ export default function AdminDashboard() {
         onChange={(e) => setDigital("yt_handle", e.target.value)}
       />
     </Field>
-
+<Field label="JUDUL UTAMA">
+                    <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} placeholder="300+ Followers" />
+                  </Field>
     <Field label="Link YouTube">
       <input
         style={s.input}
