@@ -355,17 +355,17 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
   {
     platform: "Instagram",
     handle: "@harmafarm.losgo",
-    metric: "300+ Followers",
-    change: "+1.691% Accounts Reached",
-    actionText: "Lihat Resep & Tips Sehat",
+    metric: "Resep & Promo Harian",
+    change: "UPDATE INFO TERBARU",
+    actionText: "Lihat Instagram",
     url: "https://www.instagram.com/harmafarm.losgo?igsh=MWx0bG02Z3VjOWNvZw=="
   },
   {
     platform: "TikTok",
     handle: "@harmafarm.losgo",
-    metric: "1.3K+ Likes",
-    change: "Viral Video Resep Praktis",
-    actionText: "Tonton Ide Penyajian",
+    metric: "Video Edukasi dan Promosi",
+    change: "Tips Budidaya & Olahan",
+    actionText: "Tonton TikTok",
     url: "https://www.tiktok.com/@harmafarm.losgo?_r=1&_t=ZS-96s87slWO38"
   },
   {
@@ -373,15 +373,15 @@ export const DIGITAL_PRESENCE: SocialMediaStat[] = [
     handle: "@Losgochannel",
     metric: "Video Edukasi & Produk",
     change: "Konten Budidaya & Frozen Food",
-    actionText: "Tonton Channel",
+    actionText: "Kunjungi Channel",
     url: "https://www.youtube.com/@Losgochannel"
   },
   {
     platform: "Google Maps",
     handle: "LOSGO LELE ORGANIK HARMAFARM",
-    metric: "4.6/5 Rating (30+ Ulasan)",
-    change: "Pengiriman Cepat & Terjaga",
-    actionText: "Rute Petunjuk Produksi",
+    metric: "4.9/5 Rating Pelanggan",
+    change: "Lokasi Produksi Resmi",
+    actionText: "Lihat Lokasi",
     url: "https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6?g_st=ic"
   },
 ];
