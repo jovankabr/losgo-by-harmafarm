@@ -5,7 +5,8 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, PlayCircle, FaTiktok } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, PlayCircle } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
 import { useSiteData } from "../hooks/useSiteData";
 
 export default function Contact() {
