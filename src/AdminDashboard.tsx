@@ -29,12 +29,26 @@ const DEFAULT: SiteData = {
   },
   digital: {
     ig_handle: '@harmafarm.losgo',
-    ig_metric: '300+ Followers',
+    ig_metric: 'Resep & Promo Harian',
+    ig_change: 'UPDATE INFO TERBARU',
+    ig_action: 'Lihat Instagram',
     ig_url: 'https://www.instagram.com/harmafarm.losgo',
+
     tt_handle: '@harmafarm.losgo',
-    tt_metric: '1.3K+ Likes',
+    tt_metric: 'Video Resep Praktis',
+    tt_change: 'KONTEN HARIAN',
+    tt_action: 'Tonton TikTok',
     tt_url: 'https://www.tiktok.com/@harmafarm.losgo',
-    gmaps_metric: '4.6/5 Rating (30+ Ulasan)',
+
+    yt_handle: '@Losgochannel',
+    yt_metric: 'Video Edukasi & Produk',
+    yt_change: 'KONTEN BUDIDAYA & FROZEN FOOD',
+    yt_action: 'Tonton Channel',
+    yt_url: 'https://youtube.com/...',
+
+    gmaps_metric: 'Lokasi & Ulasan Pelanggan',
+    gmaps_change: 'PETUNJUK RUTE PRODUKSI',
+    gmaps_action: 'Buka Google Maps',
     gmaps_url: 'https://maps.app.goo.gl/Cm4agTf1PJ6MiGsv6',
   },
   products: [
@@ -414,6 +428,56 @@ export default function AdminDashboard() {
                   <input style={s.input} value={data.digital.tt_url} onChange={e => setDigital('tt_url', e.target.value)} />
                 </Field>
               </div>
+
+              {/* YouTube */}
+
+              <div style={s.fieldGroup}>
+  <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 10, color: '#315B35' }}>
+    ▶️ YouTube
+  </div>
+
+  <div style={s.grid2}>
+    <Field label="Nama Channel">
+      <input
+        style={s.input}
+        value={data.digital.yt_handle}
+        onChange={e => setDigital('yt_handle', e.target.value)}
+      />
+    </Field>
+
+    <Field label="Judul Utama">
+      <input
+        style={s.input}
+        value={data.digital.yt_metric}
+        onChange={e => setDigital('yt_metric', e.target.value)}
+      />
+    </Field>
+  </div>
+
+  <Field label="Teks Kecil">
+    <input
+      style={s.input}
+      value={data.digital.yt_change}
+      onChange={e => setDigital('yt_change', e.target.value)}
+    />
+  </Field>
+
+  <Field label="Teks Tombol">
+    <input
+      style={s.input}
+      value={data.digital.yt_action}
+      onChange={e => setDigital('yt_action', e.target.value)}
+    />
+  </Field>
+
+  <Field label="Link YouTube">
+    <input
+      style={s.input}
+      value={data.digital.yt_url}
+      onChange={e => setDigital('yt_url', e.target.value)}
+    />
+  </Field>
+</div>
 
               {/* Google Maps */}
               <div style={s.fieldGroup}>
