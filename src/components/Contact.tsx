@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, PlayCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Clock2, Sparkles, Send, PlayCircle, FaTiktok } from "lucide-react";
 import { useSiteData } from "../hooks/useSiteData";
 
 export default function Contact() {
@@ -15,20 +15,12 @@ export default function Contact() {
   const contactCards = [
     {
       title: "WhatsApp Order & Reseller",
-      value: c?.phone || '+62 856-4111-4777',
+      value: `${c?.phone || ''}\n${c?.phone2 || ''}`,
       info: "Hubungi kami untuk pemesanan produk, konsultasi, dan informasi reseller.",
       href: c?.whatsappUrl || '#',
       icon: Phone,
       color: "bg-emerald-50 text-emerald-600 border-emerald-100",
     },
-    ...(c?.phone2 ? [{
-      title: "WhatsApp Order & Reseller 2",
-      value: c.phone2 || '+62 856-4111-3777',
-      info: "Hubungi kami untuk pemesanan produk, konsultasi, dan informasi reseller.",
-      href: c?.whatsappUrl2 || `https://wa.me/${c.phone2.replace(/\D/g, '')}`,
-      icon: Phone,
-      color: "bg-emerald-50 text-emerald-600 border-emerald-100",
-    }] : []),
     {
       title: "E-mail Resmi",
       value: c?.email || 'hartonolosgo@gmail.com',
@@ -44,6 +36,14 @@ export default function Contact() {
       href: c?.instagram || '#',
       icon: Instagram,
       color: "bg-pink-50 text-pink-600 border-pink-100",
+    },
+    {
+      title: "TikTok Official",
+      value: data?.digital?.tt_handle || '@harmafarm.losgo',
+      info: "Ikuti video produk, edukasi budidaya, promo, dan aktivitas HarmaFarm.",
+      href: data?.digital?.tt_url || '#',
+      icon: FaTiktok,
+      color: "bg-black text-white border-gray-200",
     },
     {
       title: "YouTube Channel",
@@ -101,7 +101,7 @@ export default function Contact() {
                       </div>
                       <div className="flex-grow min-w-0">
                         <h4 className="font-display font-black text-[10px] uppercase tracking-widest text-brand-dark/40 mb-1 leading-none">{card.title}</h4>
-                        <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">{card.value}</div>
+                        <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words whitespace-pre-line">{card.value}</div>
                         <p className="text-xs text-brand-dark/50 mt-1">{card.info}</p>
                       </div>
                     </div>
