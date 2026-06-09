@@ -107,9 +107,9 @@ export default function App() {
           <Hero />
           <TrustBar />
           <TrustIndicators />
+          <FeaturedProducts />
           <About />
           <WhyProbiotic />
-          <FeaturedProducts />
           <ProductionProcess />
           <DigitalPresence />
           <Testimonials />
@@ -117,7 +117,7 @@ export default function App() {
           <CTA />
           <Contact />
           <Footer />
-
+          
           <motion.a
             id="floating-whatsapp-widget"
             href={CONTACT_INFO.whatsappUrl}
