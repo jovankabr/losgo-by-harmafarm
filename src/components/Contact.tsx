@@ -87,7 +87,7 @@ export default function Contact() {
               {contactCards.map((card, idx) => {
                 const IconComponent = card.icon
                 return (
-                  <motion.a
+                  <motion.div
                     key={card.title}
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
