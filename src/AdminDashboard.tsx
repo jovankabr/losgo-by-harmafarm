@@ -481,36 +481,19 @@ export default function AdminDashboard() {
 
           {/* ===== PROSES ===== */}
           {tab === 'proses' && (
-            <div>
-              <div style={s.h2}>⚙️ Proses</div>
-              <div style={s.h2sub}>Section "Proses Produksi HarmaFarm" — galeri foto proses</div>
+  <div>
+    <div style={s.h2}>⚙️ Proses Produksi</div>
+    <div style={s.h2sub}>
+      Tahapan proses produksi ditampilkan langsung dari data website.
+    </div>
 
-              <div style={s.h3}>Foto Galeri Proses Produksi</div>
-              <div style={s.infoBox}>
-                Upload foto-foto proses produksi (seleksi bahan baku, pembersihan, marinasi, pengemasan, dll).<br />
-                Foto tampil di section Proses website. Maks 500KB per foto.
-              </div>
-              {(data.gallery || []).map((item, i) => (
-                <div key={i} style={s.card}>
-                  <div style={s.cardHeader}>
-                    <strong style={{ fontSize: 13 }}>Foto {i + 1}{item.title ? ` — ${item.title}` : ''}</strong>
-                    <button style={s.delBtn} onClick={() => setData(d => ({ ...d, gallery: d.gallery.filter((_, idx) => idx !== i) }))}>🗑 Hapus</button>
-                  </div>
-                  <Field label="Foto">
-                    <ImageUploader value={item.image} onChange={url => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, image: url } : g) }))} />
-                  </Field>
-                  <div style={s.grid2}>
-                    <Field label="Judul Foto (contoh: Seleksi Bahan Baku)">
-                      <input style={s.input} value={item.title} onChange={e => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, title: e.target.value } : g) }))} />
-                    </Field>
-                    <Field label="Sub Judul (contoh: Tahap 1)">
-                      <input style={s.input} value={item.subtitle} onChange={e => setData(d => ({ ...d, gallery: d.gallery.map((g, idx) => idx === i ? { ...g, subtitle: e.target.value } : g) }))} />
-                    </Field>
-                  </div>
-                </div>
-              ))}
-              <button style={s.addBtn} onClick={() => setData(d => ({ ...d, gallery: [...(d.gallery || []), { image: '', title: '', subtitle: '' }] }))}>
-                + Tambah Foto Proses
+    <div style={s.infoBox}>
+      Saat ini section proses tidak menggunakan gambar.
+      Jika ingin menggunakan foto proses produksi,
+      frontend perlu diperbarui terlebih dahulu.
+    </div>
+  </div>
+)}
               </button>
             </div>
           )}
