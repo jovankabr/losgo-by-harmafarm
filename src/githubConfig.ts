@@ -13,6 +13,7 @@ export type SiteData = {
     instagram: string
     tiktok: string
     mapsEmbed: string
+    mapsUrl?: string
   }
   hero: {
     badge: string
