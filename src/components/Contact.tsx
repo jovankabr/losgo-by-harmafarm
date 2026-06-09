@@ -129,10 +129,15 @@ export default function Contact() {
       )}
     </div>
   ) : (
-    <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">
-      {card.value}
-    </div>
-  )}
+  <a
+    href={card.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-sm sm:text-base font-bold text-brand-dark hover:text-brand-primary transition-colors leading-snug break-words"
+  >
+    {card.value}
+  </a>
+)}
 
   <p className="text-xs text-brand-dark/50 mt-1">
     {card.info}
