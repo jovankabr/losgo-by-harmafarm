@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Instagram, Smartphone, MapPin, MousePointer, TrendingUp, Users, ThumbsUp, Star, ArrowUpRight } from "lucide-react";
+import { Instagram, Smartphone, MapPin, MousePointer, TrendingUp, Users, ThumbsUp, Star, ArrowUpRight, Youtube} from "lucide-react";
 import { DIGITAL_PRESENCE, SocialMediaStat } from "../data";
 
 const PlatformIcons = {
@@ -13,6 +13,7 @@ const PlatformIcons = {
   TikTok: Smartphone, // Using Smartphone to represent mobile-first shortform video TikTok
   "Google Maps": MapPin,
   Website: MousePointer,
+  YouTube: Youtube,
 };
 
 export default function DigitalPresence() {
