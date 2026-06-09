@@ -87,8 +87,11 @@ export default function Contact() {
               {contactCards.map((card, idx) => {
                 const IconComponent = card.icon
                 return (
-                  <motion.div
+                  <motion.a
                     key={card.title}
+                    href={'phone1' in card ? undefined : card.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -130,13 +133,9 @@ export default function Contact() {
     </div>
   ) : (
   <a
-    href={card.href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-sm sm:text-base font-bold text-brand-dark hover:text-brand-primary transition-colors leading-snug break-words"
-  >
-    {card.value}
-  </a>
+    <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">
+      {card.value}
+    </div>
 )}
 
   <p className="text-xs text-brand-dark/50 mt-1">
@@ -144,7 +143,7 @@ export default function Contact() {
   </p>
 </div>
                     </div>
-                  </motion.div>
+                  </motion.a>
                 )
               })}
             </div>
@@ -162,7 +161,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <motion.div
+          <motion.a
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
