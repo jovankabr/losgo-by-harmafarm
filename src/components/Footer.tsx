@@ -41,7 +41,7 @@ export default function Footer() {
     ],
     support: [
       { name: "Hubungi Penjualan", href: "#kontak" },
-      { name: "Program Reseller", href: "#faq" },
+      { name: "Program Reseller", href: "#reseller" },
       { name: "Informasi Produk", href: "#produk" },
       { name: "Lokasi Produksi", href: "#kontak" },
     ],
