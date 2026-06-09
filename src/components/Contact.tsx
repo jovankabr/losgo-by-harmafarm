@@ -60,7 +60,7 @@ export default function Contact() {
       title: "Rumah Produksi dan Penjualan",
       value: c?.address || 'Cilongok, Kabupaten Banyumas, Jawa Tengah',
       info: "Pusat produksi dan pengolahan produk HarmaFarm di Kabupaten Banyumas.",
-      href: c?.mapsEmbed || '#',
+      href: c?.mapsUrl || '#',
       icon: MapPin,
       color: "bg-amber-50 text-amber-600 border-amber-100",
     },
