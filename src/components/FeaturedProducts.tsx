@@ -174,6 +174,7 @@ export default function FeaturedProducts() {
         </div>
 
         <motion.div
+          id="reseller"
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
