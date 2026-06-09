@@ -457,7 +457,6 @@ export default function AdminDashboard() {
         onChange={e => setDigital('yt_metric', e.target.value)}
       />
     </Field>
-  </div>
     <Field label="Link YouTube">
       <input
         style={s.input}
