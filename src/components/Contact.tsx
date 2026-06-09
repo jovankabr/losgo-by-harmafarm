@@ -16,9 +16,11 @@ export default function Contact() {
   const contactCards = [
     {
       title: "WhatsApp Order & Reseller",
-      value: `${c?.phone || ''}\n${c?.phone2 || ''}`,
+      phone1: c?.phone,
+      phone2: c?.phone2,
+      whatsapp1: c?.whatsappUrl,
+      whatsapp2: c?.whatsappUrl2,
       info: "Hubungi kami untuk pemesanan produk, konsultasi, dan informasi reseller.",
-      href: c?.whatsappUrl || '#',
       icon: Phone,
       color: "bg-emerald-50 text-emerald-600 border-emerald-100",
     },
@@ -87,9 +89,6 @@ export default function Contact() {
                 return (
                   <motion.a
                     key={card.title}
-                    href={card.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 15 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -101,12 +100,46 @@ export default function Contact() {
                         <IconComponent className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                       </div>
                       <div className="flex-grow min-w-0">
-                        <h4 className="font-display font-black text-[10px] uppercase tracking-widest text-brand-dark/40 mb-1 leading-none">{card.title}</h4>
-                        <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words whitespace-pre-line">{card.value}</div>
-                        <p className="text-xs text-brand-dark/50 mt-1">{card.info}</p>
-                      </div>
+  <h4 className="font-display font-black text-[10px] uppercase tracking-widest text-brand-dark/40 mb-1 leading-none">
+    {card.title}
+  </h4>
+
+  {'phone1' in card ? (
+    <div className="flex flex-col gap-1 mt-1">
+      <a
+        href={card.whatsapp1}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm sm:text-base font-bold text-brand-dark hover:text-green-600"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {card.phone1}
+      </a>
+
+      {card.phone2 && (
+        <a
+          href={card.whatsapp2}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm sm:text-base font-bold text-brand-dark hover:text-green-600"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {card.phone2}
+        </a>
+      )}
+    </div>
+  ) : (
+    <div className="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-primary transition-colors leading-snug break-words">
+      {card.value}
+    </div>
+  )}
+
+  <p className="text-xs text-brand-dark/50 mt-1">
+    {card.info}
+  </p>
+</div>
                     </div>
-                  </motion.a>
+                  </motion.div>
                 )
               })}
             </div>
