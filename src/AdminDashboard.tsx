@@ -404,7 +404,7 @@ export default function AdminDashboard() {
                   <Field label="Username tampil (contoh: @harmafarm.losgo)">
                     <input style={s.input} value={data.digital.ig_handle} onChange={e => setDigital('ig_handle', e.target.value)} placeholder="@harmafarm.losgo" />
                   </Field>
-                  <Field label="Statistik (contoh: 300+ Followers)">
+                  <Field label="JUDUL UTAMA">
                     <input style={s.input} value={data.digital.ig_metric} onChange={e => setDigital('ig_metric', e.target.value)} placeholder="300+ Followers" />
                   </Field>
                 </div>
@@ -420,7 +420,7 @@ export default function AdminDashboard() {
                   <Field label="Username tampil (contoh: @harmafarm.losgo)">
                     <input style={s.input} value={data.digital.tt_handle} onChange={e => setDigital('tt_handle', e.target.value)} placeholder="@harmafarm.losgo" />
                   </Field>
-                  <Field label="Statistik (contoh: 1.3K+ Likes)">
+                  <Field label="JUDUL UTAMA">
                     <input style={s.input} value={data.digital.tt_metric} onChange={e => setDigital('tt_metric', e.target.value)} placeholder="1.3K+ Likes" />
                   </Field>
                 </div>
@@ -444,31 +444,6 @@ export default function AdminDashboard() {
         onChange={e => setDigital('yt_handle', e.target.value)}
       />
     </Field>
-
-    <Field label="Judul Utama">
-      <input
-        style={s.input}
-        value={data.digital.yt_metric}
-        onChange={e => setDigital('yt_metric', e.target.value)}
-      />
-    </Field>
-  </div>
-
-  <Field label="Teks Kecil">
-    <input
-      style={s.input}
-      value={data.digital.yt_change}
-      onChange={e => setDigital('yt_change', e.target.value)}
-    />
-  </Field>
-
-  <Field label="Teks Tombol">
-    <input
-      style={s.input}
-      value={data.digital.yt_action}
-      onChange={e => setDigital('yt_action', e.target.value)}
-    />
-  </Field>
 
   <Field label="Link YouTube">
     <input
