@@ -27,7 +27,7 @@ export default function Navbar({ scrollProgress }: NavbarProps) {
     { name: "Keunggulan", href: "#keunggulan", id: "keunggulan" },
     { name: "Proses", href: "#proses", id: "proses" },
     { name: "Kontak", href: "#kontak", id: "kontak" },
-    { name: "Testimoni", href: "#testimoni", id: "testimonial" },
+    { name: "Testimoni", href: "#testimonial", id: "testimonial" },
   ];
 
   useEffect(() => {
@@ -59,16 +59,33 @@ if (closest) {
   setActiveSection(closest.id);
 }
 
-      const currentlyVisible = offsets.find((o) => o.visible);
-      if (currentlyVisible) {
-        setActiveSection(currentlyVisible.id);
-      } else {
-        // Fallback to closest if none perfectly visible
-        const sorted = [...offsets].sort((a, b) => a.top - b.top);
-        if (sorted[0] && sorted[0].top < window.innerHeight / 2) {
-          setActiveSection(sorted[0].id);
-        }
-      }
+      const handleScroll = () => {
+  setScrolled(window.scrollY > 20);
+
+  const offsets = navLinks.map((link) => {
+    const el = document.getElementById(link.id);
+
+    if (!el) {
+      return {
+        id: link.id,
+        top: Infinity,
+      };
+    }
+
+    const rect = el.getBoundingClientRect();
+
+    return {
+      id: link.id,
+      top: Math.abs(rect.top - 120),
+    };
+  });
+
+  const closest = offsets.sort((a, b) => a.top - b.top)[0];
+
+  if (closest) {
+    setActiveSection(closest.id);
+  }
+};
     };
 
     window.addEventListener("scroll", handleScroll);
