@@ -343,7 +343,7 @@ export const FAQS: FaqItem[] = [
 ];
 
 export interface SocialMediaStat {
-  platform: "Instagram" | "TikTok" | "Google Maps" | "Youtube";
+  platform: "Instagram" | "TikTok" | "Google Maps" | "YouTube";
   handle: string;
   metric: string;
   change: string;
