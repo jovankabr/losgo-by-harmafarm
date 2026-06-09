@@ -33,9 +33,9 @@ export default function Footer() {
   const footerLinks = {
     brand: [
       { name: "Tentang Kami", href: "#tentang-kami" },
-      { name: "Keunggulan Produk", href: "#digital" },
+      { name: "Keunggulan HarmaFarm", href: "#keunggulan" },
       { name: "Proses Produksi", href: "#proses" },
-      { name: "Testimoni Pelanggan", href: "#faq-testimonials-section" },
+      { name: "Testimoni Pelanggan", href: "#testimonial" },
     ],
     products: [
       { name: "LOSGo 800 gr", href: "#produk" },
